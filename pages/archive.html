@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,24 +8,24 @@
     <title>مقالات | ادومستر</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
-    
-<style>
-    .more-blog-cards {
-    display: block !important;
-    opacity: 1 !important;
-    transform: translateY(20px);
-    transition: all 0.5s ease;
-}
-</style>
 
+    <style>
+        .more-blog-cards {
+            display: block !important;
+            opacity: 1 !important;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+    </style>
 
-<!-- ==========================================
+ <!-- ==========================================
        START: HEADER SECTION
        ========================================== -->
        <header class="main-header">
         <div class="container header-container">
-            
+
             <!-- Mobile Menu Toggle & Logo -->
             <div class="logo-area">
                 <input type="checkbox" id="menu-toggle" class="menu-checkbox">
@@ -35,14 +36,16 @@
                 </label>
 
                 <div class="logo">
-                    <a href="index.html">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="student__svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                    <a href="../index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="student__svg">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
                         </svg>
                         <span class="logo-text">Edu<span>Master</span></span>
                     </a>
                 </div>
-                
+
                 <!-- Main Navigation Menu -->
                 <nav class="main-nav">
                     <ul class="nav-list">
@@ -50,7 +53,7 @@
                         <li><a href="../index.html#courses-section" class="nav-link">دوره‌ها</a></li>
                         <li><a href="../index.html#instructors-section" class="nav-link">اساتید</a></li>
                         <li><a href="../index.html#blog-section" class="nav-link">وبلاگ</a></li>
-                        
+
                         <!-- Pages Dropdown Menu -->
                         <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle">صفحات <span class="arrow-down"></span></a>
@@ -86,17 +89,21 @@
                 </div>
 
                 <!-- Dark Mode Toggle Button -->
-                <button class="theme-toggle-btn" aria-label="Toggle Theme">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="moon">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
-                    </svg>                      
+                <button class="theme-toggle-btn" aria-label="Toggle Theme" id="themeToggleBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" id="themeIcon" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="moon">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                    </svg>
                 </button>
 
                 <!-- Shopping Cart Component -->
                 <a href="cart.html" class="cart-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="shopping-cart" style="width: 25px;">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-                    </svg>                      
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="shopping-cart" style="width: 25px;">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                    </svg>
                 </a>
                 <!-- Authentication Buttons -->
                 <div class="auth-buttons">
@@ -112,129 +119,232 @@
        ========================================== -->
 
 
-<!-- کانتینر اصلی صفحه اختصاصی مقالات -->
-<div class="container blog-archive-page">
-    
-    <!-- هدر صفحه آرشیو -->
-    <header class="archive-header">
-        <h1 class="archive-title">مجله تخصصی برنامه‌نویسی و توسعه وب</h1>
-        <p class="archive-subtitle">آخرین مقالات، آموزش‌ها و ترفندهای دنیای فناوری در دنیای فرانت‌اند</p>
-    </header>
+    <!-- کانتینر اصلی صفحه اختصاصی مقالات -->
+    <div class="container blog-archive-page">
 
-    <!-- شبکه مقالات (۵ مقاله شما در این کانتینر قرار می‌گیرند) -->
-    <div class="blog-grid">
-<!-- گرید کارت‌های مقالات وبلاگ -->
-<div class="blog-grid">
+        <!-- هدر صفحه آرشیو -->
+        <header class="archive-header">
+            <h1 class="archive-title">مجله تخصصی برنامه‌نویسی و توسعه وب</h1>
+            <p class="archive-subtitle">آخرین مقالات، آموزش‌ها و ترفندهای دنیای فناوری در دنیای فرانت‌اند</p>
+        </header>
 
-    <!-- مقاله اول -->
-    <div class="blog-card">
-        <div class="blog-img-box">
-            <img src="../images/map.webp" alt="نقشه راه فرانت اند">
-        </div>
-        <div class="blog-card-body">
-            <span class="blog-category">برنامه‌نویسی</span>
-            <h3 class="blog-title">نقشه راه ورود به دنیای فرانت‌اند در سال ۲۰۲۶</h3>
-            <p class="blog-excerpt">چگونه یادگیری طراحی وب را از صفر آغاز کنیم و چه مهارت‌هایی برای بازار کار نیاز داریم؟</p>
-            <div class="blog-footer">
-                <span class="blog-date">⏱️ ۵ دقیقه مطالعه</span>
-                <a href="#" class="blog-read-more">ادامه مطلب ←</a>
+        <!-- شبکه مقالات (۵ مقاله شما در این کانتینر قرار می‌گیرند) -->
+        <div class="blog-grid">
+            <!-- گرید کارت‌های مقالات وبلاگ -->
+            <div class="blog-grid">
+
+                <!-- مقاله اول -->
+                <div class="blog-card">
+                    <div class="blog-img-box">
+                        <img src="../images/map.webp" alt="نقشه راه فرانت اند">
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-category">برنامه‌نویسی</span>
+                        <h3 class="blog-title">نقشه راه ورود به دنیای فرانت‌اند در سال ۲۰۲۶</h3>
+                        <p class="blog-excerpt">چگونه یادگیری طراحی وب را از صفر آغاز کنیم و چه مهارت‌هایی برای بازار
+                            کار نیاز داریم؟</p>
+                        <div class="blog-footer">
+                            <span class="blog-date">
+                                <a href="#" class="dash-menu-item">
+                                    <span class="svg-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-hourglass-icon lucide-hourglass">
+                                            <path d="M5 22h14" />
+                                            <path d="M5 2h14" />
+                                            <path
+                                                d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22" />
+                                            <path
+                                                d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2" />
+                                        </svg> </span>
+                                    5 دقیقه مطالعه
+                                </a>
+                            </span>
+                            <a href="main-archive.html" class="blog-read-more">ادامه مطلب ←</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مقاله دوم -->
+                <div class="blog-card">
+                    <div class="blog-img-box">
+                        <img src="../images/AI.webp" alt="هوش مصنوعی">
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-category">هوش مصنوعی</span>
+                        <h3 class="blog-title">تاثیر هوش مصنوعی بر آینده شغلی توسعه‌دهندگان</h3>
+                        <p class="blog-excerpt">آیا هوش مصنوعی جایگزین برنامه‌نویسان می‌شود؟ بررسی فرصت‌ها و چالش‌های
+                            پیش رو.</p>
+                        <div class="blog-footer">
+                            <span class="blog-date">
+                                <a href="#" class="dash-menu-item">
+                                    <span class="svg-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-hourglass-icon lucide-hourglass">
+                                            <path d="M5 22h14" />
+                                            <path d="M5 2h14" />
+                                            <path
+                                                d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22" />
+                                            <path
+                                                d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2" />
+                                        </svg> </span>
+                                    8 دقیقه مطالعه
+                                </a>
+                            </span>
+                            <a href="main-archive.html" class="blog-read-more">ادامه مطلب ←</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مقاله سوم -->
+                <div class="blog-card">
+                    <div class="blog-img-box">
+                        <img src="../images/UI and UX.webp" alt="اصول UI/UX">
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-category">طراحی رابط کاربری</span>
+                        <h3 class="blog-title">۵ اصل کلیدی در طراحی تجربه کاربری (UX)</h3>
+                        <p class="blog-excerpt">چگونه طرح‌هایی بسازیم که کاربران عاشق کار کردن با اپلیکیشن یا وب‌سایت
+                            شما شوند؟</p>
+                        <div class="blog-footer">
+                            <span class="blog-date">
+                                <a href="#" class="dash-menu-item">
+                                    <span class="svg-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-hourglass-icon lucide-hourglass">
+                                            <path d="M5 22h14" />
+                                            <path d="M5 2h14" />
+                                            <path
+                                                d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22" />
+                                            <path
+                                                d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2" />
+                                        </svg> </span>
+                                    4 دقیقه مطالعه
+                                </a> </span>
+                            <a href="main-archive.html" class="blog-read-more">ادامه مطلب ←</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مقاله چهارم (جدید) -->
+                <div class="blog-card more-blog-cards">
+                    <div class="blog-img-box">
+                        <img src="../images/js.png" alt="سئو در وب">
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-category">سئو و بهینه‌سازی</span>
+                        <h3 class="blog-title">اصول سئو (SEO) برای توسعه‌دهندگان وب</h3>
+                        <p class="blog-excerpt">چگونه کدهای فرانت‌اند خود را بهینه‌سازی کنیم تا سایت ما در رتبه‌های اول
+                            گوگل قرار گیرد؟</p>
+                        <div class="blog-footer">
+                            <span class="blog-date">
+                                <a href="#" class="dash-menu-item">
+                                    <span class="svg-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-hourglass-icon lucide-hourglass">
+                                            <path d="M5 22h14" />
+                                            <path d="M5 2h14" />
+                                            <path
+                                                d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22" />
+                                            <path
+                                                d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2" />
+                                        </svg> </span>
+                                    4 دقیقه مطالعه
+                                </a> </span>
+                            <a href="main-archive.html" class="blog-read-more">ادامه مطلب ←</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مقاله پنجم (جدید) -->
+                <div class="blog-card more-blog-cards">
+                    <div class="blog-img-box">
+                        <img src="../images/next-js.jpeg" alt="تحلیل داده">
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-category">علوم داده</span>
+                        <h3 class="blog-title">مقدمه‌ای بر تحلیل داده‌ها و بازار کار آن</h3>
+                        <p class="blog-excerpt">بررسی ابزارها و مهارت‌های مورد نیاز برای ورود به شغل جذاب و پردرآمد
+                            تحلیلگری داده.</p>
+                        <div class="blog-footer">
+                            <span class="blog-date">
+                                <a href="#" class="dash-menu-item">
+                                    <span class="svg-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-hourglass-icon lucide-hourglass">
+                                            <path d="M5 22h14" />
+                                            <path d="M5 2h14" />
+                                            <path
+                                                d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22" />
+                                            <path
+                                                d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2" />
+                                        </svg> </span>
+                                    8 دقیقه مطالعه
+                                </a>
+                            </span>
+                            <a href="main-archive.html" class="blog-read-more">ادامه مطلب ←</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مقاله ششم (جدید) -->
+                <div class="blog-card more-blog-cards">
+                    <div class="blog-img-box">
+                        <img src="../images/figma.avif" alt="دیزاین سیستم">
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-category">طراحی گرافیک</span>
+                        <h3 class="blog-title">دیزاین سیستم چیست و چه کاربردی دارد؟</h3>
+                        <p class="blog-excerpt">آشنایی با مفهوم تفکیک اجزا و المان‌های گرافیکی برای یکپارچه‌سازی
+                            پروژه‌های بزرگ.</p>
+                        <div class="blog-footer">
+                            <span class="blog-date">
+                                <a href="#" class="dash-menu-item">
+                                    <span class="svg-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-hourglass-icon lucide-hourglass">
+                                            <path d="M5 22h14" />
+                                            <path d="M5 2h14" />
+                                            <path
+                                                d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22" />
+                                            <path
+                                                d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2" />
+                                        </svg> </span>
+                                    5 دقیقه مطالعه
+                                </a>
+                            </span>
+                            <a href="main-archive.html" class="blog-read-more">ادامه مطلب ←</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- بخش صفحه‌بندی (Pagination) زیر مقالات -->
+                <div class="pagination-wrapper">
+                    <nav class="pagination">
+                        <a href="#" class="page-link prev-page disabled">قبلی</a>
+                        <a href="#" class="page-link active">۱</a>
+                        <a href="#" class="page-link">۲</a>
+                        <a href="#" class="page-link">۳</a>
+                        <span class="page-dots">...</span>
+                        <a href="#" class="page-link">۱۰</a>
+                        <a href="#" class="page-link next-page">بعدی</a>
+                    </nav>
+                </div>
             </div>
-        </div>
-    </div>
 
-    <!-- مقاله دوم -->
-    <div class="blog-card">
-        <div class="blog-img-box">
-            <img src="../images/AI.webp" alt="هوش مصنوعی">
-        </div>
-        <div class="blog-card-body">
-            <span class="blog-category">هوش مصنوعی</span>
-            <h3 class="blog-title">تاثیر هوش مصنوعی بر آینده شغلی توسعه‌دهندگان</h3>
-            <p class="blog-excerpt">آیا هوش مصنوعی جایگزین برنامه‌نویسان می‌شود؟ بررسی فرصت‌ها و چالش‌های پیش رو.</p>
-            <div class="blog-footer">
-                <span class="blog-date">⏱️ ۸ دقیقه مطالعه</span>
-                <a href="#" class="blog-read-more">ادامه مطلب ←</a>
-            </div>
-        </div>
-    </div>
 
-    <!-- مقاله سوم -->
-    <div class="blog-card">
-        <div class="blog-img-box">
-            <img src="../images/UI and UX.webp" alt="اصول UI/UX">
-        </div>
-        <div class="blog-card-body">
-            <span class="blog-category">طراحی رابط کاربری</span>
-            <h3 class="blog-title">۵ اصل کلیدی در طراحی تجربه کاربری (UX)</h3>
-            <p class="blog-excerpt">چگونه طرح‌هایی بسازیم که کاربران عاشق کار کردن با اپلیکیشن یا وب‌سایت شما شوند؟</p>
-            <div class="blog-footer">
-                <span class="blog-date">⏱️ ۴ دقیقه مطالعه</span>
-                <a href="#" class="blog-read-more">ادامه مطلب ←</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- مقاله چهارم (جدید) -->
-<div class="blog-card more-blog-cards">
-    <div class="blog-img-box">
-        <img src="../images/js.png" alt="سئو در وب">
-    </div>
-    <div class="blog-card-body">
-        <span class="blog-category">سئو و بهینه‌سازی</span>
-        <h3 class="blog-title">اصول سئو (SEO) برای توسعه‌دهندگان وب</h3>
-        <p class="blog-excerpt">چگونه کدهای فرانت‌اند خود را بهینه‌سازی کنیم تا سایت ما در رتبه‌های اول گوگل قرار گیرد؟</p>
-        <div class="blog-footer">
-            <span class="blog-date">⏱️ ۶ دقیقه مطالعه</span>
-            <a href="#" class="blog-read-more">ادامه مطلب ←</a>
-        </div>
-    </div>
-</div>
-
-<!-- مقاله پنجم (جدید) -->
-<div class="blog-card more-blog-cards">
-    <div class="blog-img-box">
-        <img src="../images/next-js.jpeg" alt="تحلیل داده">
-    </div>
-    <div class="blog-card-body">
-        <span class="blog-category">علوم داده</span>
-        <h3 class="blog-title">مقدمه‌ای بر تحلیل داده‌ها و بازار کار آن</h3>
-        <p class="blog-excerpt">بررسی ابزارها و مهارت‌های مورد نیاز برای ورود به شغل جذاب و پردرآمد تحلیلگری داده.</p>
-        <div class="blog-footer">
-            <span class="blog-date">⏱️ ۷ دقیقه مطالعه</span>
-            <a href="#" class="blog-read-more">ادامه مطلب ←</a>
-        </div>
-    </div>
-</div>
-
-<!-- مقاله ششم (جدید) -->
-<div class="blog-card more-blog-cards">
-    <div class="blog-img-box">
-        <img src="../images/figma.avif" alt="دیزاین سیستم">
-    </div>
-    <div class="blog-card-body">
-        <span class="blog-category">طراحی گرافیک</span>
-        <h3 class="blog-title">دیزاین سیستم چیست و چه کاربردی دارد؟</h3>
-        <p class="blog-excerpt">آشنایی با مفهوم تفکیک اجزا و المان‌های گرافیکی برای یکپارچه‌سازی پروژه‌های بزرگ.</p>
-        <div class="blog-footer">
-            <span class="blog-date">⏱️ ۵ دقیقه مطالعه</span>
-            <a href="#" class="blog-read-more">ادامه مطلب ←</a>
-        </div>
-    </div>
-</div>
-
-    <!-- بخش صفحه‌بندی (Pagination) زیر مقالات -->
-    <div class="pagination-wrapper">
-        <nav class="pagination">
-            <a href="#" class="page-link prev-page disabled">قبلی</a>
-            <a href="#" class="page-link active">۱</a>
-            <a href="#" class="page-link">۲</a>
-            <a href="#" class="page-link">۳</a>
-            <span class="page-dots">...</span>
-            <a href="#" class="page-link">۱۰</a>
-            <a href="#" class="page-link next-page">بعدی</a>
-        </nav>
-    </div>
-</div>
-
+<script src="../js/script.js"></script>
 </body>
+
 </html>
