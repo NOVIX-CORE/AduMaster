@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سبد خرید شما</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cart.css">
+
+</head>
+
+<body>
+
+    <!-- کدهای هدر خودت را اینجا بگذار تا سبد خرید بالا هم دیده شود -->
+
+    <div class="cart-page-container">
+        <!-- ستون سمت راست: لیست دوره‌ها -->
+        <main class="cart-main">
+            <h2>سبد خرید شما</h2>
+            <table class="cart-table">
+                <thead>
+                    <!-- محصول اول -->
+                    <tr class="cart-row-box">
+                        <!-- یک آی‌دی منحصربه‌فرد برای چک‌باکس محصول اول -->
+                        <input type="checkbox" id="delete-item-1" class="delete-trigger" hidden>
+
+                        <td>
+                            <div class="cart-page-item">
+                                <img src="../images/js.png" alt="دوره جاوااسکریپت" class="cart-page-img">
+                                <div class="cart-page-title">
+                                    <h3>دوره جامع آموزش جاوااسکریپت متخصص</h3>
+                                </div>
+                            </div>
+                        </td>
+                        <td><span class="item-price">۱,۵۰۰,۰۰۰ تومان</span></td>
+                        <td>
+                            <!-- این لِیبل به چک‌باکس بالا وصل است و نقش دکمه حذف را بازی میکند -->
+                            <label for="delete-item-1" class="delete-row-btn">&times;</label>
+                        </td>
+                    </tr>
+
+                    <!-- محصول دوم -->
+                    <tr class="cart-row-box">
+                        <input type="checkbox" id="delete-item-2" class="delete-trigger" hidden>
+                        <td>
+                            <div class="cart-page-item">
+                                <img src="../images/css.jpg" alt="دوره طراحی وب" class="cart-page-img">
+                                <div class="cart-page-title">
+                                    <h3>دوره طلایی طراحی وب با HTML و CSS</h3>
+                                </div>
+                            </div>
+                        </td>
+                        <td><span class="item-price">۸۵۰,۰۰۰ تومان</span></td>
+                        <td>
+                            <label for="delete-item-2" class="delete-row-btn">&times;</label>
+                        </td>
+                    </tr>
+
+                    <!-- محصول سوم -->
+                    <tr class="cart-row-box">
+                        <input type="checkbox" id="delete-item-3" class="delete-trigger" hidden>
+                        <td>
+                            <div class="cart-page-item">
+                                <img src="../images/react.webp" alt="دوره ری‌اکت" class="cart-page-img">
+                                <div class="cart-page-title">
+                                    <h3>دوره پیشرفته React و نود جی اس</h3>
+                                </div>
+                            </div>
+                        </td>
+                        <td><span class="item-price">۲,۱۰۰,۰۰۰ تومان</span></td>
+                        <td>
+                            <label for="delete-item-3" class="delete-row-btn">&times;</label>
+                        </td>
+                    </tr>
+                    </tbody>
+            </table>
+        </main>
+
+        <!-- ستون سمت چپ: مجموع مبالغ و کد تخفیف -->
+        <aside class="cart-sidebar">
+            <h3>خلاصه فاکتور</h3>
+            <div class="coupon-box">
+                <input type="text" class="coupon-input" placeholder="کد تخفیف...">
+                <button class="coupon-btn">اعمال</button>
+            </div>
+            <div class="checkout-row">
+                <span>قیمت دوره ها:</span>
+                <span id="subtotalPrice">۴,۴۵۰,۰۰۰ تومان</span>
+            </div>
+            <div class="checkout-row">
+                <span>تخفیف:</span>
+                <span style="color: #10b981;">۰ تومان</span>
+            </div>
+            <div class="checkout-row checkout-total">
+                <span>مبلغ قابل پرداخت:</span>
+                <span id="finalTotalPrice">۴,۴۵۰,۰۰۰ تومان</span>
+            </div>
+            <a href="#" class="checkout-btn">انتقال به درگاه پرداخت</a>
+        </aside>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
