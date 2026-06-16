@@ -1,28 +1,4 @@
-@import url('https://googleapis.com');
 
-:root {
-    --primary-color: #4f46e5;
-    --primary-hover: #4338ca;
-    --text-main: #1f2937;
-    --text-muted: #6b7280;
-    --bg-main: #f9fafb;
-    --bg-card: #ffffff;
-    --border-color: #f3f4f6;
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-    --transition: all 0.3s ease;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-color: var(--bg-main);
-    color: var(--text-main);
-    line-height: 1.6;
-}
 
 .container {
     max-width: 1200px;
@@ -63,7 +39,7 @@ body {
     padding: 2rem;
     text-align: center;
     box-shadow: var(--shadow);
-    border: 1px solidvar(--border-color);
+    border: 1px solid var(--border-color);
     transition: var(--transition);
     display: flex;
     flex-direction: column;
@@ -143,4 +119,19 @@ body {
 
 .view-profile-btn:hover {
     background-color: var(--primary-hover);
+}
+
+
+
+@media  (max-width: 400px){
+    .teachers-grid{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .container{
+        padding: 3rem 1rem;
+    }
 }
