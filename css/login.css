@@ -44,7 +44,7 @@
 }
 
 .auth-title {
-    color: var(--text-main);
+    color: var(--background);
     font-size: 26px;
     font-weight: 800;
     margin: 0 0 10px 0;
@@ -65,7 +65,7 @@
 
 .form-group label {
     display: block;
-    color: var(--text-main);
+    color: var(--background);
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 8px;
@@ -74,8 +74,8 @@
 .form-group input[type="email"],
 .form-group input[type="password"] {
     width: 100%;
-    background-color: var(--bg-main);
-    border: 1px solid var(--border-color);
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
     border-radius: 12px;
     padding: 14px 16px;
     font-size: 15px;
@@ -89,6 +89,16 @@
 .form-group input:focus {
     border-color: var(--primary-color);
     box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+@media (max-width: 400px){
+    .auth-card{
+        padding: 40px 21px;
+    }
+
+    .auth-wrapper{
+        padding: 10px;
+    }
 }
 
 /* ساختار نمایش چشم دکمه پسورد */
@@ -305,8 +315,8 @@
     box-sizing: border-box !important;
     
     /* کپی دقیق ویژگی‌های ظاهری فیلد ایمیل بالا */
-    background-color: var(--bg-main) !important;
-    border: 1px solid var(--border-color) !important;
+    background-color: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
     border-radius: 12px !important;
     padding: 14px 16px !important;
     padding-left: 45px !important; /* فضا برای آیکون چشم در سمت چپ */
@@ -362,8 +372,8 @@
        max-width: 100% !important;
        display: block !important;
        box-sizing: border-box !important;
-       background-color: var(--bg-main) !important;
-       border: 1px solid var(--border-color) !important;
+       background-color: #f8fafc !important;
+       border: 1px solid #e2e8f0 !important;
        border-radius: 12px !important;
        padding: 14px 16px !important;
        font-size: 15px !important;
