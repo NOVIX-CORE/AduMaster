@@ -8,7 +8,7 @@
 }
 
 .settings-section-card {
-    background-color: var(--bg-surface);
+    background-color: var(--bg-main);
     border: 1px solid var(--border-color);
     border-radius: 16px;
     padding: 25px;
@@ -161,4 +161,26 @@
 
 .password-btn:hover {
     background-color: #059669;
+}
+
+@media (max-width: 390px){
+    .input-group{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-action-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .settings-grid-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
