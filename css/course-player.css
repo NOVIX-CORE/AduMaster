@@ -72,7 +72,7 @@
 }
 
 .nav-video-btn {
-    background-color: var(--bg-surface);
+    background-color: var(--bg-main);
     border: 1px solid var(--border-color);
     color: var(--text-main);
     padding: 10px 20px;
@@ -91,7 +91,7 @@
 
 /* باکس توضیحات و تب‌ها */
 .session-details-box {
-    background-color: var(--bg-surface);
+    background-color: var(--bg-main);
     border: 1px solid var(--border-color);
     border-radius: 16px;
     padding: 25px;
@@ -186,7 +186,7 @@
    ========================================================================== */
    .player-sidebar-chapters {
     width: 320px;
-    background-color: var(--bg-surface);
+    background-color: var(--bg-main);
     border-right: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
@@ -305,4 +305,24 @@
 
 .attachment-item svg {
     color: var(--primary-color);
+}
+
+@media  (max-width: 520px){
+    .player-main-content{
+        padding: 12px;
+    }
+
+    .playing-course-title{
+        font-size: 15px;
+        margin-right: 1rem;
+    }
+
+    .exit-player-btn{
+        font-size: 11px;
+        display: flex;
+    }
+
+    .attachment-item{
+        flex-direction: column;
+    }
 }
