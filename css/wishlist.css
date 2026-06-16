@@ -8,7 +8,7 @@
 }
 
 .wish-card {
-    background-color: var(--bg-surface);
+    background-color: var(--bg-main);
     border: 1px solid var(--border-color);
     border-radius: 16px;
     overflow: hidden;
