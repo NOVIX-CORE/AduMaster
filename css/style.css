@@ -1,8 +1,9 @@
 /* ==========================================================================
    1. GLOBAL STYLES & VARIABLE DECLARATIONS
    ========================================================================== */
-   :root {
-    /* Light Theme Palette */
+
+:root {
+    /* Light Theme Palette (تم روشن شما) */
     --primary-color: #6366f1;
     --secondary-color: #4f46e5;
     --bg-main: #f8fafc;
@@ -14,12 +15,77 @@
     --font-family: "Shabnam", "Sahel", 'Vazirmatn', sans-serif;
 }
 
+/* پالت تم دارک جدید - سرمه‌ای عمیق و شیک */
+[data-theme="dark"] {
+    --primary-color: #6366f1;    /* بنفش/نیلی روشن برای کنتراست عالی */
+    --secondary-color: #4f46e5;  
+    --bg-main: #000026;          /* سرمه‌ای فوق‌العاده تیره برای پس‌زمینه کل صفحه */
+    --bg-surface: #ffffff;       /* سرمه‌ای مدیوم برای باکس‌ها و کارت‌های آموزشی */
+    --border-color: #3c3c3c;     /* رنگ خطوط هماهنگ با پس‌زمینه سرمه‌ای */
+    --text-main: #f8fafc;        /* سفید یخی برای متن‌های اصلی */
+    --text-muted: #94a3b8;       /* خاکستری-آبی برای متن‌های فرعی */
+    --background: #000026;
+}
+
+/* اعمال رنگ‌های متغیر به بدنه اصلی برای سوییچ نرم */
+body {
+    /* background-color: var(--bg-main);
+    color: var(--text-main); */
+    font-family: var(--font-family);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
 /* 
 
 Preloader 
 
 */
 
+/* ==========================================
+   Preloader Core Styles
+========================================== */
+#preloader, .preloader-overlay {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    z-index: -99999 !important;
+}
+
+.preloader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background); /* Uses your deep #000026 backdrop */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999; /* Forces preloader to stay on top of everything */
+    opacity: 1;
+    transition: opacity 0.5s ease; /* Matches the 500ms JavaScript timeout */
+    pointer-events: all;
+}
+
+.preloader-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid var(--border-color);
+    border-top: 4px solid var(--primary-color); /* Uses your #6366f1 accent color */
+    border-radius: 50%;
+    animation: spinLoader 1s linear infinite;
+}
+
+/* Spinner Rotation Keyframes */
+@keyframes spinLoader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 /* Dark Theme Palette Extensions */
 .dark-theme {
@@ -63,11 +129,12 @@ ul {
     padding: 0 20px;
 }
 
+
 /* ==========================================================================
    2. MAIN HEADER STYLES (DESKTOP)
    ========================================================================== */
 .main-header {
-    background-color: var(--bg-surface);
+    background-color: var(--bg-main);
     border-bottom: 1px solid var(--border-color);
     position: fixed;
     top: 0;
@@ -183,7 +250,7 @@ ul {
     display: block;
     padding: 10px 20px;
     font-size: 14px;
-    color: var(--text-main);
+    color: var(--background);
     transition: background 0.3s, color 0.3s;
 }
 
@@ -198,6 +265,275 @@ ul {
     align-items: center;
     gap: 15px;
 }
+
+/* استایل های سبد خرید */
+
+/* موقعیت‌دهی به والد برای کنترل باکس فرزند */
+.header-cart-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-icon-btn {
+    color: var(--text-main);
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* نشانگر دایره‌ای تعداد ترنزیشن‌ها */
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-family: var(--font-family);
+}
+
+/* باکس اصلی منوی کشویی سبد خرید */
+.mini-cart-dropdown {
+    position: absolute;
+    top: 130%;
+    left: 0; /* باز شدن به سمت چپ برای فونت‌های راست‌چین هدر */
+    width: 320px;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    z-index: 1000;
+    font-family: var(--font-family);
+    direction: rtl;
+    
+    /* حالت مخفی پیش‌فرض با انیمیشن نرم */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.25s ease;
+}
+
+/* جادوی هاور: وقتی روی والد قرار می‌گیریم، سبد خرید ظاهر می‌شود */
+.header-cart-wrapper:hover .mini-cart-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* والد اصلی آیکون و سبد خرید در هدر */
+.header-cart-wrapper {
+    position: relative !important; /* این خط حیاتی است تا باکس فرزند از این تگ خارج نشود */
+    display: inline-flex;
+    align-items: center;
+}
+
+.cart-icon-btn {
+    color: var(--text-main);
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 5px;
+}
+
+/* نشانگر تعداد*/
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ef4444; /* قرمز جذاب برای جلب توجه خریدار */
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 1px 5px;
+    border-radius: 10px;
+    line-height: 1;
+}
+
+/* باکس منوی کشویی سبد خرید */
+.mini-cart-dropdown {
+    position: absolute;
+    top: 100%; /* دقیقاً چسبیده به زیر آیکون */
+    left: 0; /* باز شدن به سمت چپ هدر */
+    width: 300px;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    z-index: 9999; /* بالاترین لایه تا روی تمام المان‌ها و بخش محبوب‌ترین‌ها بیفتد */
+    direction: rtl;
+    
+    /* حالت مخفی پیش‌فرض بدون اشغال فضا */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.2s ease-in-out;
+    /* جلوگیری از کش آمدن ناخواسته */
+    height: auto; 
+    pointer-events: none; /* وقتی مخفی است، کاربر نتواند روی آن کلیک کند */
+}
+
+/* نمایش منو هنگام هاور روی والد */
+.header-cart-wrapper:hover .mini-cart-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(5px);
+    pointer-events: auto; /* فعال شدن کلیک هنگام باز بودن */
+}
+
+/* جزئیات داخلی برای تمیزتر شدن ظاهر */
+.mini-cart-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.mini-cart-items {
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 5px 15px;
+}
+
+.mini-cart-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.mini-cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item-thumb {
+    width: 45px;
+    height: 45px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.cart-item-details h4 {
+    margin: 0 0 4px 0;
+    font-size: 0.8rem;
+    color: var(--text-main);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+}
+
+.cart-item-price {
+    font-size: 0.75rem;
+    color: #10b981; /* سبز قیمت */
+    font-weight: bold;
+}
+
+.remove-item-btn {
+    margin-right: auto;
+    background: none;
+    border: none;
+    color: #ef4444;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.mini-cart-footer {
+    padding: 15px;
+    border-top: 1px solid var(--border-color);
+}
+
+.cart-total-price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+}
+
+.go-to-cart-btn {
+    display: block;
+    text-align: center;
+    background-color: #2563eb; /* آبی یا رنگ برند شما */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* کدهای اورراید نهایی برای حل مشکل فضای خالی */
+.header-cart-wrapper {
+    position: relative !important;
+    display: inline-flex !important;
+    height: auto !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.mini-cart-dropdown {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    display: block !important; /* مطمئن شو فلکس یا گرید نیست */
+    float: none !important;
+    clear: both !important;
+}
+
+/* تعریف ابعاد و هویت واقعی به تگ لینک سبد خرید */
+.header-cart-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.cart-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--text-main);
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* بزرگ کردن ابعاد SVG برای پر کردن تگ لینک */
+.shopping-cart {
+    width: 24px !important; 
+    height: 24px !important; 
+    display: block !important;
+}
+
+/* استایل شیک و تمیز برای نشانگر تعداد */
+.cart-badge {
+    position: absolute !important;
+    top: 1px !important;
+    right: 1px !important;
+    background-color: #ef4444 !important;
+    color: #ffffff !important;
+    font-size: 0.7rem !important;
+    font-weight: 700 !important;
+    padding: 2px 6px !important;
+    border-radius: 50% !important;
+    line-height: 1 !important;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    -ms-border-radius: 50% !important;
+    -o-border-radius: 50% !important;
+}
+
+
+
 
 /* Search Interface Component */
 .search-box {
@@ -220,7 +556,7 @@ ul {
 }
 
 .search-box input:focus {
-    background-color: var(--bg-surface);
+    background-color: var(--bg-main);
     border-color: var(--primary-color);
     width: 200px;
 }
@@ -232,6 +568,7 @@ ul {
     border: none;
     cursor: pointer;
     font-size: 14px;
+    color: var(--text-main);
 }
 
 /* Theme Toggle Control Button */
@@ -310,16 +647,24 @@ ul {
 
 .student__svg{
     fill: var(--primary-color);
+    color: #101726;
+}
+
+.moon{
+    color: var(--text-main);
 }
 
 /* ==========================================================================
    3. RESPONSIVE DESIGN & MOBILE MENU (BREAKPOINTS)
    ========================================================================== */
-@media (max-width: 1100px) {
+@media  (max-width: 1100px){
     .header-actions .auth-buttons,
     .header-actions .search-box {
         display: none;
     }
+}
+
+@media (max-width: 800px) {
 
     .hamburger-btn {
         display: flex;
@@ -465,7 +810,7 @@ body[dir="ltr"] .dropdown-menu {
     font-size: 42px;
     font-weight: 800;
     line-height: 1.4;
-    color: var(--border-color);
+    color: var(--bg-surface);
     margin-bottom: 20px;
 }
 
@@ -501,7 +846,7 @@ body[dir="ltr"] .dropdown-menu {
 
 .btn-secondary-hero {
     background-color: transparent;
-    color: var(--bg-main);
+    color: var(--bg-surface);
     border: 1px solid var(--border-color);
     padding: 14px 30px;
     border-radius: 8px;
@@ -949,7 +1294,7 @@ body[dir="ltr"] .dropdown-menu {
     box-shadow: 0 4px 10px rgba(239, 68, 68, 0.3);
 }
 
-.course-content { padding: 22px; }
+.course-content { padding: 22px; color: var(--background);}
 
 /* بخش اطلاعات مدرس و امتیاز */
 .course-meta {
@@ -962,6 +1307,7 @@ body[dir="ltr"] .dropdown-menu {
     display: flex;
     align-items: center;
     gap: 8px;
+    color: var(--background);
 }
 .teacher-avatar {
     width: 28px;
@@ -971,7 +1317,7 @@ body[dir="ltr"] .dropdown-menu {
     background-position: center;
     border: 1px solid rgba(255,255,255,0.2);
 }
-.teacher-info a { font-size: 12px; color: var(--text-main); }
+.teacher-info a { font-size: 12px; color: var(--background); }
 
 .course-rating {
     display: flex;
@@ -1053,7 +1399,7 @@ body[dir="ltr"] .dropdown-menu {
 /* استایل کلی بخش دسته‌بندی */
 .categories-section {
     padding: 60px 20px;
-    background-color: #f8fafc;
+    background-color: var(--bg-main);
     direction: rtl;
 }
 
@@ -1065,7 +1411,7 @@ body[dir="ltr"] .dropdown-menu {
 .categories-title {
     text-align: center;
     font-size: 28px;
-    color: #1e293b;
+    color: var(--text-main);
     margin-bottom: 40px;
     font-weight: bold;
 }
@@ -1212,7 +1558,6 @@ body[dir="ltr"] .dropdown-menu {
     .stats-container {
         flex-direction: column;
         align-items: flex-start;
-        padding-right: 20%;
     }
     
     .stats-section{
@@ -1248,7 +1593,7 @@ body[dir="ltr"] .dropdown-menu {
 }
 
 .header-text h2 {
-    color: #0f172a;
+    color: var(--text-main);
     font-size: 26px;
     font-weight: bold;
     margin: 0;
@@ -1371,6 +1716,7 @@ body[dir="ltr"] .dropdown-menu {
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.4;
+    color: var(--bg-surface);
 }
 
 .cta-content p {
@@ -1630,6 +1976,23 @@ body[dir="ltr"] .dropdown-menu {
     box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
 }
 
+@media (max-width: 360px){
+    .blog-grid{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .blog-card{
+        width: 18rem;
+    }
+
+    .pagination{
+        padding: 10px 8px !important;
+    }
+}
+
 /* 
 =====================
 استایل کلی بخش نظرات 
@@ -1670,11 +2033,11 @@ body[dir="ltr"] .dropdown-menu {
 /* ردیف افقی کارت‌ها با قابلیت اسکرول نرم */
 .testimonials-row {
     display: flex;
-    gap: 30px;
-    overflow-x: auto;
     padding: 20px 10px 30px 10px;
-    scroll-behavior: smooth;
-    scrollbar-width: none; /* حذف نوار اسکرول در فایرفاکس */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
 }
 
 /* حذف نوار اسکرول در کروم و سافاری */
@@ -1708,7 +2071,7 @@ body[dir="ltr"] .dropdown-menu {
 
 /* متن کامنت کاربر */
 .comment {
-    color: var(--text-main);
+    color: var(--background);
     font-size: 15px;
     line-height: 1.7;
     margin-bottom: 25px;
@@ -1752,7 +2115,7 @@ body[dir="ltr"] .dropdown-menu {
 }
 
 .name {
-    color: var(--text-main);
+    color: var(--background);
     font-size: 16px;
     font-weight: 700;
     margin: 0;
@@ -1769,6 +2132,7 @@ body[dir="ltr"] .dropdown-menu {
     justify-content: center;
     gap: 15px;
     margin-top: 30px;
+    display: none;
 }
 
 .control-btn {
@@ -1878,7 +2242,7 @@ body[dir="ltr"] .dropdown-menu {
 /* استایل‌های اصلی فوتر سایت */
 .main-footer {
     background-color: var(--background); /* استفاده از رنگ سورمه‌ای تیره روت شما */
-    color: #ffffff;
+    color: var(--bg-surface);
     padding: 80px 0 30px 0;
     font-family: var(--font-family);
     position: relative;
@@ -1896,11 +2260,11 @@ body[dir="ltr"] .dropdown-menu {
     grid-template-columns: 2fr 1fr 1fr 1fr 2fr; /* ستون‌های کناری بزرگتر از ستون‌های منو هستند */
     gap: 40px;
     padding-bottom: 60px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08); /* خط جداکننده باریک */
+    border-bottom: 1px solid var(--border-color); /* خط جداکننده باریک */
 }
 
 .footer-column h4 {
-    color: #ffffff;
+    color: var(--bg-surface);
     font-size: 18px;
     font-weight: 700;
     margin-top: 0;
@@ -1941,13 +2305,14 @@ body[dir="ltr"] .dropdown-menu {
 .brand-column .logo-icon {
     width: 32px;
     height: 32px;
-    color: #ffffff;
+    color: var(--bg-surface);
 }
 
 .brand-column h3 {
     font-size: 22px;
     font-weight: 800;
     margin: 0;
+    color: var(--bg-surface);
 }
 
 .brand-desc {
@@ -1971,7 +2336,7 @@ body[dir="ltr"] .dropdown-menu {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
+    color: var(--text-main);
     transition: all 0.3s ease;
 }
 
@@ -1996,7 +2361,7 @@ body[dir="ltr"] .dropdown-menu {
 .newsletter-form {
     display: flex;
     background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-color);
     border-radius: 30px; /* دکمه و اینپوت بیضی شکل مطابق عکس */
     padding: 4px;
     max-width: 340px;
@@ -2057,7 +2422,7 @@ body[dir="ltr"] .dropdown-menu {
 
 .payment-card {
     background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-color);
     border-radius: 6px;
     padding: 4px 12px;
     font-size: 11px;
@@ -2203,7 +2568,7 @@ body[dir="ltr"] .dropdown-menu {
     font-family: var(--font-family);
     font-size: 16px;
     font-weight: 700;
-    color: var(--text-main);
+    color: var(--background);
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -2280,7 +2645,7 @@ body[dir="ltr"] .dropdown-menu {
 }
 
 .filter-mobile-accordion {
-    background: var(--bg-surface);
+    background: var(--bg-main);
     border-radius: 20px;
     padding: 25px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
@@ -2355,7 +2720,7 @@ body[dir="ltr"] .dropdown-menu {
     align-items: center;
     gap: 20px;
     margin-bottom: 30px;
-    background: var(--bg-surface);
+    background: var(--bg-main);
     padding: 15px 25px;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
@@ -2389,7 +2754,7 @@ body[dir="ltr"] .dropdown-menu {
     font-family: var(--font-family);
     outline: none;
     cursor: pointer;
-    background-color: var(--bg-surface);
+    background-color: var(--bg-main);
 }
 
 /* --- ۳. شبکه کارت‌ها و جزئیات جدید کارت‌ها --- */
@@ -2471,7 +2836,7 @@ body[dir="ltr"] .dropdown-menu {
 
 .course-card-body h3 {
     font-size: 16px;
-    color: var(--text-main);
+    color: var(--background);
     margin-bottom: 8px;
     line-height: 1.5;
 }
@@ -2513,7 +2878,7 @@ body[dir="ltr"] .dropdown-menu {
 .teacher-name {
     font-size: 13px;
     font-weight: bold;
-    color: var(--text-main);
+    color: var(--background);
 }
 
 .teacher-title {
@@ -2544,7 +2909,7 @@ body[dir="ltr"] .dropdown-menu {
 
 .price {
     font-weight: bold;
-    color: var(--text-main);
+    color: var(--background);
     font-size: 15px;
 }
 
@@ -2576,7 +2941,7 @@ body[dir="ltr"] .dropdown-menu {
     align-items: center;
     gap: 20px;
     margin-bottom: 30px;
-    background: var(--bg-surface);
+    background: var(--bg-main);
     padding: 15px 25px;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
@@ -2610,7 +2975,7 @@ body[dir="ltr"] .dropdown-menu {
     font-family: var(--font-family);
     outline: none;
     cursor: pointer;
-    background-color: var(--bg-surface);
+    background-color: var(--bg-main);
     transition: border-color 0.2s ease;
 }
 
@@ -2623,6 +2988,7 @@ body[dir="ltr"] .dropdown-menu {
     .courses-page-container {
         flex-direction: column; /* چیدمان ستونی فیلتر و محتوا */
         padding: 20px 4%;
+        padding-top: 7rem;
     }
 
     .filters-sidebar {
@@ -2643,6 +3009,19 @@ body[dir="ltr"] .dropdown-menu {
         flex-direction: column;
         align-items: stretch;
         padding: 15px;
+    }
+}
+
+@media  (max-width: 370px){
+    .courses-grid{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #courseSearch{
+        padding: 12px 0px;
     }
 }
 
@@ -2705,7 +3084,7 @@ body[dir="ltr"] .dropdown-menu {
     border-radius: 10px;
     font-size: 14px;
     font-weight: bold;
-    color: var(--text-main);
+    color: var(--background);
     text-decoration: none;
     transition: all 0.2s ease;
     border: 1px solid transparent;
@@ -2946,6 +3325,37 @@ body[dir="ltr"] .dropdown-menu {
     }
 }
 
+/* تنظیم خودکار تمام آیکون‌های SVG سایت */
+.svg-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.svg-icon svg {
+    width: 15px; /* سایز استاندارد برای اکثر آیکون‌ها */
+    height: 15px;
+    stroke: currentColor; /* جادوی CSS: رنگ آیکون خودکار همرنگ متن شما می‌شود! */
+    fill: none; /* جلوگیری از پر شدن ناخواسته داخل آیکون */
+}
+
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    left: 30px; /* اگر چیدمان سایت راست‌چین است، سمت چپ بهترین جاست */
+    z-index: 9999;
+    cursor: pointer;
+    
+    /* حالت پیش‌فرض مخفی با قابلیت انیمیشن ترنزیشن */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+
+
 
 
 
@@ -2995,18 +3405,12 @@ body{
     background: var(--secondary-color) !important; /* تیره شدن بنفش هنگام هاور */
 }
 
-/* ---فونت ها--- */
-
-@font-face {
-    font-family: 'sahel';
-    src: url('../font/Sahel-Black.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
+/* ---فونت --- */
 
 @font-face {
     font-family: 'shabnam';
-    src: url('../font/Shabnam-Medium-FD.ttf') format('truetype');
+    src: url('../font/Shabnam.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
+
