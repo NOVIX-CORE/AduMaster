@@ -1,0 +1,148 @@
+.cart-page-container {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: var(--font-family);
+}
+.cart-main {
+    flex: 3;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 25px;
+}
+.cart-sidebar {
+    flex: 1;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 25px;
+    height: fit-content;
+}
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart-table th {
+    text-align: right;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+.cart-table td {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+.cart-page-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.cart-page-img {
+    width: 80px;
+    height: 50px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+.cart-page-title h3 {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+.coupon-box {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.coupon-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    border-radius: 6px;
+}
+.coupon-btn {
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.checkout-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: var(--text-main);
+}
+.checkout-total {
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.checkout-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.delete-row-btn {
+    background: none;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+@media (max-width: 768px) {
+    .cart-page-container { flex-direction: column; }
+}
+
+@media (max-width: 768px) {
+    .cart-page-container { 
+        flex-direction: column; 
+    }
+}
+
+
+
+/* ترفند حذف ردیف بدون جاوااسکریپت */
+.cart-row-box {
+    display: table-row;
+}
+
+/* وقتی چک‌باکس مخفی تیک می‌خورد، تمام خواهر و برادرهای تگ td در آن ردیف ناپدید می‌شوند */
+.delete-trigger:checked ~ td {
+    display: none;
+}
+
+/* استایل دکمه ضربدر حذف */
+.delete-row-btn {
+    font-size: 1.6rem;
+    color: #ef4444;
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.2s;
+    user-select: none;
+}
+
+.delete-row-btn:hover {
+    color: #dc2626;
+    transform: scale(1.2);
+}
+
+
+

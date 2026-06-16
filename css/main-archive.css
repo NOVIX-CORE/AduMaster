@@ -1,0 +1,227 @@
+/* ==========================================================================
+   Isolated & Responsive Blog Article Design (No Margin Collapse / Full Layout Fix)
+   ========================================================================== */
+.main-header{
+    top: -100px;
+}
+
+.main-nav{
+    top: -19px;
+}
+
+/* باکس اصلی با حاشیه امن برای هدر */
+.blog-article-container {
+    max-width: 840px;
+    width: 90%;
+    /* تغییر مارجین تاپ به پدینگ برای جلوگیری از پایین کشیدن هدر سایت */
+    margin: 100px auto 50px auto;
+    padding: 35px;
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-sizing: border-box; /* جلوگیری از بیرون‌زدگی سایز باکس */
+}
+
+/* حل تداخل با ایجاد یک فاصله داخلی امن بالای مقاله */
+.blog-article-container::before {
+    content: "";
+    display: block;
+    height: 15px;
+}
+
+/* سربرگ مقاله */
+.blog-main-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--text-main);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.blog-meta-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 25px;
+}
+
+.blog-author-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.blog-author-img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.blog-author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-author-name {
+    color: var(--text-main);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.blog-author-title {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.blog-meta-badges {
+    display: flex;
+    gap: 10px;
+}
+
+.blog-badge-item {
+    background-color: var(--bg-main);
+    color: var(--text-muted);
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    border: 1px solid var(--border-color);
+}
+
+/* باکس‌های تصاویر */
+.blog-main-cover, .blog-body-image-holder {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.blog-cover-img, .blog-body-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* تایپوگرافی متن اصلی */
+.blog-rich-text {
+    color: var(--text-main);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    text-align: justify;
+}
+
+.blog-rich-text p {
+    margin-bottom: 20px;
+}
+
+/* جدول ریسپانسیو موبایل */
+.blog-table-scroll-area {
+    width: 100%;
+    overflow-x: auto;
+    margin: 30px 0;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.blog-custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    min-width: 500px;
+}
+
+.blog-custom-table th {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-weight: 700;
+    padding: 12px;
+    text-align: right;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.blog-custom-table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.blog-td-bold {
+    font-weight: 700;
+}
+
+.blog-status-pill {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.blog-status-pill.danger-pill { background-color: #fee2e2; color: #ef4444; }
+.blog-status-pill.primary-pill { background-color: #e0e7ff; color: var(--primary-color); }
+
+
+
+/* گرید مقالات مرتبط ۴ گزینه‌ای کاملاً مدرن و منعطف */
+.blog-cards-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 15px;
+    padding: 40px;
+}
+
+.blog-cards-grid-layout:hover{
+    background-color: var(--bg-main);
+}
+
+.blog-link-card-item {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 160px;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.blog-card-category {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.blog-link-card-item h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.4;
+    margin: 10px 0;
+}
+
+.blog-card-btn-text {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.blog-link-card-item:hover {
+    border-color: var(--primary-color);
+    background-color: var(--bg-main);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+/* مدیا کوئری‌ها برای واکنش‌گرایی ۱۰۰٪ در موبایل */
+@media (max-width: 768px) {
+    .blog-article-container { padding: 18px; width: 92%; margin-bottom: 30px; }
+    .blog-main-title { font-size: 1.45rem; }
+    .blog-meta-wrapper { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .blog-cards-grid-layout { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); padding: 15px;}
+}
