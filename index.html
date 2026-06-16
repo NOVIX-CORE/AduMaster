@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,24 +9,24 @@
     <link href="https://jsdelivr.net" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <!-- Preloader  -->
 
-    <div id="preloader">
-        <div class="loader-circle"></div>
-    
-        <div class="loader-logo">
-            EduMaster
-        </div>
+    <!-- Main Site Preloader Overlay -->
+    <div id="preloader" class="preloader-overlay">
+        <div class="preloader-spinner"></div>
     </div>
+
+
 
     <!-- ==========================================
        START: HEADER SECTION
        ========================================== -->
     <header class="main-header">
         <div class="container header-container">
-            
+
             <!-- Mobile Menu Toggle & Logo -->
             <div class="logo-area">
                 <input type="checkbox" id="menu-toggle" class="menu-checkbox">
@@ -37,13 +38,15 @@
 
                 <div class="logo">
                     <a href="index.html">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="student__svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="student__svg">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
                         </svg>
                         <span class="logo-text">Edu<span>Master</span></span>
                     </a>
                 </div>
-                
+
                 <!-- Main Navigation Menu -->
                 <nav class="main-nav">
                     <ul class="nav-list">
@@ -51,7 +54,7 @@
                         <li><a href="#courses-section" class="nav-link">دوره‌ها</a></li>
                         <li><a href="#instructors-section" class="nav-link">اساتید</a></li>
                         <li><a href="#blog-section" class="nav-link">وبلاگ</a></li>
-                        
+
                         <!-- Pages Dropdown Menu -->
                         <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle">صفحات <span class="arrow-down"></span></a>
@@ -87,22 +90,73 @@
                 </div>
 
                 <!-- Dark Mode Toggle Button -->
-                <button class="theme-toggle-btn" aria-label="Toggle Theme">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="moon">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
-                    </svg>                      
+                <button class="theme-toggle-btn" aria-label="Toggle Theme" id="themeToggleBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" id="themeIcon" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" class="moon">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                    </svg>
                 </button>
 
-                <!-- Shopping Cart Component -->
-                <a href="cart.html" class="cart-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="shopping-cart" style="width: 25px;">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-                    </svg>                      
-                </a>
+                <!-- والد اصلی سبد خرید در هدر -->
+                <div class="header-cart-wrapper">
+
+                    <a href="pages/cart.html" class="cart-icon-btn" id="cartToggleBtn">
+                        <!-- Shopping Cart Component -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="shopping-cart" style="width: 25px;">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                            </svg>
+                        <!-- نشانگر تعداد آیتم‌های سبد خرید -->
+                        <span class="cart-badge">۲</span>
+                    </a>
+
+                    <!-- باکس مینی سبد خرید که با هاور یا کلیک باز می‌شود -->
+                    <div class="mini-cart-dropdown">
+                        <div class="mini-cart-header">
+                            <span>سبد خرید شما</span>
+                            <span class="clear-cart-text">حذف همه</span>
+                        </div>
+
+                        <!-- لیست دوره‌های خریداری شده -->
+                        <div class="mini-cart-items">
+                            <!-- آیتم اول -->
+                            <div class="mini-cart-item">
+                                <img src="images/js.png" alt="دوره" class="cart-item-thumb" loading="lazy">
+                                <div class="cart-item-details">
+                                    <h4>آموزش جامع جاوااسکریپت ۲۰۲۶</h4>
+                                    <span class="cart-item-price">۴۵۰,۰۰۰ تومان</span>
+                                </div>
+                                <button class="remove-item-btn">&times;</button>
+                            </div>
+
+                            <!-- آیتم دوم -->
+                            <div class="mini-cart-item">
+                                <img src="images/css.jpg" alt="دوره" class="cart-item-thumb" loading="lazy">
+                                <div class="cart-item-details">
+                                    <h4>متدهای پیشرفته CSS Grid</h4>
+                                    <span class="cart-item-price">۲۹۰,۰۰۰ تومان</span>
+                                </div>
+                                <button class="remove-item-btn">&times;</button>
+                            </div>
+                        </div>
+
+                        <!-- بخش فوتر سبد خرید (مجموع قیمت و دکمه‌ها) -->
+                        <div class="mini-cart-footer">
+                            <div class="cart-total-price">
+                                <span>جمع کل:</span>
+                                <strong>۷۴۰,۰۰۰ تومان</strong>
+                            </div>
+                            <a href="pages/cart.html" class="go-to-cart-btn">مشاهده و تسویه حساب</a>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Authentication Buttons -->
                 <div class="auth-buttons">
-                    <a href="login.html" class="btn-login">ورود</a>
-                    <a href="register.html" class="btn-signup">ثبت نام</a>
+                    <a href="pages/login.html" class="btn-login">ورود</a>
+                    <a href="pages/register.html" class="btn-signup">ثبت نام</a>
                 </div>
             </div>
 
@@ -112,991 +166,1164 @@
        END: HEADER SECTION
        ========================================== -->
 
-       
-<main style="transition: all 300ms ease;">
-<!-- ==========================================
+
+    <main style="transition: all 300ms ease;">
+        <!-- ==========================================
        START: HERO SECTION
        ========================================== -->
-       <section class="hero-section">
-        <div class="container hero-container">
-            
-            <!-- Hero Content Area (Right Side) -->
-            <div class="hero-content">
-                <span class="hero-badge">🚀 پلتفرم تخصصی آموزش آنلاین</span>
-                <h1 class="hero-title">آینده خود را با یادگیری مهارت‌های جدید بسازید</h1>
-                <p class="hero-description">
-                    دسترسی به بیش از ۱۰۰۰ دوره آموزشی تخصصی در زمینه‌های برنامه نویسی، گرافیک، کسب و کار و زبان‌های خارجی با تدریس برترین اساتید کشور.
-                </p>
-                
-                <!-- Action Buttons -->
-                <div class="hero-actions">
-                    <a href="courses.html" class="btn-primary-hero">مشاهده دوره‌ها</a>
-                    <a href="about.html" class="btn-secondary-hero">مشاوره رایگان</a>
+        <section class="hero-section">
+            <div class="container hero-container">
+
+                <!-- Hero Content Area (Right Side) -->
+                <div class="hero-content">
+                    <span class="hero-badge">🚀 پلتفرم تخصصی آموزش آنلاین</span>
+                    <h1 class="hero-title">آینده خود را با یادگیری مهارت‌های جدید بسازید</h1>
+                    <p class="hero-description">
+                        دسترسی به بیش از ۱۰۰۰ دوره آموزشی تخصصی در زمینه‌های برنامه نویسی، گرافیک، کسب و کار و زبان‌های
+                        خارجی با تدریس برترین اساتید کشور.
+                    </p>
+
+                    <!-- Action Buttons -->
+                    <div class="hero-actions">
+                        <a href="pages/courses.html" class="btn-primary-hero">مشاهده دوره‌ها</a>
+                        <a href="pages/about.html" class="btn-secondary-hero">مشاوره رایگان</a>
+                    </div>
+
+                </div>
+
+                <!-- Hero Graphic/Image Area (Left Side) -->
+                <div class="hero-image-area" loading="lazy">
+                    <div class="hero-graphics-wrapper">
+
+                        <!-- اشکال هندسی پس‌زمینه برای پنهان کردن مرز عکس‌ها -->
+                        <div class="bg-shape-circle"></div>
+                        <div class="bg-shape-pulse"></div>
+
+                        <!-- کارت شناور بالا: امتیاز -->
+                        <div class="floating-card card-rating">
+                            <div class="card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="star">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+                                </svg>
+                            </div>
+                            <div class="card-info">
+                                <span class="card-num">۴.۸</span>
+                                <span class="card-txt">رضایت دانشجویان</span>
+                            </div>
+                        </div>
+
+                        <!-- کارت شناور راست: تعداد دوره‌ها -->
+                        <div class="floating-card card-courses">
+                            <div class="card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="student__svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                                </svg>
+                            </div>
+                            <div class="card-info">
+                                <span class="card-num">+۱۰,۰۰۰</span>
+                                <span class="card-txt">دوره آموزشی</span>
+                            </div>
+                        </div>
+
+                        <!-- المان ویدیو/پخش -->
+                        <div class="floating-play-btn">
+                            <span class="play-icon">▶</span>
+                        </div>
+
+                        <!-- تصویر اصلی استاد (وسط) -->
+                        <div class="main-instructor-img">
+                            <img src="images/student1.webp" alt="استاد اصلی" loading="lazy">
+                        </div>
+
+                        <!-- تصویر فرعی ۱ (سمت راست - دختر) -->
+                        <div class="sub-instructor-img img-left">
+                            <img src="images/student2.webp" alt="مدرس" loading="lazy">
+                        </div>
+
+                        <!-- تصویر فرعی ۲ (پایین - کار با لپ‌تاپ) -->
+                        <div class="sub-instructor-img img-bottom">
+                            <img src="images/student3.webp" alt="یادگیری آنلاین" loading="lazy">
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
-
-<!-- Hero Graphic/Image Area (Left Side) -->
-<div class="hero-image-area">
-    <div class="hero-graphics-wrapper">
-        
-        <!-- اشکال هندسی پس‌زمینه برای پنهان کردن مرز عکس‌ها -->
-        <div class="bg-shape-circle"></div>
-        <div class="bg-shape-pulse"></div>
-
-        <!-- کارت شناور بالا: امتیاز -->
-        <div class="floating-card card-rating">
-            <div class="card-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="star">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-                </svg>                  
-            </div>
-            <div class="card-info">
-                <span class="card-num">۴.۸</span>
-                <span class="card-txt">رضایت دانشجویان</span>
-            </div>
-        </div>
-
-        <!-- کارت شناور راست: تعداد دوره‌ها -->
-        <div class="floating-card card-courses">
-            <div class="card-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="student__svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
-                </svg>                  
-            </div>
-            <div class="card-info">
-                <span class="card-num">+۱۰,۰۰۰</span>
-                <span class="card-txt">دوره آموزشی</span>
-            </div>
-        </div>
-
-        <!-- المان ویدیو/پخش -->
-        <div class="floating-play-btn">
-            <span class="play-icon">▶</span>
-        </div>
-
-        <!-- تصویر اصلی استاد (وسط) -->
-        <div class="main-instructor-img">
-            <img src="images/student1.webp" alt="استاد اصلی">
-        </div>
-
-        <!-- تصویر فرعی ۱ (سمت راست - دختر) -->
-        <div class="sub-instructor-img img-left">
-            <img src="images/student2.webp" alt="مدرس">
-        </div>
-
-        <!-- تصویر فرعی ۲ (پایین - کار با لپ‌تاپ) -->
-        <div class="sub-instructor-img img-bottom">
-            <img src="images/student3.webp" alt="یادگیری آنلاین">
-        </div>
-
-    </div>
-</div>
-
-        </div>
-    </section>
-    <!-- ==========================================
+        </section>
+        <!-- ==========================================
        END: HERO SECTION
        ========================================== -->
 
         <!-- Section 2: Features/Stats -->
-    <section class="features-section">
-        <div class="features-container">
+        <section class="features-section">
+            <div class="features-container">
 
-            <!-- کارت ویژگی ۱: اساتید مجرب -->
-            <div class="feature-card">
-                <div class="feature-icon-box">
-                    <!-- آیکون سبک SVG داخلی بدون افت سرعت -->
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                <!-- کارت ویژگی ۱: اساتید مجرب -->
+                <div class="feature-card">
+                    <div class="feature-icon-box">
+                        <!-- آیکون سبک SVG داخلی بدون افت سرعت -->
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <div class="feature-info">
+                        <h3>اساتید با‌تجربه</h3>
+                        <p>یادگیری زیر نظر برترین متخصصین بازار کار</p>
+                    </div>
                 </div>
-                <div class="feature-info">
-                    <h3>اساتید با‌تجربه</h3>
-                    <p>یادگیری زیر نظر برترین متخصصین بازار کار</p>
+
+                <!-- کارت ویژگی ۲: مدرک معتبر -->
+                <div class="feature-card">
+                    <div class="feature-icon-box">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <div class="feature-info">
+                        <h3>تضمین کیفیت و مدرک</h3>
+                        <p>ارائه گواهی معتبر پایان دوره آموزشی</p>
+                    </div>
                 </div>
+
+                <!-- کارت ویژگی ۳: دسترسی همیشگی -->
+                <div class="feature-card">
+                    <div class="feature-icon-box">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <div class="feature-info">
+                        <h3>دسترسی مادام‌العمر</h3>
+                        <p>هر زمان و هر کجا که خواستید آموزش ببینید</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 3: Professional Courses Slider -->
+        <section class="courses-section" id="courses-section">
+            <div class="courses-header">
+                <div class="header-right">
+                    <h2>دوره‌های آموزشی محبوب</h2>
+                    <p>جدیدترین و پرمخاطب‌ترین دوره‌های بازار کار</p>
+                </div>
+                <!-- لینک آرشیو محصولات -->
+                <a href="pages/courses.html" class="view-all-btn">
+                    مشاهده همه دوره‌ها
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                </a>
             </div>
 
-            <!-- کارت ویژگی ۲: مدرک معتبر -->
-            <div class="feature-card">
-                <div class="feature-icon-box">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <!-- باکس نمایش اسلایدر همراه با دکمه‌های ناوبری دستی -->
+            <div class="slider-container">
+                <button class="slider-nav-btn prev-btn" id="prevBtn" aria-label="قبلی" style="display: none;">❮</button>
+                <div class="slider-wrapper">
+                    <div class="courses-slider" id="coursesSlider">
+
+                        <!-- کارت دوره ۱ -->
+                        <div class="course-card">
+                            <div class="course-thumb" style="background-image: url('images/react.webp');">
+                                <div class="badge discount-badge">۳۰٪ تخفیف</div>
+                            </div>
+                            <div class="course-content">
+                                <div class="course-meta">
+                                    <!-- پروفایل و نام مدرس -->
+                                    <div class="teacher-info">
+                                        <div class="teacher-avatar"
+                                            style="background-image: url('images/teacher4.webp');"></div>
+                                        <a href="pages/teacher-profile.html">استاد محمدی</a>
+                                    </div>
+                                    <!-- امتیاز دوره -->
+                                    <div class="course-rating">
+                                        <span>۴.۹</span>
+                                        <svg class="star-icon" width="14" height="14" viewBox="0 0 24 24"
+                                            fill="currentColor">
+                                            <polygon
+                                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                            </polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a href="#">دوره جامع فرانت‌اند (React/Next.js)</a>
+                                <p>ورود به بازار کار بین‌المللی با یادگیری مدرن‌ترین فریم‌ورک‌ها</p>
+                                <div class="course-footer">
+                                    <div class="price-box">
+                                        <span class="old-price">۶,۴۰۰,۰۰۰</span>
+                                        <span class="price">۴,۵۰۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <button class="enroll-btn"><a href="pages/single-course.html">ثبت نام</a></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- کارت دوره ۲ -->
+                        <div class="course-card">
+                            <div class="course-thumb" style="background-image: url('images/js.png');">
+                                <div class="badge discount-badge">۲۰٪ تخفیف</div>
+                            </div>
+                            <div class="course-content">
+                                <div class="course-meta">
+                                    <div class="teacher-info">
+                                        <div class="teacher-avatar"
+                                            style="background-image: url('images/teacher3.webp');"></div>
+                                        <a href="pages/teacher-profile.html">مهندس علوی</a>
+                                    </div>
+                                    <div class="course-rating">
+                                        <span>۴.۸</span>
+                                        <svg class="star-icon" width="14" height="14" viewBox="0 0 24 24"
+                                            fill="currentColor">
+                                            <polygon
+                                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                            </polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a href="#">آموزش کامل جاوااسکریپت و الگوریتم</a>
+                                <p>از صفر مطلق تا پیشرفته‌ترین مفاهیم فرانت‌اند و بک‌اند</p>
+                                <div class="course-footer">
+                                    <div class="price-box">
+                                        <span class="old-price">۳,۶۰۰,۰۰۰</span>
+                                        <span class="price">۲,۹۰۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <button class="enroll-btn"><a href="pages/single-course.html">ثبت نام</a></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- کارت دوره ۳ -->
+                        <div class="course-card">
+                            <div class="course-thumb" style="background-image: url('images/UI\ and\ UX.webp');">
+                                <div class="badge discount-badge">۱۵٪ تخفیف</div>
+                            </div>
+                            <div class="course-content">
+                                <div class="course-meta">
+                                    <div class="teacher-info">
+                                        <div class="teacher-avatar"
+                                            style="background-image: url('images/teacher1\ \(1\).webp');"></div>
+                                        <a href="pages/teacher-profile.html">خانم راد</a>
+                                    </div>
+                                    <div class="course-rating">
+                                        <span>۵.۰</span>
+                                        <svg class="star-icon" width="14" height="14" viewBox="0 0 24 24"
+                                            fill="currentColor">
+                                            <polygon
+                                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                            </polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a href="#">طراحی رابط کاربری UI/UX با Figma</a>
+                                <p>اصول طراحی اپلیکیشن و وب‌سایت‌های کاربرپسند و ترند</p>
+                                <div class="course-footer">
+                                    <div class="price-box">
+                                        <span class="old-price">۳,۷۰۰,۰۰۰</span>
+                                        <span class="price">۳,۲۰۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <button class="enroll-btn"><a href="pages/single-course.html">ثبت نام</a></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- کارت دوره ۴ -->
+                        <div class="course-card">
+                            <div class="course-thumb" style="background-image: url('images/python.jpg');">
+                                <div class="badge discount-badge">۲۵٪ تخفیف</div>
+                            </div>
+                            <div class="course-content">
+                                <div class="course-meta">
+                                    <div class="teacher-info">
+                                        <div class="teacher-avatar"
+                                            style="background-image: url('images/teacher2.webp');"></div>
+                                        <a href="pages/teacher-profile.html">دکتر اکبری</a>
+                                    </div>
+                                    <div class="course-rating">
+                                        <span>۴.۷</span>
+                                        <svg class="star-icon" width="14" height="14" viewBox="0 0 24 24"
+                                            fill="currentColor">
+                                            <polygon
+                                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                            </polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a href="#">دوره برنامه‌نویسی پایتون و هوش مصنوعی</a>
+                                <p>ورود به دنیای تحلیل داده، یادگیری ماشین و اتوماسیون</p>
+                                <div class="course-footer">
+                                    <div class="price-box">
+                                        <span class="old-price">۶,۸۰۰,۰۰۰</span>
+                                        <span class="price">۵,۱۰۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <button class="enroll-btn"><a href="pages/single-course.html">ثبت نام</a></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- کارت دوره 5 -->
+                        <div class="course-card">
+                            <div class="course-thumb" style="background-image: url('images/AI.webp');">
+                                <div class="badge discount-badge">۲۵٪ تخفیف</div>
+                            </div>
+                            <div class="course-content">
+                                <div class="course-meta">
+                                    <div class="teacher-info">
+                                        <div class="teacher-avatar"
+                                            style="background-image: url('images/teacher2.webp');"></div>
+                                        <a href="pages/teacher-profile.html">دکتر اکبری</a>
+                                    </div>
+                                    <div class="course-rating">
+                                        <span>۴.۷</span>
+                                        <svg class="star-icon" width="14" height="14" viewBox="0 0 24 24"
+                                            fill="currentColor">
+                                            <polygon
+                                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                            </polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a href="#">دوره برنامه‌نویسی پایتون و هوش مصنوعی</a>
+                                <p>ورود به دنیای تحلیل داده، یادگیری ماشین و اتوماسیون</p>
+                                <div class="course-footer">
+                                    <div class="price-box">
+                                        <span class="old-price">۶,۸۰۰,۰۰۰</span>
+                                        <span class="price">۵,۱۰۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <button class="enroll-btn"><a href="pages/single-course.html">ثبت نام</a></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- کارت دوره 6 -->
+                        <div class="course-card">
+                            <div class="course-thumb" style="background-image: url('images/AI.webp');">
+                                <div class="badge discount-badge">۲۵٪ تخفیف</div>
+                            </div>
+                            <div class="course-content">
+                                <div class="course-meta">
+                                    <div class="teacher-info">
+                                        <div class="teacher-avatar"
+                                            style="background-image: url('images/teacher2.webp');"></div>
+                                        <a href="pages/teacher-profile.html">دکتر اکبری</a>
+                                    </div>
+                                    <div class="course-rating">
+                                        <span>۴.۷</span>
+                                        <svg class="star-icon" width="14" height="14" viewBox="0 0 24 24"
+                                            fill="currentColor">
+                                            <polygon
+                                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                            </polygon>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <a href="#">دوره برنامه‌نویسی پایتون و هوش مصنوعی</a>
+                                <p>ورود به دنیای تحلیل داده، یادگیری ماشین و اتوماسیون</p>
+                                <div class="course-footer">
+                                    <div class="price-box">
+                                        <span class="old-price">۶,۸۰۰,۰۰۰</span>
+                                        <span class="price">۵,۱۰۰,۰۰۰ تومان</span>
+                                    </div>
+                                    <button class="enroll-btn"><a href="pages/single-course.html">ثبت نام</a></button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="feature-info">
-                    <h3>تضمین کیفیت و مدرک</h3>
-                    <p>ارائه گواهی معتبر پایان دوره آموزشی</p>
-                </div>
+                <button class="slider-nav-btn next-btn" id="nextBtn" aria-label="بعدی" style="display: none;">❯</button>
             </div>
-
-            <!-- کارت ویژگی ۳: دسترسی همیشگی -->
-            <div class="feature-card">
-                <div class="feature-icon-box">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                </div>
-                <div class="feature-info">
-                    <h3>دسترسی مادام‌العمر</h3>
-                    <p>هر زمان و هر کجا که خواستید آموزش ببینید</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Section 3: Professional Courses Slider -->
-    <section class="courses-section" id="courses-section">
-        <div class="courses-header">
-            <div class="header-right">
-                <h2>دوره‌های آموزشی محبوب</h2>
-                <p>جدیدترین و پرمخاطب‌ترین دوره‌های بازار کار</p>
-            </div>
-            <!-- لینک آرشیو محصولات -->
-            <a href="pages/courses.html" class="view-all-btn">
-                مشاهده همه دوره‌ها
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-            </a>
-        </div>
-
-        <!-- باکس نمایش اسلایدر همراه با دکمه‌های ناوبری دستی -->
-        <div class="slider-container">
-            <button class="slider-nav-btn prev-btn" id="prevBtn" aria-label="قبلی">❮</button>
-            <div class="slider-wrapper">
-                <div class="courses-slider" id="coursesSlider">
-
-                    <!-- کارت دوره ۱ -->
-                    <div class="course-card">
-                        <div class="course-thumb" style="background-image: url('images/react.webp');">
-                            <div class="badge discount-badge">۳۰٪ تخفیف</div>
-                        </div>
-                        <div class="course-content">
-                            <div class="course-meta">
-                                <!-- پروفایل و نام مدرس -->
-                                <div class="teacher-info">
-                                    <div class="teacher-avatar" style="background-image: url('images/teacher4.webp');"></div>
-                                    <a href="#">استاد محمدی</a>
-                                </div>
-                                <!-- امتیاز دوره -->
-                                <div class="course-rating">
-                                    <span>۴.۹</span>
-                                    <svg class="star-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                </div>
-                            </div>
-                            <a href="#">دوره جامع فرانت‌اند (React/Next.js)</a>
-                            <p>ورود به بازار کار بین‌المللی با یادگیری مدرن‌ترین فریم‌ورک‌ها</p>
-                            <div class="course-footer">
-                                <div class="price-box">
-                                    <span class="old-price">۶,۴۰۰,۰۰۰</span>
-                                    <span class="price">۴,۵۰۰,۰۰۰ تومان</span>
-                                </div>
-                                <button class="enroll-btn">ثبت نام</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- کارت دوره ۲ -->
-                    <div class="course-card">
-                        <div class="course-thumb" style="background-image: url('images/js.png');">
-                            <div class="badge discount-badge">۲۰٪ تخفیف</div>
-                        </div>
-                        <div class="course-content">
-                            <div class="course-meta">
-                                <div class="teacher-info">
-                                    <div class="teacher-avatar" style="background-image: url('images/teacher3.webp');"></div>
-                                    <a href="#">مهندس علوی</a>
-                                </div>
-                                <div class="course-rating">
-                                    <span>۴.۸</span>
-                                    <svg class="star-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                </div>
-                            </div>
-                            <a href="#">آموزش کامل جاوااسکریپت و الگوریتم</a>
-                            <p>از صفر مطلق تا پیشرفته‌ترین مفاهیم فرانت‌اند و بک‌اند</p>
-                            <div class="course-footer">
-                                <div class="price-box">
-                                    <span class="old-price">۳,۶۰۰,۰۰۰</span>
-                                    <span class="price">۲,۹۰۰,۰۰۰ تومان</span>
-                                </div>
-                                <button class="enroll-btn">ثبت نام</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- کارت دوره ۳ -->
-                    <div class="course-card">
-                        <div class="course-thumb" style="background-image: url('images/UI\ and\ UX.webp');">
-                            <div class="badge discount-badge">۱۵٪ تخفیف</div>
-                        </div>
-                        <div class="course-content">
-                            <div class="course-meta">
-                                <div class="teacher-info">
-                                    <div class="teacher-avatar" style="background-image: url('images/teacher1\ \(1\).webp');"></div>
-                                    <a href="#">خانم راد</a>
-                                </div>
-                                <div class="course-rating">
-                                    <span>۵.۰</span>
-                                    <svg class="star-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                </div>
-                            </div>
-                            <a href="#">طراحی رابط کاربری UI/UX با Figma</a>
-                            <p>اصول طراحی اپلیکیشن و وب‌سایت‌های کاربرپسند و ترند</p>
-                            <div class="course-footer">
-                                <div class="price-box">
-                                    <span class="old-price">۳,۷۰۰,۰۰۰</span>
-                                    <span class="price">۳,۲۰۰,۰۰۰ تومان</span>
-                                </div>
-                                <button class="enroll-btn">ثبت نام</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- کارت دوره ۴ -->
-                    <div class="course-card">
-                        <div class="course-thumb" style="background-image: url('images/python.jpg');">
-                            <div class="badge discount-badge">۲۵٪ تخفیف</div>
-                        </div>
-                        <div class="course-content">
-                            <div class="course-meta">
-                                <div class="teacher-info">
-                                    <div class="teacher-avatar" style="background-image: url('images/teacher2.webp');"></div>
-                                    <a href="#">دکتر اکبری</a>
-                                </div>
-                                <div class="course-rating">
-                                    <span>۴.۷</span>
-                                    <svg class="star-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                </div>
-                            </div>
-                            <a href="#">دوره برنامه‌نویسی پایتون و هوش مصنوعی</a>
-                            <p>ورود به دنیای تحلیل داده، یادگیری ماشین و اتوماسیون</p>
-                            <div class="course-footer">
-                                <div class="price-box">
-                                    <span class="old-price">۶,۸۰۰,۰۰۰</span>
-                                    <span class="price">۵,۱۰۰,۰۰۰ تومان</span>
-                                </div>
-                                <button class="enroll-btn">ثبت نام</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- کارت دوره 5 -->
-                    <div class="course-card">
-                        <div class="course-thumb" style="background-image: url('images/AI.webp');">
-                            <div class="badge discount-badge">۲۵٪ تخفیف</div>
-                        </div>
-                        <div class="course-content">
-                            <div class="course-meta">
-                                <div class="teacher-info">
-                                    <div class="teacher-avatar" style="background-image: url('images/teacher2.webp');"></div>
-                                    <a href="#">دکتر اکبری</a>
-                                </div>
-                                <div class="course-rating">
-                                    <span>۴.۷</span>
-                                    <svg class="star-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                </div>
-                            </div>
-                            <a href="#">دوره برنامه‌نویسی پایتون و هوش مصنوعی</a>
-                            <p>ورود به دنیای تحلیل داده، یادگیری ماشین و اتوماسیون</p>
-                            <div class="course-footer">
-                                <div class="price-box">
-                                    <span class="old-price">۶,۸۰۰,۰۰۰</span>
-                                    <span class="price">۵,۱۰۰,۰۰۰ تومان</span>
-                                </div>
-                                <button class="enroll-btn">ثبت نام</button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- کارت دوره 6 -->
-                    <div class="course-card">
-                        <div class="course-thumb" style="background-image: url('images/AI.webp');">
-                            <div class="badge discount-badge">۲۵٪ تخفیف</div>
-                        </div>
-                        <div class="course-content">
-                            <div class="course-meta">
-                                <div class="teacher-info">
-                                    <div class="teacher-avatar" style="background-image: url('images/teacher2.webp');"></div>
-                                    <a href="#">دکتر اکبری</a>
-                                </div>
-                                <div class="course-rating">
-                                    <span>۴.۷</span>
-                                    <svg class="star-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                </div>
-                            </div>
-                            <a href="#">دوره برنامه‌نویسی پایتون و هوش مصنوعی</a>
-                            <p>ورود به دنیای تحلیل داده، یادگیری ماشین و اتوماسیون</p>
-                            <div class="course-footer">
-                                <div class="price-box">
-                                    <span class="old-price">۶,۸۰۰,۰۰۰</span>
-                                    <span class="price">۵,۱۰۰,۰۰۰ تومان</span>
-                                </div>
-                                <button class="enroll-btn">ثبت نام</button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <button class="slider-nav-btn next-btn" id="nextBtn" aria-label="بعدی">❯</button>
-        </div>
-    </section>
+        </section>
 
         <!-- بخش دسته‌بندی دوره‌ها -->
-    <section class="categories-section">
-        <div class="categories-container">
-            <h2 class="categories-title">دسته‌بندی‌های محبوب</h2>
+        <section class="categories-section">
+            <div class="categories-container">
+                <h2 class="categories-title">دسته‌بندی‌های محبوب</h2>
 
-            <div class="categories-grid">
-                <!-- کارت دسته‌بندی ۱ -->
-                <a href="#" class="category-card">
-                    <div class="category-icon-box">
-                        <span class="category-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-laptop-icon lucide-laptop"><path d="M18 5a2 2 0 0 1 2 2v8.526a2 2 0 0 0 .212.897l1.068 2.127a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45l1.068-2.127A2 2 0 0 0 4 15.526V7a2 2 0 0 1 2-2z"/><path d="M20.054 15.987H3.946"/></svg>
-                        </span>
-                    </div>
-                    <h3>برنامه‌نویسی وب</h3>
-                    <p>فرانت‌اند، بک‌اند و فریم‌ورک‌ها</p>
-                </a>
+                <div class="categories-grid">
+                    <!-- کارت دسته‌بندی ۱ -->
+                    <a href="#" class="category-card">
+                        <div class="category-icon-box">
+                            <span class="category-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" style="color: var(--background);" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="lucide lucide-laptop-icon lucide-laptop">
+                                    <path
+                                        d="M18 5a2 2 0 0 1 2 2v8.526a2 2 0 0 0 .212.897l1.068 2.127a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45l1.068-2.127A2 2 0 0 0 4 15.526V7a2 2 0 0 1 2-2z" />
+                                    <path d="M20.054 15.987H3.946" />
+                                </svg>
+                            </span>
+                        </div>
+                        <h3>برنامه‌نویسی وب</h3>
+                        <p>فرانت‌اند، بک‌اند و فریم‌ورک‌ها</p>
+                    </a>
 
-                <!-- کارت دسته‌بندی ۲ -->
-                <a href="#" class="category-card">
-                    <div class="category-icon-box">
-                        <span class="category-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-smartphone-icon lucide-smartphone"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
-                        </span>
-                    </div>
-                    <h3>توسعه موبایل</h3>
-                    <p>اندروید، iOS و فلاتر</p>
-                </a>
+                    <!-- کارت دسته‌بندی ۲ -->
+                    <a href="#" class="category-card">
+                        <div class="category-icon-box">
+                            <span class="category-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" style="color: var(--background);" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="lucide lucide-smartphone-icon lucide-smartphone">
+                                    <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+                                    <path d="M12 18h.01" />
+                                </svg>
+                            </span>
+                        </div>
+                        <h3>توسعه موبایل</h3>
+                        <p>اندروید، iOS و فلاتر</p>
+                    </a>
 
-                <!-- کارت دسته‌بندی ۳ -->
-                <a href="#" class="category-card">
-                    <div class="category-icon-box">
-                        <span class="category-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-palette-icon lucide-palette"><path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z"/><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/></svg>
-                        </span>
-                    </div>
-                    <h3>طراحی و گرافیک</h3>
-                    <p>رابط کاربری UI/UX و فتوشاپ</p>
-                </a>
+                    <!-- کارت دسته‌بندی ۳ -->
+                    <a href="#" class="category-card">
+                        <div class="category-icon-box">
+                            <span class="category-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" style="color: var(--background);" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="lucide lucide-palette-icon lucide-palette">
+                                    <path
+                                        d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z" />
+                                    <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
+                                    <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
+                                    <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
+                                    <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
+                                </svg>
+                            </span>
+                        </div>
+                        <h3>طراحی و گرافیک</h3>
+                        <p>رابط کاربری UI/UX و فتوشاپ</p>
+                    </a>
 
-                <!-- کارت دسته‌بندی ۴ -->
-                <a href="#" class="category-card">
-                    <div class="category-icon-box">
-                        <span class="category-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bot-icon lucide-bot"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
-                        </span>
-                    </div>
-                    <h3>هوش مصنوعی</h3>
-                    <p>پایتون، داده‌کاوی و یادگیری ماشین</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-        <!-- بخش آمار و ارقام سایت -->
-    <section class="stats-section">
-        <div class="stats-container">
-
-            <!-- آمار ۱ -->
-            <div class="stat-item">
-                <div class="stat-icon-box">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round-icon lucide-user-round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
-                </div>
-                <div class="stat-info">
-                    <h3>120K+</h3>
-                    <p>دانشجویان راضی</p>
-                </div>
-            </div>
-
-            <!-- آمار ۲ -->
-            <div class="stat-item">
-                <div class="stat-icon-box">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-list-icon lucide-clipboard-list"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
-                </div>
-                <div class="stat-info">
-                    <h3>10K+</h3>
-                    <p>دوره‌های آنلاین</p>
-                </div>
-            </div>
-
-            <!-- آمار ۳ -->
-            <div class="stat-item">
-                <div class="stat-icon-box">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-round-icon lucide-users-round"><path d="M18 21a8 8 0 0 0-16 0"/><circle cx="10" cy="8" r="5"/><path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"/></svg>
-                </div>
-                <div class="stat-info">
-                    <h3>500+</h3>
-                    <p>مدرسین مجرب</p>
-                </div>
-            </div>
-
-            <!-- آمار ۴ -->
-            <div class="stat-item">
-                <div class="stat-icon-box">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star-icon lucide-star"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
-                </div>
-                <div class="stat-info">
-                    <h3>98%</h3>
-                    <p>رضایت کاربران</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- بخش معرفی مدرسین برتر -->
-    <section class="instructors-section" id="instructors-section">
-
-        <!-- هدر بخش همراه با دکمه سمت چپ (راست‌چین شده) -->
-        <div class="instructors-header">
-            <div class="header-text">
-                <span>مدرسین ما</span>
-                <h2>از اساتید مجرب و با‌تجربه یاد بگیرید</h2>
-            </div>
-            <a href="pages/teachers.html" class="view-all-btn">مشاهده همه اساتید</a>
-        </div>
-
-        <!-- شبکه کارت‌های مدرسین (۶ تایی) -->
-        <div class="instructors-grid">
-
-            <!-- مدرس ۱ -->
-            <div class="instructor-card">
-                <div class="instructor-img-box">
-                    <img src="images/teacher1 (1).webp" alt="جان اسمیت"> 
-                </div>
-                <div class="instructor-info">
-                    <h3>جان اسمیت</h3>
-                    <p class="rating">⭐ ۴.۸ (۲.۵ هزار امتیاز)</p>
-                </div>
-            </div>
-
-            <!-- مدرس ۲ -->
-            <div class="instructor-card">
-                <div class="instructor-img-box">
-                    <img src="images/teacher2.webp" alt="سارا جانسون">
-                </div>
-                <div class="instructor-info">
-                    <h3>سارا جانسون</h3>
-                    <p class="rating">⭐ ۴.۹ (۱.۸ هزار امتیاز)</p>
-                </div>
-            </div>
-
-            <!-- مدرس ۳ -->
-            <div class="instructor-card">
-                <div class="instructor-img-box">
-                    <img src="images/teacher3.webp" alt="مایکل براون">
-                </div>
-                <div class="instructor-info">
-                    <h3>مایکل براون</h3>
-                    <p class="rating">⭐ ۴.۷ (۱.۲ هزار امتیاز)</p>
-                </div>
-            </div>
-
-            <!-- مدرس ۴ -->
-            <div class="instructor-card">
-                <div class="instructor-img-box">
-                    <img src="images/teacher4.webp" alt="امیلی دیویس">
-                </div>
-                <div class="instructor-info">
-                    <h3>امیلی دیویس</h3>
-                    <p class="rating">⭐ ۴.۹ (۱.۹ هزار امتیاز)</p>
-                </div>
-            </div>
-
-            <!-- مدرس ۵ -->
-            <div class="instructor-card">
-                <div class="instructor-img-box">
-                    <img src="images/teacher5.webp" alt="دیوید ویلسون">
-                </div>
-                <div class="instructor-info">
-                    <h3>دیوید ویلسون</h3>
-                    <p class="rating">⭐ ۴.۶ (۹۵۰ امتیاز)</p>
-                </div>
-            </div>
-
-            <!-- مدرس ۶ -->
-            <div class="instructor-card">
-                <div class="instructor-img-box">
-                    <img src="images/teacher6.webp" alt="لیسا اندرسون">
-                </div>
-                <div class="instructor-info">
-                    <h3>لیسا اندرسون</h3>
-                    <p class="rating">⭐ ۴.۹ (۲.۱ هزار امتیاز)</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="learning-cta-section">
-        <div class="cta-container">
-            
-            <div class="cta-content">
-                <h2>آماده شروع یادگیری هستید؟</h2>
-                <p>به هزاران دانشجو بپیوندید و مسیر پیشرفت خود را از همین امروز آغاز کنید.</p>
-                
-                <div class="cta-actions">
-                    <a href="#" class="btn-primary-cta">شروع یادگیری</a>
-                    <a href="#" class="btn-outline-cta">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                        مشاهده دمو
+                    <!-- کارت دسته‌بندی ۴ -->
+                    <a href="#" class="category-card">
+                        <div class="category-icon-box">
+                            <span class="category-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" style="color: var(--background);" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="lucide lucide-bot-icon lucide-bot">
+                                    <path d="M12 8V4H8" />
+                                    <rect width="16" height="12" x="4" y="8" rx="2" />
+                                    <path d="M2 14h2" />
+                                    <path d="M20 14h2" />
+                                    <path d="M15 13v2" />
+                                    <path d="M9 13v2" />
+                                </svg>
+                            </span>
+                        </div>
+                        <h3>هوش مصنوعی</h3>
+                        <p>پایتون، داده‌کاوی و یادگیری ماشین</p>
                     </a>
                 </div>
             </div>
-    
-            <!-- بخش تصویر که حالا کاملاً با SVG دکور شده و عکس نمی‌خواهد -->
-            <div class="cta-image-wrapper">
+        </section>
 
-                <!-- طرح اختصاصی لپ‌تاپ و پنل مدیریتی به صورت SVG خالص -->
-                <svg class="cta-laptop-svg" viewBox="0 0 600 400" fill="none" xmlns="http://w3.org">
-                    <!-- بدنه پشت و اصلی مانیتور -->
-                    <rect x="50" y="30" width="500" height="300" rx="16" fill="#1e1e38" stroke="#334155" stroke-width="4"/>
-                    <!-- صفحه نمایش داخلی مانیتور -->
-                    <rect x="65" y="45" width="470" height="270" rx="8" fill="#0f172a"/>
-                    
-                    <!-- هدر پنل داخل لپ‌تاپ -->
-                    <rect x="80" y="60" width="440" height="40" rx="6" fill="#1e293b"/>
-                    <circle cx="105" cy="80" r="5" fill="#ef4444"/>
-                    <circle cx="120" cy="80" r="5" fill="#f59e0b"/>
-                    <circle cx="135" cy="80" r="5" fill="#10b981"/>
-                    <!-- نوارهای شبیه‌ساز منو -->
-                    <rect x="420" y="75" width="80" height="10" rx="5" fill="#475569"/>
-                    
-                    <!-- کارت‌های آماری داخل پنل (مشابه تصویر) -->
-                    <rect x="80" y="115" width="130" height="80" rx="8" fill="#1d283c"/>
-                    <rect x="95" y="130" width="60" height="12" rx="4" fill="#6366f1"/>
-                    <rect x="95" y="155" width="100" height="8" rx="4" fill="#38bdf8"/>
-                    <rect x="95" y="170" width="40" height="8" rx="4" fill="#475569"/>
-    
-                    <rect x="225" y="115" width="130" height="80" rx="8" fill="#1d283c"/>
-                    <rect x="240" y="130" width="60" height="12" rx="4" fill="#10b981"/>
-                    <rect x="240" y="155" width="80" height="8" rx="4" fill="#475569"/>
-    
-                    <rect x="370" y="115" width="150" height="80" rx="8" fill="#1d283c"/>
-                    <circle cx="400" cy="155" r="20" fill="#312e81"/>
-                    <rect x="430" y="145" width="70" height="10" rx="4" fill="#6366f1"/>
-                    <rect x="430" y="165" width="50" height="8" rx="4" fill="#475569"/>
-    
-                    <!-- نمودار یا بخش بزرگ پایین پنل -->
-                    <rect x="80" y="210" width="440" height="90" rx="8" fill="#1d283c"/>
-                    <path d="M100 280 L160 240 L220 260 L300 230 L380 250 L440 220 L500 240" stroke="#6366f1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                    
-                    <!-- پایه زیرین لپ‌تاپ -->
-                    <path d="M200 330 L400 330 L420 360 L180 360 Z" fill="#334155"/>
-                    <rect x="150" y="355" width="300" height="8" rx="4" fill="#475569"/>
-                </svg>
-            </div>
-    
-        </div>
-    </section>
+        <!-- بخش آمار و ارقام سایت -->
+        <section class="stats-section">
+            <div class="stats-container">
 
-    <!-- بخش وبلاگ و مقالات آموزشی سایت -->
-    <section class="blog-section" id="blog-section" dir="rtl">
-        <div class="blog-container">
-            <span class="blog-sub-title">وبلاگ آموزشی</span>
-            <h2 class="blog-main-title">جدیدترین مقالات و اخبار تکنولوژی</h2>
-
-            <!-- گرید کارت‌های مقالات وبلاگ -->
-            <div class="blog-grid">
-
-                <!-- مقاله اول -->
-                <div class="blog-card">
-                    <div class="blog-img-box">
-                        <img src="images/map.webp" alt="نقشه راه فرانت اند">
+                <!-- آمار ۱ -->
+                <div class="stat-item">
+                    <div class="stat-icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-user-round-icon lucide-user-round">
+                            <circle cx="12" cy="8" r="5" />
+                            <path d="M20 21a8 8 0 0 0-16 0" />
+                        </svg>
                     </div>
-                    <div class="blog-card-body">
-                        <span class="blog-category">برنامه‌نویسی</span>
-                        <h3 class="blog-title">نقشه راه ورود به دنیای فرانت‌اند در سال ۲۰۲۶</h3>
-                        <p class="blog-excerpt">چگونه یادگیری طراحی وب را از صفر آغاز کنیم و چه مهارت‌هایی برای بازار کار نیاز داریم؟</p>
-                        <div class="blog-footer">
-                            <span class="blog-date">⏱️ ۵ دقیقه مطالعه</span>
-                            <a href="#" class="blog-read-more">ادامه مطلب ←</a>
-                        </div>
+                    <div class="stat-info">
+                        <h3>120K+</h3>
+                        <p>دانشجویان راضی</p>
                     </div>
                 </div>
 
-                <!-- مقاله دوم -->
-                <div class="blog-card">
-                    <div class="blog-img-box">
-                        <img src="images/AI.webp" alt="هوش مصنوعی">
+                <!-- آمار ۲ -->
+                <div class="stat-item">
+                    <div class="stat-icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-clipboard-list-icon lucide-clipboard-list">
+                            <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                            <path d="M12 11h4" />
+                            <path d="M12 16h4" />
+                            <path d="M8 11h.01" />
+                            <path d="M8 16h.01" />
+                        </svg>
                     </div>
-                    <div class="blog-card-body">
-                        <span class="blog-category">هوش مصنوعی</span>
-                        <h3 class="blog-title">تاثیر هوش مصنوعی بر آینده شغلی توسعه‌دهندگان</h3>
-                        <p class="blog-excerpt">آیا هوش مصنوعی جایگزین برنامه‌نویسان می‌شود؟ بررسی فرصت‌ها و چالش‌های پیش رو.</p>
-                        <div class="blog-footer">
-                            <span class="blog-date">⏱️ ۸ دقیقه مطالعه</span>
-                            <a href="#" class="blog-read-more">ادامه مطلب ←</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- مقاله سوم -->
-                <div class="blog-card">
-                    <div class="blog-img-box">
-                        <img src="images/UI and UX.webp" alt="اصول UI/UX">
-                    </div>
-                    <div class="blog-card-body">
-                        <span class="blog-category">طراحی رابط کاربری</span>
-                        <h3 class="blog-title">۵ اصل کلیدی در طراحی تجربه کاربری (UX)</h3>
-                        <p class="blog-excerpt">چگونه طرح‌هایی بسازیم که کاربران عاشق کار کردن با اپلیکیشن یا وب‌سایت شما شوند؟</p>
-                        <div class="blog-footer">
-                            <span class="blog-date">⏱️ ۴ دقیقه مطالعه</span>
-                            <a href="#" class="blog-read-more">ادامه مطلب ←</a>
-                        </div>
+                    <div class="stat-info">
+                        <h3>10K+</h3>
+                        <p>دوره‌های آنلاین</p>
                     </div>
                 </div>
 
-                <!-- مقاله چهارم (جدید) -->
-            <div class="blog-card more-blog-cards">
-                <div class="blog-img-box">
-                    <img src="https://unsplash.com" alt="سئو در وب">
-                </div>
-                <div class="blog-card-body">
-                    <span class="blog-category">سئو و بهینه‌سازی</span>
-                    <h3 class="blog-title">اصول سئو (SEO) برای توسعه‌دهندگان وب</h3>
-                    <p class="blog-excerpt">چگونه کدهای فرانت‌اند خود را بهینه‌سازی کنیم تا سایت ما در رتبه‌های اول گوگل قرار گیرد؟</p>
-                    <div class="blog-footer">
-                        <span class="blog-date">⏱️ ۶ دقیقه مطالعه</span>
-                        <a href="#" class="blog-read-more">ادامه مطلب ←</a>
+                <!-- آمار ۳ -->
+                <div class="stat-item">
+                    <div class="stat-icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-users-round-icon lucide-users-round">
+                            <path d="M18 21a8 8 0 0 0-16 0" />
+                            <circle cx="10" cy="8" r="5" />
+                            <path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3" />
+                        </svg>
                     </div>
-                </div>
-            </div>
-
-            <!-- مقاله پنجم (جدید) -->
-            <div class="blog-card more-blog-cards">
-                <div class="blog-img-box">
-                    <img src="https://unsplash.com" alt="تحلیل داده">
-                </div>
-                <div class="blog-card-body">
-                    <span class="blog-category">علوم داده</span>
-                    <h3 class="blog-title">مقدمه‌ای بر تحلیل داده‌ها و بازار کار آن</h3>
-                    <p class="blog-excerpt">بررسی ابزارها و مهارت‌های مورد نیاز برای ورود به شغل جذاب و پردرآمد تحلیلگری داده.</p>
-                    <div class="blog-footer">
-                        <span class="blog-date">⏱️ ۷ دقیقه مطالعه</span>
-                        <a href="#" class="blog-read-more">ادامه مطلب ←</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- مقاله ششم (جدید) -->
-            <div class="blog-card more-blog-cards">
-                <div class="blog-img-box">
-                    <img src="https://unsplash.com" alt="دیزاین سیستم">
-                </div>
-                <div class="blog-card-body">
-                    <span class="blog-category">طراحی گرافیک</span>
-                    <h3 class="blog-title">دیزاین سیستم چیست و چه کاربردی دارد؟</h3>
-                    <p class="blog-excerpt">آشنایی با مفهوم تفکیک اجزا و المان‌های گرافیکی برای یکپارچه‌سازی پروژه‌های بزرگ.</p>
-                    <div class="blog-footer">
-                        <span class="blog-date">⏱️ ۵ دقیقه مطالعه</span>
-                        <a href="#" class="blog-read-more">ادامه مطلب ←</a>
-                    </div>
-                </div>
-            </div>
-
-        </div> <!-- انتهای تگ blog-grid فعلی شما -->
-
-        <!-- دکمه جدید برای لود کردن مقالات بیشتر (این را دقیقاً بعد از تگ بسته‌شدن blog-grid بگذار) -->
-        <div class="blog-more-btn-wrapper">
-            <button class="view-all-blog-btn" id="loadMoreBlogBtn" type="button"><a href="pages/archive.html">مشاهده همه مقالات</a></button>
-        </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- بخش نظرات دانشجویان - نسخه اصلاح شده -->
-    <section class="testimonials-section" dir="rtl">
-        <div class="container">
-            <span class="sub-title">نظرات دانشجویان</span>
-            <h2 class="main-title">دانشجویان ما چه می‌گویند؟</h2>
-
-            <!-- این باکس اصلی اسلایدر است -->
-            <div class="testimonials-row" id="testimonialSlider">
-
-                <!-- کارت اول -->
-                <div class="testimonial-card">
-                    <p class="comment">"ادومستر مسیر شغلی من را کاملاً تغییر داد. دوره‌ها بسیار جامع هستند و اساتید فوق‌العاده عمل می‌کنند!"</p>
-                    <div class="rating">★★★★★</div>
-                    <div class="user-info">
-                        <img src="images/student1.webp" alt="الکس تامپسون" class="avatar">
-                        <div class="user-details">
-                            <h4 class="name">الکس تامپسون</h4>
-                            <span class="role">توسعه‌دهنده وب</span>
-                        </div>
+                    <div class="stat-info">
+                        <h3>500+</h3>
+                        <p>مدرسین مجرب</p>
                     </div>
                 </div>
 
-                <!-- کارت دوم -->
-                <div class="testimonial-card">
-                    <p class="comment">"بهترین پلتفرم آموزش آنلاین که تا به حال دیده‌ام. محتوای باکیفیت و پشتیبانی بسیار عالی!"</p>
-                    <div class="rating">★★★★★</div>
-                    <div class="user-info">
-                        <img src="images/student2.webp" alt="جسیکا لی" class="avatar">
-                        <div class="user-details">
-                            <h4 class="name">جسیکا لی</h4>
-                            <span class="role">دانشمند داده</span>
-                        </div>
+                <!-- آمار ۴ -->
+                <div class="stat-item">
+                    <div class="stat-icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-star-icon lucide-star">
+                            <path
+                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                        </svg>
                     </div>
-                </div>
-
-                <!-- کارت سوم -->
-                <div class="testimonial-card">
-                    <p class="comment">"من عاشق انعطاف‌پذیری دوره‌ها و دسترسی همیشگی به ویدیوها شدم. ارزش هر تومانی که پرداخت کردم را داشت!"</p>
-                    <div class="rating">★★★★★</div>
-                    <div class="user-info">
-                        <img src="images/student3.webp" alt="رایان میلر" class="avatar">
-                        <div class="user-details">
-                            <h4 class="name">رایان میلر</h4>
-                            <span class="role">طراح رابط کاربری</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- کارت چهارم -->
-                <div class="testimonial-card">
-                    <p class="comment">"پروژه‌های عملی این دوره به من کمک کرد تا یک پورتفولیو قوی بسازم. به همه پیشنهادش می‌کنم."</p>
-                    <div class="rating">★★★★★</div>
-                    <div class="user-info">
-                        <img src="images/student4.webp" alt="سارا کانر" class="avatar">
-                        <div class="user-details">
-                            <h4 class="name">سارا کانر</h4>
-                            <span class="role">مدیر محصول</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- کارت پنجم -->
-                <div class="testimonial-card">
-                    <p class="comment">"یک انجمن فوق‌العاده از دانشجویان و مربیان. در طول مسیر یادگیری هرگز احساس تنهایی نکردم."</p>
-                    <div class="rating">★★★★★</div>
-                    <div class="user-info">
-                        <img src="images/student5.webp" alt="دیوید کیم" class="avatar">
-                        <div class="user-details">
-                            <h4 class="name">دیوید کیم</h4>
-                            <span class="role">توسعه‌دهنده موبایل</span>
-                        </div>
+                    <div class="stat-info">
+                        <h3>98%</h3>
+                        <p>رضایت کاربران</p>
                     </div>
                 </div>
 
             </div>
+        </section>
 
-            <!-- دکمه‌های ناوبری اسلایدر -->
-            <div class="slider-controls">
-                <button class="control-btn prev-btn" id="prevBtn" type="button">&#10094;</button>
-                <button class="control-btn next-btn" id="nextBtn" type="button">&#10095;</button>
+        <!-- بخش معرفی مدرسین برتر -->
+        <section class="instructors-section" id="instructors-section">
+
+            <!-- هدر بخش همراه با دکمه سمت چپ (راست‌چین شده) -->
+            <div class="instructors-header">
+                <div class="header-text">
+                    <span>مدرسین ما</span>
+                    <h2>از اساتید مجرب و با‌تجربه یاد بگیرید</h2>
+                </div>
+                <a href="pages/teachers.html" class="view-all-btn">مشاهده همه اساتید</a>
             </div>
-        </div>
-    </section>
 
-    <!-- بخش لوگوهای شرکت‌ها - همکاران ما -->
-    <section class="brands-section">
-        <div class="brands-container">
-            <!-- ردیف لوگوها شامل کدهای SVG اختصاصی و بسیار سبک -->
-            <div class="brands-grid">
+            <!-- شبکه کارت‌های مدرسین (۶ تایی) -->
+            <div class="instructors-grid">
 
-                <!-- لوگو گوگل -->
-                <div class="brand-item">
-                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://w3.org">
-                        <path d="M12.24 10.285V13.4h6.887c-.275 1.565-1.88 4.604-6.887 4.604-4.33 0-7.866-3.577-7.866-8s3.536-8 7.866-8c2.46 0 4.105 1.025 5.047 1.926l2.427-2.334C18.155 2.569 15.44 1.5 12.24 1.5 6.433 1.5 1.72 6.204 1.72 12s4.713 10.5 10.52 10.5c6.06 0 10.087-4.258 10.087-10.258 0-.692-.075-1.22-.165-1.457H12.24z"/>
-                    </svg>
+                <!-- مدرس ۱ -->
+                <div class="instructor-card">
+                    <div class="instructor-img-box">
+                        <img src="images/teacher1 (1).webp" alt="جان اسمیت" loading="lazy">
+                    </div>
+                    <div class="instructor-info">
+                        <h3>جان اسمیت</h3>
+                        <p class="rating">⭐ ۴.۸ (۲.۵ هزار امتیاز)</p>
+                    </div>
                 </div>
 
-                <!-- لوگو مایکروسافت -->
-                <div class="brand-item">
-                    <svg viewBox="0 0 23 23" fill="currentColor" xmlns="http://w3.org">
-                        <path d="M0 0h11v11H0zM12 0h11v11H12zM0 12h11v11H0zM12 12h11v11H12z"/>
-                    </svg>
+                <!-- مدرس ۲ -->
+                <div class="instructor-card">
+                    <div class="instructor-img-box">
+                        <img src="images/teacher2.webp" alt="سارا جانسون" loading="lazy">
+                    </div>
+                    <div class="instructor-info">
+                        <h3>سارا جانسون</h3>
+                        <p class="rating">⭐ ۴.۹ (۱.۸ هزار امتیاز)</p>
+                    </div>
                 </div>
 
-                <!-- لوگو آمازون -->
-                <div class="brand-item">
-                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://w3.org">
-                        <path d="M16.147 16.944c-.754.516-1.741.79-2.731.79-2.222 0-3.325-1.25-3.325-3.414 0-3.336 2.535-4.52 6.056-4.52v.421c0 1.25-.262 2.651-.836 3.73-.243.456-.59.816-1.164 2.993zm5.006 1.75c-.217.18-.517.12-.716-.09-.597-.624-1.926-2.025-2.584-2.613-.254-.228-.195-.492.112-.354 1.83.829 4.316 2.535 3.905 3.12-.135.195-.465.132-.717-.063zm-8.889.378c-3.193 0-5.717-1.392-5.717-4.39 0-3.856 3.123-5.32 7.747-5.32h1.29v-.517c0-1.125-.195-2.533-1.637-2.533-1.34 0-1.764.93-1.884 1.831-.035.244-.216.444-.457.444l-2.903-.195c-.24-.015-.412-.224-.37-.464.405-2.313 2.584-4.145 5.76-4.145 3.493 0 4.904 2.133 4.904 5.374v6.52c0 .945.345 1.335.66 1.725.18.21.21.465-.015.63l-2.483 1.85c-.21.15-.465.105-.63-.12-.33-.42-.66-.99-.75-1.425-.66.825-1.785 1.56-3.465 1.56zm-1.89-15.004c4.896 1.487 10.36 1.487 15.257 0 .363-.111.666.24.417.493-2.126 2.16-5.467 3.518-8.046 3.518-2.578 0-5.92-1.358-8.046-3.518-.25-.253.054-.604.418-.493z"/>
-                    </svg>
+                <!-- مدرس ۳ -->
+                <div class="instructor-card">
+                    <div class="instructor-img-box">
+                        <img src="images/teacher3.webp" alt="مایکل براون" loading="lazy">
+                    </div>
+                    <div class="instructor-info">
+                        <h3>مایکل براون</h3>
+                        <p class="rating">⭐ ۴.۷ (۱.۲ هزار امتیاز)</p>
+                    </div>
                 </div>
 
-                <!-- لوگو نتفلیکس -->
-                <div class="brand-item">
-                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://w3.org">
-                        <path d="M5.18 0H8.3v15.932L18.82 0h3.122v24h-3.122V8.068L8.3 24H5.18V0z"/>
-                    </svg>
+                <!-- مدرس ۴ -->
+                <div class="instructor-card">
+                    <div class="instructor-img-box">
+                        <img src="images/teacher4.webp" alt="امیلی دیویس" loading="lazy">
+                    </div>
+                    <div class="instructor-info">
+                        <h3>امیلی دیویس</h3>
+                        <p class="rating">⭐ ۴.۹ (۱.۹ هزار امتیاز)</p>
+                    </div>
                 </div>
 
-                <!-- لوگو اسپاتیفای -->
-                <div class="brand-item">
-                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://w3.org">
-                        <path d="M12 0C5.376 0 0 5.376 0 12s5.376 12 12 12 12-5.376 12-12S18.624 0 12 0zm5.496 17.304c-.216.348-.672.456-1.02.24-2.832-1.728-6.396-2.112-10.596-1.152-.396.096-.804-.156-.888-.552-.096-.396.156-.804.552-.888 4.608-1.056 8.532-.6 11.712 1.344.348.204.456.66.24 1.008zm1.464-3.264c-.276.444-.852.588-1.296.312-3.24-2-8.184-2.58-12.012-1.416-.492.144-1.008-.132-1.152-.624-.144-.492.132-1.008.624-1.152 4.38-1.332 9.816-.672 13.524 1.62.444.264.588.84.312 1.26zm.132-3.42C15.348 8.448 9.168 8.244 5.616 9.324c-.564.168-1.152-.156-1.32-.72-.168-.564.156-1.152.72-1.32 4.092-1.236 10.92-.996 15.228 1.56.504.3.672.948.372 1.452-.3.516-.948.684-1.452.384z"/>
-                    </svg>
+                <!-- مدرس ۵ -->
+                <div class="instructor-card">
+                    <div class="instructor-img-box">
+                        <img src="images/teacher5.webp" alt="دیوید ویلسون" loading="lazy">
+                    </div>
+                    <div class="instructor-info">
+                        <h3>دیوید ویلسون</h3>
+                        <p class="rating">⭐ ۴.۶ (۹۵۰ امتیاز)</p>
+                    </div>
                 </div>
 
-                <!-- لوگو ادوبی -->
-                <div class="brand-item">
-                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://w3.org">
-                        <path d="M15.1 2H24v20L15.1 2zm-6.2 0H0v20L8.9 2zm3.1 7.1L17.7 22h-3.6l-2.1-5.1H8.3l3.7-7.8z"/>
+                <!-- مدرس ۶ -->
+                <div class="instructor-card">
+                    <div class="instructor-img-box">
+                        <img src="images/teacher6.webp" alt="لیسا اندرسون" loading="lazy">
+                    </div>
+                    <div class="instructor-info">
+                        <h3>لیسا اندرسون</h3>
+                        <p class="rating">⭐ ۴.۹ (۲.۱ هزار امتیاز)</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="learning-cta-section">
+            <div class="cta-container">
+
+                <div class="cta-content">
+                    <h2>آماده شروع یادگیری هستید؟</h2>
+                    <p>به هزاران دانشجو بپیوندید و مسیر پیشرفت خود را از همین امروز آغاز کنید.</p>
+
+                    <div class="cta-actions">
+                        <a href="pages/courses.html" class="btn-primary-cta">شروع یادگیری</a>
+                        <a href="#" class="btn-outline-cta">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            مشاهده دمو
+                        </a>
+                    </div>
+                </div>
+
+                <!-- بخش تصویر که حالا کاملاً با SVG دکور شده و عکس نمی‌خواهد -->
+                <div class="cta-image-wrapper">
+
+                    <!-- طرح اختصاصی لپ‌تاپ و پنل مدیریتی به صورت SVG خالص -->
+                    <svg class="cta-laptop-svg" viewBox="0 0 600 400" fill="none" xmlns="http://w3.org">
+                        <!-- بدنه پشت و اصلی مانیتور -->
+                        <rect x="50" y="30" width="500" height="300" rx="16" fill="#1e1e38" stroke="#334155"
+                            stroke-width="4" />
+                        <!-- صفحه نمایش داخلی مانیتور -->
+                        <rect x="65" y="45" width="470" height="270" rx="8" fill="#0f172a" />
+
+                        <!-- هدر پنل داخل لپ‌تاپ -->
+                        <rect x="80" y="60" width="440" height="40" rx="6" fill="#1e293b" />
+                        <circle cx="105" cy="80" r="5" fill="#ef4444" />
+                        <circle cx="120" cy="80" r="5" fill="#f59e0b" />
+                        <circle cx="135" cy="80" r="5" fill="#10b981" />
+                        <!-- نوارهای شبیه‌ساز منو -->
+                        <rect x="420" y="75" width="80" height="10" rx="5" fill="#475569" />
+
+                        <!-- کارت‌های آماری داخل پنل (مشابه تصویر) -->
+                        <rect x="80" y="115" width="130" height="80" rx="8" fill="#1d283c" />
+                        <rect x="95" y="130" width="60" height="12" rx="4" fill="#6366f1" />
+                        <rect x="95" y="155" width="100" height="8" rx="4" fill="#38bdf8" />
+                        <rect x="95" y="170" width="40" height="8" rx="4" fill="#475569" />
+
+                        <rect x="225" y="115" width="130" height="80" rx="8" fill="#1d283c" />
+                        <rect x="240" y="130" width="60" height="12" rx="4" fill="#10b981" />
+                        <rect x="240" y="155" width="80" height="8" rx="4" fill="#475569" />
+
+                        <rect x="370" y="115" width="150" height="80" rx="8" fill="#1d283c" />
+                        <circle cx="400" cy="155" r="20" fill="#312e81" />
+                        <rect x="430" y="145" width="70" height="10" rx="4" fill="#6366f1" />
+                        <rect x="430" y="165" width="50" height="8" rx="4" fill="#475569" />
+
+                        <!-- نمودار یا بخش بزرگ پایین پنل -->
+                        <rect x="80" y="210" width="440" height="90" rx="8" fill="#1d283c" />
+                        <path d="M100 280 L160 240 L220 260 L300 230 L380 250 L440 220 L500 240" stroke="#6366f1"
+                            stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+
+                        <!-- پایه زیرین لپ‌تاپ -->
+                        <path d="M200 330 L400 330 L420 360 L180 360 Z" fill="#334155" />
+                        <rect x="150" y="355" width="300" height="8" rx="4" fill="#475569" />
                     </svg>
                 </div>
 
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- بخش وبلاگ و مقالات آموزشی سایت -->
+        <section class="blog-section" id="blog-section" dir="rtl">
+            <div class="blog-container">
+                <span class="blog-sub-title">وبلاگ آموزشی</span>
+                <h2 class="blog-main-title">جدیدترین مقالات و اخبار تکنولوژی</h2>
+
+                <!-- گرید کارت‌های مقالات وبلاگ -->
+                <div class="blog-grid">
+
+                    <!-- مقاله اول -->
+                    <div class="blog-card">
+                        <div class="blog-img-box">
+                            <img src="images/map.webp" alt="نقشه راه فرانت اند" loading="lazy">
+                        </div>
+                        <div class="blog-card-body">
+                            <span class="blog-category">برنامه‌نویسی</span>
+                            <h3 class="blog-title">نقشه راه ورود به دنیای فرانت‌اند در سال ۲۰۲۶</h3>
+                            <p class="blog-excerpt">چگونه یادگیری طراحی وب را از صفر آغاز کنیم و چه مهارت‌هایی برای
+                                بازار کار نیاز داریم؟</p>
+                            <div class="blog-footer">
+                                <span class="blog-date">⏱️ ۵ دقیقه مطالعه</span>
+                                <a href="pages/archive.html" class="blog-read-more">ادامه مطلب ←</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- مقاله دوم -->
+                    <div class="blog-card">
+                        <div class="blog-img-box">
+                            <img src="images/AI.webp" alt="هوش مصنوعی" loading="lazy">
+                        </div>
+                        <div class="blog-card-body">
+                            <span class="blog-category">هوش مصنوعی</span>
+                            <h3 class="blog-title">تاثیر هوش مصنوعی بر آینده شغلی توسعه‌دهندگان</h3>
+                            <p class="blog-excerpt">آیا هوش مصنوعی جایگزین برنامه‌نویسان می‌شود؟ بررسی فرصت‌ها و
+                                چالش‌های پیش رو.</p>
+                            <div class="blog-footer">
+                                <span class="blog-date">⏱️ ۸ دقیقه مطالعه</span>
+                                <a href="#" class="blog-read-more">ادامه مطلب ←</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- مقاله سوم -->
+                    <div class="blog-card">
+                        <div class="blog-img-box">
+                            <img src="images/UI and UX.webp" alt="اصول UI/UX" loading="lazy">
+                        </div>
+                        <div class="blog-card-body">
+                            <span class="blog-category">طراحی رابط کاربری</span>
+                            <h3 class="blog-title">۵ اصل کلیدی در طراحی تجربه کاربری (UX)</h3>
+                            <p class="blog-excerpt">چگونه طرح‌هایی بسازیم که کاربران عاشق کار کردن با اپلیکیشن یا
+                                وب‌سایت شما شوند؟</p>
+                            <div class="blog-footer">
+                                <span class="blog-date">⏱️ ۴ دقیقه مطالعه</span>
+                                <a href="#" class="blog-read-more">ادامه مطلب ←</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- مقاله چهارم (جدید) -->
+                    <div class="blog-card more-blog-cards">
+                        <div class="blog-img-box">
+                            <img src="https://unsplash.com" alt="سئو در وب">
+                        </div>
+                        <div class="blog-card-body">
+                            <span class="blog-category">سئو و بهینه‌سازی</span>
+                            <h3 class="blog-title">اصول سئو (SEO) برای توسعه‌دهندگان وب</h3>
+                            <p class="blog-excerpt">چگونه کدهای فرانت‌اند خود را بهینه‌سازی کنیم تا سایت ما در رتبه‌های
+                                اول گوگل قرار گیرد؟</p>
+                            <div class="blog-footer">
+                                <span class="blog-date">⏱️ ۶ دقیقه مطالعه</span>
+                                <a href="#" class="blog-read-more">ادامه مطلب ←</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- مقاله پنجم (جدید) -->
+                    <div class="blog-card more-blog-cards">
+                        <div class="blog-img-box">
+                            <img src="https://unsplash.com" alt="تحلیل داده">
+                        </div>
+                        <div class="blog-card-body">
+                            <span class="blog-category">علوم داده</span>
+                            <h3 class="blog-title">مقدمه‌ای بر تحلیل داده‌ها و بازار کار آن</h3>
+                            <p class="blog-excerpt">بررسی ابزارها و مهارت‌های مورد نیاز برای ورود به شغل جذاب و پردرآمد
+                                تحلیلگری داده.</p>
+                            <div class="blog-footer">
+                                <span class="blog-date">⏱️ ۷ دقیقه مطالعه</span>
+                                <a href="#" class="blog-read-more">ادامه مطلب ←</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- مقاله ششم (جدید) -->
+                    <div class="blog-card more-blog-cards">
+                        <div class="blog-img-box">
+                            <img src="https://unsplash.com" alt="دیزاین سیستم">
+                        </div>
+                        <div class="blog-card-body">
+                            <span class="blog-category">طراحی گرافیک</span>
+                            <h3 class="blog-title">دیزاین سیستم چیست و چه کاربردی دارد؟</h3>
+                            <p class="blog-excerpt">آشنایی با مفهوم تفکیک اجزا و المان‌های گرافیکی برای یکپارچه‌سازی
+                                پروژه‌های بزرگ.</p>
+                            <div class="blog-footer">
+                                <span class="blog-date">
+                                    <a href="#" class="dash-menu-item">
+                                        <span class="svg-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="lucide lucide-hourglass-icon lucide-hourglass">
+                                                <path d="M5 22h14" />
+                                                <path d="M5 2h14" />
+                                                <path
+                                                    d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22" />
+                                                <path
+                                                    d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2" />
+                                            </svg> </span>
+                                        5 دقیقه مطالعه
+                                    </a>
+                                </span>
+                                <a href="#" class="blog-read-more">ادامه مطلب ←</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- انتهای تگ blog-grid فعلی شما -->
+
+                <!-- دکمه جدید برای لود کردن مقالات بیشتر (این را دقیقاً بعد از تگ بسته‌شدن blog-grid بگذار) -->
+                <div class="blog-more-btn-wrapper">
+                    <button class="view-all-blog-btn" id="loadMoreBlogBtn" type="button"><a
+                            href="pages/archive.html">مشاهده همه مقالات</a></button>
+                </div>
+
+            </div>
+            </div>
+        </section>
+
+        <!-- بخش نظرات دانشجویان - نسخه اصلاح شده -->
+        <section class="testimonials-section" dir="rtl">
+            <div class="container">
+                <span class="sub-title">نظرات دانشجویان</span>
+                <h2 class="main-title">دانشجویان ما چه می‌گویند؟</h2>
+
+                <!-- این باکس اصلی اسلایدر است -->
+                <div class="testimonials-row" id="testimonialSlider">
+
+                    <!-- کارت اول -->
+                    <div class="testimonial-card">
+                        <p class="comment">"ادومستر مسیر شغلی من را کاملاً تغییر داد. دوره‌ها بسیار جامع هستند و اساتید
+                            فوق‌العاده عمل می‌کنند!"</p>
+                        <div class="rating">★★★★★</div>
+                        <div class="user-info">
+                            <img src="images/student1.webp" alt="الکس تامپسون" class="avatar" loading="lazy">
+                            <div class="user-details">
+                                <h4 class="name">الکس تامپسون</h4>
+                                <span class="role">توسعه‌دهنده وب</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- کارت دوم -->
+                    <div class="testimonial-card">
+                        <p class="comment">"بهترین پلتفرم آموزش آنلاین که تا به حال دیده‌ام. محتوای باکیفیت و پشتیبانی
+                            بسیار عالی!"</p>
+                        <div class="rating">★★★★★</div>
+                        <div class="user-info">
+                            <img src="images/student2.webp" alt="جسیکا لی" class="avatar" loading="lazy">
+                            <div class="user-details">
+                                <h4 class="name">جسیکا لی</h4>
+                                <span class="role">دانشمند داده</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- کارت سوم -->
+                    <div class="testimonial-card">
+                        <p class="comment">"من عاشق انعطاف‌پذیری دوره‌ها و دسترسی همیشگی به ویدیوها شدم. ارزش هر تومانی
+                            که پرداخت کردم را داشت!"</p>
+                        <div class="rating">★★★★★</div>
+                        <div class="user-info">
+                            <img src="images/student3.webp" alt="رایان میلر" class="avatar" loading="lazy">
+                            <div class="user-details">
+                                <h4 class="name">رایان میلر</h4>
+                                <span class="role">طراح رابط کاربری</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- کارت چهارم -->
+                    <div class="testimonial-card">
+                        <p class="comment">"پروژه‌های عملی این دوره به من کمک کرد تا یک پورتفولیو قوی بسازم. به همه
+                            پیشنهادش می‌کنم."</p>
+                        <div class="rating">★★★★★</div>
+                        <div class="user-info">
+                            <img src="images/student4.webp" alt="سارا کانر" class="avatar" loading="lazy">
+                            <div class="user-details">
+                                <h4 class="name">سارا کانر</h4>
+                                <span class="role">مدیر محصول</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- کارت پنجم -->
+                    <div class="testimonial-card">
+                        <p class="comment">"یک انجمن فوق‌العاده از دانشجویان و مربیان. در طول مسیر یادگیری هرگز احساس
+                            تنهایی نکردم."</p>
+                        <div class="rating">★★★★★</div>
+                        <div class="user-info">
+                            <img src="images/student5.webp" alt="دیوید کیم" class="avatar" loading="lazy">
+                            <div class="user-details">
+                                <h4 class="name">دیوید کیم</h4>
+                                <span class="role">توسعه‌دهنده موبایل</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- دکمه‌های ناوبری اسلایدر -->
+                <div class="slider-controls">
+                    <button class="control-btn prev-btn" id="testimonialPrevBtn" type="button">&#10094;</button>
+                    <button class="control-btn next-btn" id="testimonialNextBtn" type="button">&#10095;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- بخش لوگوهای شرکت‌ها - همکاران ما -->
+        <section class="brands-section">
+            <div class="brands-container">
+                <!-- ردیف لوگوها شامل کدهای SVG اختصاصی و بسیار سبک -->
+                <div class="brands-grid">
+
+                    <!-- لوگو گوگل -->
+                    <div class="brand-item">
+                        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://w3.org">
+                            <path
+                                d="M12.24 10.285V13.4h6.887c-.275 1.565-1.88 4.604-6.887 4.604-4.33 0-7.866-3.577-7.866-8s3.536-8 7.866-8c2.46 0 4.105 1.025 5.047 1.926l2.427-2.334C18.155 2.569 15.44 1.5 12.24 1.5 6.433 1.5 1.72 6.204 1.72 12s4.713 10.5 10.52 10.5c6.06 0 10.087-4.258 10.087-10.258 0-.692-.075-1.22-.165-1.457H12.24z" />
+                        </svg>
+                    </div>
+
+                    <!-- لوگو مایکروسافت -->
+                    <div class="brand-item">
+                        <svg viewBox="0 0 23 23" fill="currentColor" xmlns="http://w3.org">
+                            <path d="M0 0h11v11H0zM12 0h11v11H12zM0 12h11v11H0zM12 12h11v11H12z" />
+                        </svg>
+                    </div>
+
+                    <!-- لوگو آمازون -->
+                    <div class="brand-item">
+                        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://w3.org">
+                            <path
+                                d="M16.147 16.944c-.754.516-1.741.79-2.731.79-2.222 0-3.325-1.25-3.325-3.414 0-3.336 2.535-4.52 6.056-4.52v.421c0 1.25-.262 2.651-.836 3.73-.243.456-.59.816-1.164 2.993zm5.006 1.75c-.217.18-.517.12-.716-.09-.597-.624-1.926-2.025-2.584-2.613-.254-.228-.195-.492.112-.354 1.83.829 4.316 2.535 3.905 3.12-.135.195-.465.132-.717-.063zm-8.889.378c-3.193 0-5.717-1.392-5.717-4.39 0-3.856 3.123-5.32 7.747-5.32h1.29v-.517c0-1.125-.195-2.533-1.637-2.533-1.34 0-1.764.93-1.884 1.831-.035.244-.216.444-.457.444l-2.903-.195c-.24-.015-.412-.224-.37-.464.405-2.313 2.584-4.145 5.76-4.145 3.493 0 4.904 2.133 4.904 5.374v6.52c0 .945.345 1.335.66 1.725.18.21.21.465-.015.63l-2.483 1.85c-.21.15-.465.105-.63-.12-.33-.42-.66-.99-.75-1.425-.66.825-1.785 1.56-3.465 1.56zm-1.89-15.004c4.896 1.487 10.36 1.487 15.257 0 .363-.111.666.24.417.493-2.126 2.16-5.467 3.518-8.046 3.518-2.578 0-5.92-1.358-8.046-3.518-.25-.253.054-.604.418-.493z" />
+                        </svg>
+                    </div>
+
+                    <!-- لوگو نتفلیکس -->
+                    <div class="brand-item">
+                        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://w3.org">
+                            <path d="M5.18 0H8.3v15.932L18.82 0h3.122v24h-3.122V8.068L8.3 24H5.18V0z" />
+                        </svg>
+                    </div>
+
+                    <!-- لوگو اسپاتیفای -->
+                    <div class="brand-item">
+                        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://w3.org">
+                            <path
+                                d="M12 0C5.376 0 0 5.376 0 12s5.376 12 12 12 12-5.376 12-12S18.624 0 12 0zm5.496 17.304c-.216.348-.672.456-1.02.24-2.832-1.728-6.396-2.112-10.596-1.152-.396.096-.804-.156-.888-.552-.096-.396.156-.804.552-.888 4.608-1.056 8.532-.6 11.712 1.344.348.204.456.66.24 1.008zm1.464-3.264c-.276.444-.852.588-1.296.312-3.24-2-8.184-2.58-12.012-1.416-.492.144-1.008-.132-1.152-.624-.144-.492.132-1.008.624-1.152 4.38-1.332 9.816-.672 13.524 1.62.444.264.588.84.312 1.26zm.132-3.42C15.348 8.448 9.168 8.244 5.616 9.324c-.564.168-1.152-.156-1.32-.72-.168-.564.156-1.152.72-1.32 4.092-1.236 10.92-.996 15.228 1.56.504.3.672.948.372 1.452-.3.516-.948.684-1.452.384z" />
+                        </svg>
+                    </div>
+
+                    <!-- لوگو ادوبی -->
+                    <div class="brand-item">
+                        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://w3.org">
+                            <path
+                                d="M15.1 2H24v20L15.1 2zm-6.2 0H0v20L8.9 2zm3.1 7.1L17.7 22h-3.6l-2.1-5.1H8.3l3.7-7.8z" />
+                        </svg>
+                    </div>
+
+                </div>
+            </div>
+        </section>
 
         <!-- ==========================================================================
        بخش سوالات متداول (FAQ Section)
        ========================================================================== -->
-    <section class="home-faq-section">
-        <div class="home-faq-container">
+        <section class="home-faq-section">
+            <div class="home-faq-container">
 
-            <!-- تیتر بخش -->
-            <div class="home-faq-header">
-                <span class="home-faq-subtitle">پشتیبانی آموزشی</span>
-                <h2 class="home-faq-title">سوالات متداول کاربران</h2>
-                <p class="home-faq-desc">پاسخ رایج‌ترین سوالات خود را در این بخش پیدا کنید.</p>
+                <!-- تیتر بخش -->
+                <div class="home-faq-header">
+                    <span class="home-faq-subtitle">پشتیبانی آموزشی</span>
+                    <h2 class="home-faq-title">سوالات متداول کاربران</h2>
+                    <p class="home-faq-desc">پاسخ رایج‌ترین سوالات خود را در این بخش پیدا کنید.</p>
+                </div>
+
+                <!-- مجموعه سوالات آکاردئونی -->
+                <div class="home-faq-wrapper">
+
+                    <!-- سوال اول -->
+                    <div class="home-faq-item">
+                        <button class="home-faq-question">
+                            آیا دوره‌ها دارای پشتیبانی هستند؟
+                            <span class="home-faq-icon">+</span>
+                        </button>
+                        <div class="home-faq-answer">
+                            <p>بله، تمامی دوره‌های تخصصی ادومستر دارای پشتیبانی دائمی توسط مدرس دوره در پنل کاربری و
+                                تلگرام هستند.</p>
+                        </div>
+                    </div>
+
+                    <!-- سوال دوم -->
+                    <div class="home-faq-item">
+                        <button class="home-faq-question">
+                            چگونه می‌توانم ویدیوهای دوره را تماشا کنم؟
+                            <span class="home-faq-icon">+</span>
+                        </button>
+                        <div class="home-faq-answer">
+                            <p>پس از خرید هر دوره، دسترسی شما به ویدیوها به صورت آنی باز می‌شود و می‌توانید از طریق
+                                سیستم اسپات‌پلی یا پنل کاربری دانلود یا تماشا کنید.</p>
+                        </div>
+                    </div>
+
+                    <!-- سوال سوم -->
+                    <div class="home-faq-item">
+                        <button class="home-faq-question">
+                            آیا امکان بازگشت وجه در صورت عدم رضایت وجود دارد؟
+                            <span class="home-faq-icon">+</span>
+                        </button>
+                        <div class="home-faq-answer">
+                            <p>بله، تا ۷ روز پس از خرید دوره، در صورت عدم رضایت از کیفیت آموزشی می‌توانید درخواست بازگشت
+                                وجه خود را ثبت کنید.</p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+        </section>
 
-            <!-- مجموعه سوالات آکاردئونی -->
-            <div class="home-faq-wrapper">
-
-                <!-- سوال اول -->
-                <div class="home-faq-item">
-                    <button class="home-faq-question">
-                        آیا دوره‌ها دارای پشتیبانی هستند؟ 
-                        <span class="home-faq-icon">+</span>
-                    </button>
-                    <div class="home-faq-answer">
-                        <p>بله، تمامی دوره‌های تخصصی ادومستر دارای پشتیبانی دائمی توسط مدرس دوره در پنل کاربری و تلگرام هستند.</p>
-                    </div>
-                </div>
-
-                <!-- سوال دوم -->
-                <div class="home-faq-item">
-                    <button class="home-faq-question">
-                        چگونه می‌توانم ویدیوهای دوره را تماشا کنم؟ 
-                        <span class="home-faq-icon">+</span>
-                    </button>
-                    <div class="home-faq-answer">
-                        <p>پس از خرید هر دوره، دسترسی شما به ویدیوها به صورت آنی باز می‌شود و می‌توانید از طریق سیستم اسپات‌پلی یا پنل کاربری دانلود یا تماشا کنید.</p>
-                    </div>
-                </div>
-
-                <!-- سوال سوم -->
-                <div class="home-faq-item">
-                    <button class="home-faq-question">
-                        آیا امکان بازگشت وجه در صورت عدم رضایت وجود دارد؟ 
-                        <span class="home-faq-icon">+</span>
-                    </button>
-                    <div class="home-faq-answer">
-                        <p>بله، تا ۷ روز پس از خرید دوره، در صورت عدم رضایت از کیفیت آموزشی می‌توانید درخواست بازگشت وجه خود را ثبت کنید.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-</main>
+    </main>
 
     <!-- بخش فوتر سایت - نسخه فارسی و راست‌چین -->
-<footer class="main-footer" dir="rtl">
-    <div class="footer-container">
-        
-        <!-- ردیف اصلی ستون‌های فوتر -->
-        <div class="footer-widgets">
-            
-            <!-- ستون ۱: درباره برند و شبکه‌های اجتماعی -->
-            <div class="footer-column brand-column">
-                <div class="footer-logo">
-                    <!-- آیکون کلاه فارغ‌التحصیلی SVG -->
-                    <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM4.16 11.23l6.34 3.46c.3.16.69.16.99 0l6.34-3.46C17.43 12.37 14.86 14 12 14s-5.43-1.63-5.84-2.77zM12 16c-2.4 0-4.63-.8-6-2.13V17c0 1.66 2.69 3 6 3s6-1.34 6-3v-3.13c-1.37 1.33-3.6 2.13-6 2.13z"/></svg>
-                    <h3>ادومستر</h3>
+    <footer class="main-footer" dir="rtl">
+        <div class="footer-container">
+
+            <!-- ردیف اصلی ستون‌های فوتر -->
+            <div class="footer-widgets">
+
+                <!-- ستون ۱: درباره برند و شبکه‌های اجتماعی -->
+                <div class="footer-column brand-column">
+                    <div class="footer-logo">
+                        <!-- آیکون کلاه فارغ‌التحصیلی SVG -->
+                        <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM4.16 11.23l6.34 3.46c.3.16.69.16.99 0l6.34-3.46C17.43 12.37 14.86 14 12 14s-5.43-1.63-5.84-2.77zM12 16c-2.4 0-4.63-.8-6-2.13V17c0 1.66 2.69 3 6 3s6-1.34 6-3v-3.13c-1.37 1.33-3.6 2.13-6 2.13z" />
+                        </svg>
+                        <h3>ادومستر</h3>
+                    </div>
+                    <p class="brand-desc">بهترین پلتفرم برای یادگیری مهارت‌های جدید و پیشرفت در مسیر شغلی شما.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="فیسبوک"><svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z" />
+                            </svg></a>
+                        <a href="#" aria-label="توییتر"><svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                            </svg></a>
+                        <a href="#" aria-label="لینکدین"><svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg></a>
+                        <a href="#" aria-label="اینستاگرام"><svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                            </svg></a>
+                    </div>
                 </div>
-                <p class="brand-desc">بهترین پلتفرم برای یادگیری مهارت‌های جدید و پیشرفت در مسیر شغلی شما.</p>
-                <div class="social-links">
-                    <a href="#" aria-label="فیسبوک"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg></a>
-                    <a href="#" aria-label="توییتر"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
-                    <a href="#" aria-label="لینکدین"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
-                    <a href="#" aria-label="اینستاگرام"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+
+                <!-- ستون ۲: دسترسی سریع -->
+                <div class="footer-column">
+                    <h4>دسترسی سریع</h4>
+                    <ul>
+                        <li><a href="#">خانه</a></li>
+                        <li><a href="#">دوره‌ها</a></li>
+                        <li><a href="#">درباره ما</a></li>
+                        <li><a href="#">مدرسین</a></li>
+                        <li><a href="#">وبلاگ</a></li>
+                    </ul>
                 </div>
+                <!-- ستون ۳: دسته‌بندی‌ها -->
+                <div class="footer-column">
+                    <h4>دسته‌بندی‌ها</h4>
+                    <ul>
+                        <li><a href="#">توسعه وب</a></li>
+                        <li><a href="#">علوم داده</a></li>
+                        <li><a href="#">طراحی گرافیک</a></li>
+                        <li><a href="#">کسب و کار</a></li>
+                        <li><a href="#">بازاریابی</a></li>
+                    </ul>
+                </div>
+
+                <!-- ستون ۴: پشتیبانی -->
+                <div class="footer-column">
+                    <h4>پشتیبانی</h4>
+                    <ul>
+                        <li><a href="#">مرکز کمک</a></li>
+                        <li><a href="#">تماس با ما</a></li>
+                        <li><a href="#">قوانین و مقررات</a></li>
+                        <li><a href="#">حریم خصوصی</a></li>
+                        <li><a href="#">سیاست بازگشت وجه</a></li>
+                    </ul>
+                </div>
+
+                <!-- ستون ۵: خبرنامه -->
+                <div class="footer-column newsletter-column">
+                    <h4>خبرنامه</h4>
+                    <p>برای اطلاع از دوره‌های جدید و تخفیف‌ها عضو شوید.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="ایمیل خود را وارد کنید" required>
+                        <button type="submit">عضویت</button>
+                    </form>
+                </div>
+
             </div>
 
-            <!-- ستون ۲: دسترسی سریع -->
-            <div class="footer-column">
-                <h4>دسترسی سریع</h4>
-                <ul>
-                    <li><a href="#">خانه</a></li>
-                    <li><a href="#">دوره‌ها</a></li>
-                    <li><a href="#">درباره ما</a></li>
-                    <li><a href="#">مدرسین</a></li>
-                    <li><a href="#">وبلاگ</a></li>
-                </ul>
-            </div>
-            <!-- ستون ۳: دسته‌بندی‌ها -->
-            <div class="footer-column">
-                <h4>دسته‌بندی‌ها</h4>
-                <ul>
-                    <li><a href="#">توسعه وب</a></li>
-                    <li><a href="#">علوم داده</a></li>
-                    <li><a href="#">طراحی گرافیک</a></li>
-                    <li><a href="#">کسب و کار</a></li>
-                    <li><a href="#">بازاریابی</a></li>
-                </ul>
-            </div>
-
-            <!-- ستون ۴: پشتیبانی -->
-            <div class="footer-column">
-                <h4>پشتیبانی</h4>
-                <ul>
-                    <li><a href="#">مرکز کمک</a></li>
-                    <li><a href="#">تماس با ما</a></li>
-                    <li><a href="#">قوانین و مقررات</a></li>
-                    <li><a href="#">حریم خصوصی</a></li>
-                    <li><a href="#">سیاست بازگشت وجه</a></li>
-                </ul>
-            </div>
-
-            <!-- ستون ۵: خبرنامه -->
-            <div class="footer-column newsletter-column">
-                <h4>خبرنامه</h4>
-                <p>برای اطلاع از دوره‌های جدید و تخفیف‌ها عضو شوید.</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="ایمیل خود را وارد کنید" required>
-                    <button type="submit">عضویت</button>
-                </form>
+            <!-- بخش کپی‌رایت و لوگوهای پرداخت پایین فوتر -->
+            <div class="footer-bottom">
+                <p class="copyright">© ۲۰۲۶ ادومستر. تمامی حقوق محفوظ است.</p>
+                <div class="payment-methods">
+                    <span class="payment-card">VISA</span>
+                    <span class="payment-card">PayPal</span>
+                    <span class="payment-card">MasterCard</span>
+                    <span class="payment-card">AMEX</span>
+                </div>
             </div>
 
         </div>
 
-        <!-- بخش کپی‌رایت و لوگوهای پرداخت پایین فوتر -->
-        <div class="footer-bottom">
-            <p class="copyright">© ۲۰۲۶ ادومستر. تمامی حقوق محفوظ است.</p>
-            <div class="payment-methods">
-                <span class="payment-card">VISA</span>
-                <span class="payment-card">PayPal</span>
-                <span class="payment-card">MasterCard</span>
-                <span class="payment-card">AMEX</span>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- دکمه بازگشت به بالا (دایره صورتی سمت راست در تصویر) -->
-    <button class="scroll-to-top" id="scrollTopBtn" title="بازگشت به بالا">↑</button>
-</footer>
+        <!-- دکمه بازگشت به بالا (دایره صورتی سمت راست در تصویر) -->
+        <button class="scroll-to-top" id="scrollTopBtn" title="بازگشت به بالا">↑</button>
+    </footer>
 
 </body>
+
 </html>
 <script src="js/script.js">
-// for prealoader
+    // for prealoader
 
-window.addEventListener('load',()=>{
+    window.addEventListener('load', () => {
 
-const preloader =
-document.getElementById('preloader');
+        const preloader =
+            document.getElementById('preloader');
 
-preloader.style.opacity='0';
+        preloader.style.opacity = '0';
 
-setTimeout(()=>{
-    preloader.style.display='none';
-},500);
+        setTimeout(() => {
+            preloader.style.display = 'none';
+        }, 500);
 
-});
+    });
 </script>
 </body>
+
 </html>
