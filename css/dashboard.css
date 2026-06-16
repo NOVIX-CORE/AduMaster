@@ -13,7 +13,7 @@
    ========================================================================== */
 .dash-sidebar {
     width: 280px;
-    background-color: var(--bg-surface);
+    background-color: var(--bg-main);
     border-left: 1px solid var(--border-color);
     padding: 30px 20px;
     display: flex;
@@ -152,6 +152,12 @@
     font-size: 13.5px;
 }
 
+@media  (max-width: 700px){
+    .dash-main-content{
+        padding: 40px 12px;
+    }
+}
+
 /* کارت‌های آمار پیشخوان */
 .dash-stats-grid {
     display: grid;
@@ -160,7 +166,7 @@
 }
 
 .stat-card {
-    background-color: var(--bg-surface);
+    background-color: var(--bg-main);
     border: 1px solid var(--border-color);
     border-radius: 16px;
     padding: 20px;
@@ -219,7 +225,7 @@
 
 /* کارت ادامه دوره */
 .recent-course-card {
-    background-color: var(--bg-surface);
+    background-color: var(--bg-main);
     border: 1px solid var(--border-color);
     border-radius: 16px;
     padding: 20px;
@@ -290,7 +296,7 @@
 
 /* کارت کوچک گواهینامه جدید */
 .mini-cert-card {
-    background-color: var(--bg-surface);
+    background-color: var(--bg-main);
     border: 1px solid var(--border-color);
     border-radius: 16px;
     padding: 20px;
@@ -336,6 +342,17 @@
     }
 }
 
+@media  (max-width: 500px){
+    .recent-course-card{
+        flex-direction: column;
+    }
+}
+
+@media  (max-width: 830px) and (min-width: 600px){
+    .recent-course-card{
+        flex-direction: column;
+    }
+}
 
 /* ==========================================================================
    استایل پاپ‌آپ تایید خروج (Logout Modal)
@@ -437,3 +454,54 @@
 .cancel-logout-btn:hover {
     background-color: rgba(255, 255, 255, 0.06);
 }
+
+
+
+
+
+/* دکمه موبایل */
+.mobile-menu-btn{
+    display:none;
+    }
+    
+    /* موبایل */
+    @media (max-width:600px){
+    
+    .mobile-menu-btn{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        position:fixed;
+        top: 5px;
+        right: 5px;
+        width:40px;
+        height:40px;
+        border:none;
+        border-radius:12px;
+        background:#6366f1;
+        color:#fff;
+        font-size:24px;
+        cursor:pointer;
+        z-index:1001;
+    }
+    
+    .dash-sidebar{
+        position:fixed;
+        top:0;
+        right:-300px;
+        width:260px;
+        height:100vh;
+        background: var(--bg-main);
+        transition:0.3s;
+        z-index:1000;
+    }
+    
+    .dash-sidebar.active{
+        right:0;
+    }
+    
+    .dash-main-content{
+        width:100%;
+    }
+    
+    }
