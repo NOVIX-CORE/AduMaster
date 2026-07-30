@@ -1,7 +1,8 @@
 /* ==========================================================================
    ساختار چیدمان دو ستونه صفحه لندینگ دوره
    ========================================================================== */
-   .course-landing-main {
+
+.course-landing-main {
     background-color: var(--bg-main);
     padding: 60px 0 80px 0;
     font-family: var(--font-family);
@@ -18,9 +19,11 @@
     align-items: start;
 }
 
+
 /* ==========================================================================
    ستون سمت راست (محتوا و ویدیو)
    ========================================================================== */
+
 .course-hero-section {
     display: flex;
     flex-direction: column;
@@ -69,9 +72,11 @@
     object-fit: cover;
 }
 
+
 /* ==========================================================================
    ستون سمت چپ (سایدبار قیمت و ویژگی‌ها)
    ========================================================================== */
+
 .course-sticky-card {
     background-color: var(--bg-main);
     border: 1px solid var(--border-color);
@@ -81,11 +86,14 @@
     flex-direction: column;
     gap: 25px;
     position: sticky;
-    top: 30px; /* چسبیدن شیک کارت هنگام اسکرول صفحه به پایین */
+    top: 30px;
+    /* چسبیدن شیک کارت هنگام اسکرول صفحه به پایین */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+
 /* قیمت‌ها */
+
 .course-price-zone {
     display: flex;
     justify-content: space-between;
@@ -128,7 +136,9 @@
     color: var(--text-muted);
 }
 
+
 /* دکمه‌ها */
+
 .course-action-buttons {
     display: flex;
     flex-direction: column;
@@ -158,7 +168,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background-color: rgba(255, 255,255, 0.01);
+    background-color: rgba(255, 255, 255, 0.01);
     border: 1px solid var(--border-color);
     color: var(--text-main);
     padding: 12px;
@@ -176,17 +186,22 @@
     background-color: rgba(244, 63, 94, 0.02);
 }
 
+
 /* حالت فعال شدن دکمه قلب (لایک شده) */
+
 .like-course-btn.liked {
     background-color: rgba(244, 63, 94, 0.1);
     border-color: #f43f5e;
     color: #f43f5e;
 }
+
 .like-course-btn.liked svg {
     fill: #f43f5e;
 }
 
+
 /* لیست ویژگی‌های سایدبار */
+
 .course-features-list {
     display: flex;
     flex-direction: column;
@@ -218,7 +233,9 @@
     font-weight: 700;
 }
 
+
 /* واکنش‌گرایی برای تبلت و موبایل */
+
 @media (max-width: 992px) {
     .course-landing-container {
         grid-template-columns: 1fr;
@@ -233,7 +250,8 @@
 /* ==========================================================================
    بخش معرفی مدرس دوره
    ========================================================================== */
-   .landing-instructor-box {
+
+.landing-instructor-box {
     background-color: var(--bg-main);
     border: 1px solid var(--border-color);
     border-radius: 20px;
@@ -272,8 +290,8 @@
     line-height: 1.7;
 }
 
-@media  (max-width: 500px){
-    .landing-instructor-box{
+@media (max-width: 500px) {
+    .landing-instructor-box {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -282,9 +300,11 @@
     }
 }
 
+
 /* ==========================================================================
    بخش سرفصل‌های آکاردئونی قفل‌شده
    ========================================================================== */
+
 .landing-section-title {
     margin-bottom: 20px;
 }
@@ -380,9 +400,11 @@
     font-size: 12px;
 }
 
+
 /* ==========================================================================
    بخش فرم کامنت‌ها و لیست نظرات
    ========================================================================== */
+
 .comment-submit-form {
     display: flex;
     flex-direction: column;
@@ -450,7 +472,7 @@
 .comment-user-avatar {
     width: 36px;
     height: 36px;
-    background-color: rgba(255, 255,255, 0.05);
+    background-color: rgba(255, 255, 255, 0.05);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -475,9 +497,11 @@
     line-height: 1.7;
 }
 
+
 /* ==========================================================================
    دکمه مشاهده بیشتر نظرات و انیمیشن‌ها
    ========================================================================== */
+
 .load-more-comments-btn {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.01);
@@ -512,7 +536,10 @@
     animation: popInComment 0.4s ease forwards;
     border-color: var(--primary-color);
 }
+
+
 /* استایل اختصاصی لینک نام مدرس */
+
 .instructor-profile-link {
     color: var(--text-main);
     text-decoration: none;
@@ -523,7 +550,9 @@
     color: var(--primary-color);
 }
 
+
 /* استایل سطر جلسه رایگان که تبدیل به تگ لینک شده است */
+
 a.landing-session-row.free-preview {
     text-decoration: none;
     display: flex;
@@ -536,6 +565,7 @@ a.landing-session-row.free-preview:hover {
 
 
 /* باکس و دکمه‌های خرید دوره */
+
 .course-action-box {
     display: flex;
     flex-direction: column;
@@ -558,9 +588,14 @@ a.landing-session-row.free-preview:hover {
     cursor: pointer;
     transition: transform 0.2s;
 }
-.btn-start-learning:hover { transform: translateY(-2px); }
+
+.btn-start-learning:hover {
+    transform: translateY(-2px);
+}
+
 
 /* ردیف دکمه سبد خرید و نشان کردن */
+
 .course-secondary-actions {
     display: flex;
     gap: 10px;
@@ -609,20 +644,24 @@ a.landing-session-row.free-preview:hover {
     border-color: #f59e0b;
 }
 
+
 /* کانتینر پیام‌های پاپ‌آپ (توست نوتیفیکیشن) */
+
 .toast-container {
     position: fixed;
-    top: 90px; /* مقدار فاصله از بالا را کمی بیشتر کردیم تا دقیقاً زیر هدر یا چسبیده به آن با ظاهر شیک بیاید */
+    top: 90px;
+    /* مقدار فاصله از بالا را کمی بیشتر کردیم تا دقیقاً زیر هدر یا چسبیده به آن با ظاهر شیک بیاید */
     left: 20px;
-    z-index: 999999 !important; /* مقدار بسیار بالا برای آمدن روی هدر */
+    z-index: 999999 !important;
+    /* مقدار بسیار بالا برای آمدن روی هدر */
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-
 .toast-message {
-    background-color: #10b981; /* سبز جذاب و زنده */
+    background-color: #10b981;
+    /* سبز جذاب و زنده */
     color: #ffffff;
     padding: 14px 24px;
     border-radius: 12px;
@@ -638,8 +677,14 @@ a.landing-session-row.free-preview:hover {
 }
 
 @keyframes slideInLeft {
-    from { transform: translateX(-100%); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .toast-message.fade-out {
@@ -647,6 +692,12 @@ a.landing-session-row.free-preview:hover {
 }
 
 @keyframes slideOutLeft {
-    from { transform: translateX(0); opacity: 1; }
-    to { transform: translateX(-100%); opacity: 0; }
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
 }
