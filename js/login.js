@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     var loginForm = document.getElementById('loginForm');
     var emailInput = document.getElementById('email');
     var passwordInput = document.getElementById('password');
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var btnSpinner = submitBtn.querySelector('.btn-spinner');
 
     // ۱. عملکرد دکمه چشم برای مخفی/ظاهر کردن رمز عبور
-    togglePassword.addEventListener('click', function() {
+    togglePassword.addEventListener('click', function () {
         if (passwordInput.type === 'password') {
             passwordInput.type = 'text';
             togglePassword.textContent = '🙈';
@@ -27,9 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ۲. اعتبارسنجی فرم هنگام زدن دکمه ثبت فرم
-    loginForm.addEventListener('submit', function(e) {
+    loginForm.addEventListener('submit', function (e) {
         e.preventDefault(); // جلوگیری از رفرش شدن آنی صفحه
-        
+
         var isFormValid = true;
         globalErrorBox.style.display = 'none'; // ریست کردن خطای کلی
 
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!isFormValid) {
             authCard.classList.add('shake-animation');
             // حذف کلاس انیمیشن پس از اتمام برای اجرای مجدد در دفعات بعدی
-            setTimeout(function() {
+            setTimeout(function () {
                 authCard.classList.remove('shake-animation');
             }, 400);
             return;
@@ -64,26 +64,26 @@ document.addEventListener('DOMContentLoaded', function() {
         btnText.style.display = 'none';
         btnSpinner.style.display = 'block';
 
-        setTimeout(function() {
+        setTimeout(function () {
             // شبیه‌سازی یک خطای فرضی از سمت سرور (مثلا رمز اشتباه است)
             submitBtn.disabled = false;
             btnText.style.display = 'block';
             btnSpinner.style.display = 'none';
-            
+
             // نمایش خطای سرور و لرزش کارت
             globalErrorBox.textContent = "ایمیل یا رمز عبور وارد شده اشتباه است!";
             globalErrorBox.style.display = 'block';
             authCard.classList.add('shake-animation');
-            setTimeout(function() { authCard.classList.remove('shake-animation'); }, 400);
-            
+            setTimeout(function () { authCard.classList.remove('shake-animation'); }, 400);
+
         }, 1500); // لودینگ به مدت ۱.۵ ثانیه طول می‌کشد
     });
 
     // ۵. حذف لحظه‌ای خطای فیلدها هنگام تایپ کردن مجدد کاربر
-    emailInput.addEventListener('input', function() {
+    emailInput.addEventListener('input', function () {
         document.getElementById('emailGroup').classList.remove('has-error');
     });
-    passwordInput.addEventListener('input', function() {
+    passwordInput.addEventListener('input', function () {
         document.getElementById('passwordGroup').classList.remove('has-error');
     });
 });
