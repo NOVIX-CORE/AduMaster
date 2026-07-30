@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,28 +10,29 @@
     <!-- ۲. اتصال به CSS اختصاصی صفحه ورود -->
     <link rel="stylesheet" href="../css/login.css">
 </head>
+
 <body class="auth-page-body">
 
     <div class="auth-wrapper">
         <!-- دکمه بازگشت به خانه -->
         <a href="../index.html" class="back-to-home">← بازگشت به صفحه اصلی</a>
-        
+
         <div class="auth-card" id="authCard">
             <h2 class="auth-title">خوش آمدید!</h2>
             <p class="auth-subtitle">لطفاً برای ورود به حساب خود اطلاعات زیر را وارد کنید.</p>
-            
+
             <!-- باکس پیام خطای کلی سیستم -->
             <div class="global-error-box" id="globalErrorBox">ایمیل یا رمز عبور اشتباه است!</div>
-            
+
             <form class="auth-form" id="loginForm" novalidate>
-                
+
                 <!-- فیلد ایمیل -->
                 <div class="form-group" id="emailGroup">
                     <label for="email">ایمیل یا نام کاربری</label>
                     <input type="email" id="email" placeholder="example@gmail.com" autocomplete="off" required>
                     <span class="error-message">لطفاً یک ایمیل معتبر وارد کنید.</span>
                 </div>
-                
+
                 <!-- فیلد رمز عبور -->
                 <div class="form-group" id="passwordGroup">
                     <label for="password">رمز عبور</label>
@@ -41,7 +43,7 @@
                     </div>
                     <span class="error-message">رمز عبور باید حداقل ۶ کاراکتر باشد.</span>
                 </div>
-                
+
                 <!-- گزینه‌های فرم -->
                 <div class="form-options">
                     <label class="remember-me">
@@ -49,14 +51,14 @@
                     </label>
                     <a href="#" class="forgot-pass">رمز عبور را فراموش کرده‌اید؟</a>
                 </div>
-                
+
                 <!-- دکمه ارسال فرم -->
                 <button type="submit" class="auth-submit-btn" id="submitBtn">
                     <span class="btn-text">ورود به حساب</span>
                     <div class="btn-spinner"></div> <!-- انیمیشن لودینگ -->
                 </button>
             </form>
-            
+
             <div class="auth-footer">
                 <span>هنوز ثبت‌نام نکرده‌اید؟</span>
                 <a href="register.html" class="register-link">ایجاد حساب کاربری</a>
@@ -67,4 +69,5 @@
     <!-- ۳. لود کردن کدهای جاوااسکریپت اختصاصی فرم ورود -->
     <script src="../js/login.js"></script>
 </body>
+
 </html>
