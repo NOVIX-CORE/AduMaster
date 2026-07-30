@@ -1,6 +1,6 @@
 let cartItems = [];
 document.addEventListener('DOMContentLoaded', function() {
-    
+
     // ==========================================
     // ۱. مدیریت پرلودر (غیب شدن انیمیشن اول صفحه)
     // ==========================================
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var singleCard = mainSlider.querySelector('.course-card');
             if (!singleCard) return;
             var cardWidth = singleCard.getBoundingClientRect().width;
-            var spaceGap = 24; 
+            var spaceGap = 24;
             var totalMove = currentSlideIndex * (cardWidth + spaceGap);
             mainSlider.style.transform = 'translateX(' + totalMove + 'px)';
         }
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var visibleCardsCount = countVisibleCards();
             if (totalCardsCount <= visibleCardsCount) return;
             if (currentSlideIndex >= (totalCardsCount - visibleCardsCount)) {
-                currentSlideIndex = 0; 
+                currentSlideIndex = 0;
             } else {
                 currentSlideIndex = currentSlideIndex + 1;
             }
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var visibleCardsCount = countVisibleCards();
             if (totalCardsCount <= visibleCardsCount) return;
             if (currentSlideIndex <= 0) {
-                currentSlideIndex = totalCardsCount - visibleCardsCount; 
+                currentSlideIndex = totalCardsCount - visibleCardsCount;
             } else {
                 currentSlideIndex = currentSlideIndex - 1;
             }
@@ -125,15 +125,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==========================================
     // ۴. آکاردئون سوالات متداول صفحه اصلی
     // ==========================================
-    var homeFaqQuestions = document.querySelectorAll('.home-faq-question');
-    if (homeFaqQuestions.length > 0) {
-        homeFaqQuestions.forEach(function(question) {
-            question.addEventListener('click', function() {
-                var item = this.parentElement;
-                if (item) item.classList.toggle('active');
-            });
+    const questions = document.querySelectorAll(".home-faq-question");
+
+    questions.forEach(function(question) {
+
+        question.addEventListener("click", function() {
+
+            this.parentElement.classList.toggle("active");
+
         });
-    }
+
+    });
+
 
     // ==========================================
     // ۵. شمارنده‌های لوکس آمار (luxuryCounters)
@@ -143,9 +146,9 @@ document.addEventListener('DOMContentLoaded', function() {
         luxuryCounters.forEach(function(counter) {
             var updateCount = function() {
                 var target = Number(counter.getAttribute('data-target'));
-                var count = Number(counter.innerText.replace(/[^0-9.]/g, '')); 
-                var speed = target / 40; 
-                
+                var count = Number(counter.innerText.replace(/[^0-9.]/g, ''));
+                var speed = target / 40;
+
                 if (count < target) {
                     if (target === 48) {
                         counter.innerText = ((count + 1) / 10).toFixed(1);
@@ -187,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function() {
             slider.style.transform = "translateX(-" + (index * getCardSize()) + "px)";
         }
 
-        next.addEventListener("click", function () {
+        next.addEventListener("click", function() {
             var total = slider.children.length;
             var visible = 3;
             if (index >= total - visible) {
@@ -195,88 +198,89 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 index++;
             }
-            move();});
+            move();
+        });
 
-            prev.addEventListener("click", function () {
-                var total = slider.children.length;
-                var visible = 3;
-                if (index <= 0) {
-                    index = total - visible;
-                } else {
-                    index--;
-                }
-                move();
-            });
-    
-            window.addEventListener("resize", function () {
-                move();
-            });
-        }
-    
-        // ==========================================
-        // ۷. مخفی شدن باکس تایمر بالای صفحه با اسکرول
-        // ==========================================
-        var timerBox = document.getElementById("topTimer");
-        if (timerBox) {
-            window.addEventListener("scroll", function () {
-                if (window.scrollY > 80) {
-                    timerBox.style.transform = "translateY(-100%)";
-                } else {
-                    timerBox.style.transform = "translateY(0)";
-                }
-            });
-        }
-    });
-    
-    // ==========================================
-    // ۸. عملکرد منوی سایدبار داشبورد
-    // ==========================================
-    function toggleMenu() {
-        var sidebar = document.querySelector(".dash-sidebar");
-        if (sidebar) {
-            sidebar.classList.toggle("active");
-        }
+        prev.addEventListener("click", function() {
+            var total = slider.children.length;
+            var visible = 3;
+            if (index <= 0) {
+                index = total - visible;
+            } else {
+                index--;
+            }
+            move();
+        });
+
+        window.addEventListener("resize", function() {
+            move();
+        });
     }
-    
+
     // ==========================================
-    // ۹. باز و بسته کردن پاپ‌آ‌پ تایید خروج
+    // ۷. مخفی شدن باکس تایمر بالای صفحه با اسکرول
     // ==========================================
-    function toggleLogoutModal(isOpen) {
-        var modal = document.getElementById('logoutModal');
-        if (!modal) return;
-        if (isOpen) {
-            modal.classList.add('open');
-        } else {
-            modal.classList.remove('open');
-        }
+    var timerBox = document.getElementById("topTimer");
+    if (timerBox) {
+        window.addEventListener("scroll", function() {
+            if (window.scrollY > 80) {
+                timerBox.style.transform = "translateY(-100%)";
+            } else {
+                timerBox.style.transform = "translateY(0)";
+            }
+        });
     }
-    
-    // ==========================================
-    // ۱۰. پردازش کامل فرم ثبت‌نام و انیمیشن لرزش
-    // ==========================================
-    function isEmailValid(email) {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+});
+
+// ==========================================
+// ۸. عملکرد منوی سایدبار داشبورد
+// ==========================================
+function toggleMenu() {
+    var sidebar = document.querySelector(".dash-sidebar");
+    if (sidebar) {
+        sidebar.classList.toggle("active");
     }
-    
-    var registerForm = document.getElementById('registerForm');
-    if (registerForm) {
-        registerForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            var usernameInput = document.getElementById('username');
-            var regEmailInput = document.getElementById('email');
-            var regPasswordInput = document.getElementById('password');
-            var confirmPasswordInput = document.getElementById('confirmPassword');
-            var termsCheck = document.getElementById('termsCheck');
-            var regGlobalError = document.getElementById('globalErrorBox');
-            var regAuthCard = document.getElementById('authCard');
-            
-            var isValid = true;
-            if (regGlobalError) regGlobalError.style.display = 'none';
-    
-            if (usernameInput && usernameInput.value.trim().length < 3) {
-                var group = document.getElementById('usernameGroup');
-                if (group) group.classList.add('has-error');
+}
+
+// ==========================================
+// ۹. باز و بسته کردن پاپ‌آ‌پ تایید خروج
+// ==========================================
+function toggleLogoutModal(isOpen) {
+    var modal = document.getElementById('logoutModal');
+    if (!modal) return;
+    if (isOpen) {
+        modal.classList.add('open');
+    } else {
+        modal.classList.remove('open');
+    }
+}
+
+// ==========================================
+// ۱۰. پردازش کامل فرم ثبت‌نام و انیمیشن لرزش
+// ==========================================
+function isEmailValid(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+var registerForm = document.getElementById('registerForm');
+if (registerForm) {
+    registerForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        var usernameInput = document.getElementById('username');
+        var regEmailInput = document.getElementById('email');
+        var regPasswordInput = document.getElementById('password');
+        var confirmPasswordInput = document.getElementById('confirmPassword');
+        var termsCheck = document.getElementById('termsCheck');
+        var regGlobalError = document.getElementById('globalErrorBox');
+        var regAuthCard = document.getElementById('authCard');
+
+        var isValid = true;
+        if (regGlobalError) regGlobalError.style.display = 'none';
+
+        if (usernameInput && usernameInput.value.trim().length < 3) {
+            var group = document.getElementById('usernameGroup');
+            if (group) group.classList.add('has-error');
             isValid = false;
         } else {
             var group = document.getElementById('usernameGroup');
@@ -340,7 +344,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 submitBtn.disabled = false;
                 if (btnText) btnText.style.display = 'block';
                 if (btnSpinner) btnSpinner.style.display = 'none';
-                
+
                 // نمایش پیام فرضی سرور
                 if (regGlobalError) {
                     regGlobalError.textContent = "این ایمیل قبلاً ثبت‌نام شده است!";
@@ -357,17 +361,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // حذف خطاها در زمان تایپ مجدد کاربر
     var usernameInput = document.getElementById('username');
     if (usernameInput) {
-        usernameInput.addEventListener('input', function() { 
+        usernameInput.addEventListener('input', function() {
             var group = document.getElementById('usernameGroup');
-            if (group) group.classList.remove('has-error'); 
+            if (group) group.classList.remove('has-error');
         });
     }
-    
+
     var confirmPasswordInput = document.getElementById('confirmPassword');
     if (confirmPasswordInput) {
-        confirmPasswordInput.addEventListener('input', function() { 
+        confirmPasswordInput.addEventListener('input', function() {
             var group = document.getElementById('confirmPasswordGroup');
-            if (group) group.classList.remove('has-error'); 
+            if (group) group.classList.remove('has-error');
         });
     }
 }
@@ -432,121 +436,118 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+
 // برای سبد خرید
 // نمونه داده دوره‌ها برای شبیه‌سازی فرانت‌اند
-let cartItems = [
-    { id: 1, title: "آموزش جامع جاوااسکریپت ۲۰۲۶", price: 450000, img: "course-1.jpg" },
-    { id: 2, title: "متدهای پیشرفته CSS Grid", price: 290000, img: "course-2.jpg" }
-];
+// let cartItems = [
+//     { id: 1, title: "آموزش جامع جاوااسکریپت ۲۰۲۶", price: 450000, img: "../images/js.png" },
+//     { id: 2, title: "متدهای پیشرفته CSS Grid", price: 290000, img: "../images/css.jpg" },
+// ];
 
-// فانکشن به‌روزرسانی قالب سبد خرید در هدر
-function updateMiniCart() {
-    const cartItemsContainer = document.querySelector('.mini-cart-items');
-    const cartBadge = document.querySelector('.cart-badge');
-    const totalPriceEl = document.querySelector('.mini-cart-footer strong');
-    
-    if(!cartItemsContainer || !cartBadge) return;
+// // فانکشن به‌روزرسانی قالب سبد خرید در هدر
+// function updateMiniCart() {
+//     const cartItemsContainer = document.querySelector('.mini-cart-items');
+//     const cartBadge = document.querySelector('.cart-badge');
+//     const totalPriceEl = document.querySelector('.mini-cart-footer strong');
 
-    cartBadge.textContent = cartItems.length;
+//     if(!cartItemsContainer || !cartBadge) return;
 
-    if (cartItems.length === 0) {
-        cartItemsContainer.innerHTML = '<div class="text-center p-3 text-muted">سبد خرید شما خالی است.</div>';
-        if(totalPriceEl) totalPriceEl.textContent = '۰ تومان';
-        return;
-    }
+//     cartBadge.textContent = cartItems.length;
 
-    let html = '';
-    let total = 0;
+//     if (cartItems.length === 0) {
+//         cartItemsContainer.innerHTML = '<div class="text-center p-3 text-muted">سبد خرید شما خالی است.</div>';
+//         if(totalPriceEl) totalPriceEl.textContent = '۰ تومان';
+//         return;
+//     }
 
-    cartItems.forEach(item => {
-        total += item.price;
-        html += 
-            <div class="mini-cart-item" data-id="${item.id}">
-                <img src="${item.img}" alt="${item.title}" class="cart-item-thumb">
-                <div class="cart-item-details">
-                    <h4>${item.title}</h4>
-                    <span class="cart-item-price">${item.price.toLocaleString('fa-IR')} تومان</span>
-                </div>
-                <button class="remove-item-btn" onclick="removeFromCart(${item.id})">&times;</button>
-            </div>
-        ;
-    });
+//     let html = '';
+//     let total = 0;
 
-    cartItemsContainer.innerHTML = html;
-    if(totalPriceEl) totalPriceEl.textContent = total.toLocaleString('fa-IR') + ' تومان';
-}
+//     cartItems.forEach(item => {
+//         total += item.price;
+//         html += 
+//             <div class="mini-cart-item" data-id="${item.id}">
+//                 <img src="${item.img}" alt="${item.title}" class="cart-item-thumb">
+//                 <div class="cart-item-details">
+//                     <h4>${item.title}</h4>
+//                     <span class="cart-item-price">${item.price.toLocaleString('fa-IR')} تومان</span>
+//                 </div>
+//                 <button class="remove-item-btn" onclick="removeFromCart(${item.id})">&times;</button>
+//             </div>
+//         ;
+//     });
 
-// فانکشن حذف آیتم از سبد خرید
-function removeFromCart(id) {
-    cartItems = cartItems.filter(item => item.id !== id);
-    updateMiniCart();
-    // اگر در صفحه سبد خرید اصلی هم باشیم، آن را هم بروز میکنیم
-    if(typeof updateMainCartPage === 'function') {
-        updateMainCartPage();
-    }
-}
+//     cartItemsContainer.innerHTML = html;
+//     if(totalPriceEl) totalPriceEl.textContent = total.toLocaleString('fa-IR') + ' تومان';
+// }
 
-// حذف همه آیتم‌ها
-document.querySelector('.clear-cart-text')?.addEventListener('click', () => {
-    cartItems = [];
-    updateMiniCart();
-    if(typeof updateMainCartPage === 'function') {
-        updateMainCartPage();
-    }
-});
+// // فانکشن حذف آیتم از سبد خرید
+// function removeFromCart(id) {
+//     cartItems = cartItems.filter(item => item.id !== id);
+//     updateMiniCart();
+//     // اگر در صفحه سبد خرید اصلی هم باشیم، آن را هم بروز میکنیم
+//     if(typeof updateMainCartPage === 'function') {
+//         updateMainCartPage();
+//     }
+// }
 
-// اجرای اولیه هنگام لود صفحه
-document.addEventListener('DOMContentLoaded', updateMiniCart);
+// // حذف همه آیتم‌ها
+// document.querySelector('.clear-cart-text')?.addEventListener('click', () => {
+//     cartItems = [];
+//     updateMiniCart();
+//     if(typeof updateMainCartPage === 'function') {
+//         updateMainCartPage();
+//     }
+// });
 
-{/* ادامه سبد خرید */}
+// // اجرای اولیه هنگام لود صفحه
+// document.addEventListener('DOMContentLoaded', updateMiniCart);
 
-// اتصال صفحه اصلی سبد خرید به کدهای جاوااسکریپت بالا
-        function updateMainCartPage() {
-            const tableBody = document.getElementById('mainCartTableBody');
-            const subtotalPriceEl = document.getElementById('subtotalPrice');
-            const finalTotalPriceEl = document.getElementById('finalTotalPrice');
-            
-            if(!tableBody) return;
+// {/* ادامه سبد خرید */}
 
-            if(cartItems.length === 0) {
-                tableBody.innerHTML = '<tr><td colspan="3" style="text-align:center; padding: 40px 0; color:var(--text-muted);">هیچ دوره‌ای در سبد خرید شما نیست.</td></tr>';
-                subtotalPriceEl.textContent = '۰ تومان';
-                finalTotalPriceEl.textContent = '۰ تومان';
-                return;
-            }
+// // اتصال صفحه اصلی سبد خرید به کدهای جاوااسکریپت بالا
+//         function updateMainCartPage() {
+//             const tableBody = document.getElementById('mainCartTableBody');
+//             const subtotalPriceEl = document.getElementById('subtotalPrice');
+//             const finalTotalPriceEl = document.getElementById('finalTotalPrice');
 
-            let html = '';
-            let total = 0;
+//             if(!tableBody) return;
 
-            cartItems.forEach(item => {
-                total += item.price;
-                html += 
-                    <tr>
-                        <td>
-                            <div class="cart-page-item">
-                                <img src="${item.img}" class="cart-page-img">
-                                <div class="cart-page-title">
-                                    <h3>${item.title}</h3>
-                                </div>
-                            </div>
-                        </td>
-                        <td style="color: var(--primary-color); font-weight: bold;">${item.price.toLocaleString('fa-IR')} تومان</td>
-                        <td><button class="delete-row-btn" onclick="removeFromCart(${item.id})">&times;</button></td>
-                    </tr>
-                ;
-            });
+//             if(cartItems.length === 0) {
+//                 tableBody.innerHTML = '<tr><td colspan="3" style="text-align:center; padding: 40px 0; color:var(--text-muted);">هیچ دوره‌ای در سبد خرید شما نیست.</td></tr>';
+//                 subtotalPriceEl.textContent = '۰ تومان';
+//                 finalTotalPriceEl.textContent = '۰ تومان';
+//                 return;
+//             }
 
-            tableBody.innerHTML = html;
-            subtotalPriceEl.textContent = total.toLocaleString('fa-IR') + ' تومان';
-            finalTotalPriceEl.textContent = total.toLocaleString('fa-IR') + ' تومان';
-        }
+//             let html = '';
+//             let total = 0;
 
-        // اجرای تابع رندر صفحه اصلی هماهنگ با مینی سبد خرید
-        document.addEventListener('DOMContentLoaded', () => {
-            updateMainCartPage();
-        });
+//             cartItems.forEach(item => {
+//                 total += item.price;
+//                 html += 
+//                     <tr>
+//                         <td>
+//                             <div class="cart-page-item">
+//                                 <img src="${item.img}" class="cart-page-img">
+//                                 <div class="cart-page-title">
+//                                     <h3>${item.title}</h3>
+//                                 </div>
+//                             </div>
+//                         </td>
+//                         <td style="color: var(--primary-color); font-weight: bold;">${item.price.toLocaleString('fa-IR')} تومان</td>
+//                         <td><button class="delete-row-btn" onclick="removeFromCart(${item.id})">&times;</button></td>
+//                     </tr>
+//                 ;
+//             });
 
+//             tableBody.innerHTML = html;
+//             subtotalPriceEl.textContent = total.toLocaleString('fa-IR') + ' تومان';
+//             finalTotalPriceEl.textContent = total.toLocaleString('fa-IR') + ' تومان';
+//         }
 
-
-
-        
+//         // اجرای تابع رندر صفحه اصلی هماهنگ با مینی سبد خرید
+//         document.addEventListener('DOMContentLoaded', () => {
+//             updateMainCartPage();
+//         });
