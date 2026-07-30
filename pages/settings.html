@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,11 @@
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="../css/settings.css">
 </head>
+
 <body>
 
     <div class="dashboard-wrapper">
-        
+
         <!-- سایدبار مشترک پنل (کلاس active روی تنظیمات حساب قرار گرفته) -->
         <aside class="dash-sidebar">
             <div class="dash-logo">
@@ -22,7 +24,7 @@
                 <span class="dash-icon">🏠</span>
                 بازگشت به سایت اصلی
             </a>
-            
+
             <nav class="dash-menu">
                 <a href="dashboard.html" class="dash-menu-item">
                     <span class="dash-icon">📊</span>
@@ -53,7 +55,7 @@
 
         <!-- محتوای اصلی بخش تنظیمات -->
         <main class="dash-main-content">
-            
+
             <!-- هدر بالایی پنل -->
             <header class="dash-header">
                 <div class="user-welcome">
@@ -67,13 +69,13 @@
 
             <!-- فرم اصلی تنظیمات -->
             <div class="settings-form-wrapper">
-                
+
                 <!-- بخش اول: اطلاعات فردی -->
                 <section class="settings-section-card">
                     <div class="settings-card-header">
                         <h4>👤 اطلاعات فردی و تماس</h4>
                     </div>
-                    
+
                     <!-- آپلودر عکس پروفایل جدید و شیک -->
                     <div class="profile-upload-box">
                         <div class="upload-avatar-preview">
@@ -103,7 +105,7 @@
                             <label>رشته تحصیلی / تخصص</label>
                             <input type="text" value="طراح فرانت‌اند">
                         </div>
-                        
+
                         <div class="form-action-box">
                             <button type="submit" class="save-settings-btn">ذخیره تغییرات اطلاعات</button>
                         </div>
@@ -115,7 +117,7 @@
                     <div class="settings-card-header">
                         <h4>🔒 تغییر کلمه عبور</h4>
                     </div>
-                    
+
                     <!-- اضافه شدن آی‌دی و تابع چک کردن رمز به فرم -->
                     <form class="settings-grid-form" id="passwordForm" onsubmit="validatePassword(event)">
                         <div class="input-group">
@@ -131,7 +133,7 @@
                             <label>تکرار کلمه عبور جدید</label>
                             <input type="password" id="confirmPass" placeholder="تکرار مجدد رمز جدید" required>
                         </div>
-                        
+
                         <div class="form-action-box">
                             <button type="submit" class="save-settings-btn password-btn">بروزرسانی رمز عبور</button>
                         </div>
@@ -153,7 +155,7 @@
             <div class="modal-icon">🚪</div>
             <h3>خروج از حساب کاربری</h3>
             <p>احمد عزیز، آیا واقعاً می‌خواهی از حساب کاربری خود خارج شوی؟</p>
-            
+
             <div class="modal-actions">
                 <!-- این دکمه کاربر را به صفحه اصلی هدایت می‌کند -->
                 <a href="../index.html" class="modal-btn confirm-logout-btn">بله، خارج می‌شوم</a>
@@ -162,21 +164,22 @@
             </div>
         </div>
     </div>
-    
 
-<!-- قطار اسکریپت‌ها -->
-<!-- ۱. فایل عمومی (برای دکمه خروج) -->
-<script src="../js/script.js"></script>
 
-<!-- ۲. فایل اختصاصی (برای آپلود عکس پروفایل) -->
-<script src="../js/settings.js"></script>
+    <!-- قطار اسکریپت‌ها -->
+    <!-- ۱. فایل عمومی (برای دکمه خروج) -->
+    <script src="../js/script.js"></script>
+
+    <!-- ۲. فایل اختصاصی (برای آپلود عکس پروفایل) -->
+    <script src="../js/settings.js"></script>
 </body>
+
 </html>
 
 </body>
 
 <button class="mobile-menu-btn" onclick="toggleMenu()">
     ☰
-    </button>
+</button>
 
 </html>
