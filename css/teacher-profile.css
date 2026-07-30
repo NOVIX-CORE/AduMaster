@@ -2,13 +2,13 @@
 /* پروفایل مدرس */
 /* ===================================================================== */
 
-.teacher-profile-section{
+.teacher-profile-section {
     padding: 80px 0 40px;
 
     padding-top: 7rem;
 }
 
-.teacher-profile-card{
+.teacher-profile-card {
 
     max-width: 1200px;
     width: 90%;
@@ -29,12 +29,12 @@
 
 /* تصویر مدرس */
 
-.teacher-profile-image{
+.teacher-profile-image {
 
     flex-shrink: 0;
 }
 
-.teacher-profile-image img{
+.teacher-profile-image img {
 
     width: 220px;
     height: 220px;
@@ -46,16 +46,16 @@
 
 /* اطلاعات */
 
-.teacher-profile-info{
+.teacher-profile-info {
 
     flex: 1;
 }
 
-.teacher-badge{
+.teacher-badge {
 
     display: inline-block;
 
-    background: rgba(99,102,241,.1);
+    background: rgba(99, 102, 241, .1);
 
     color: var(--primary-color);
 
@@ -70,7 +70,7 @@
     margin-bottom: 15px;
 }
 
-.teacher-profile-info h1{
+.teacher-profile-info h1 {
 
     font-size: 34px;
 
@@ -79,7 +79,7 @@
     margin-bottom: 10px;
 }
 
-.teacher-position{
+.teacher-position {
 
     color: var(--primary-color);
 
@@ -88,7 +88,7 @@
     margin-bottom: 15px;
 }
 
-.teacher-description{
+.teacher-description {
 
     color: var(--text-muted);
 
@@ -99,7 +99,7 @@
 
 /* آمار */
 
-.teacher-stats{
+.teacher-stats {
 
     display: flex;
     gap: 15px;
@@ -109,7 +109,7 @@
     flex-wrap: wrap;
 }
 
-.teacher-stat-box{
+.teacher-stat-box {
 
     min-width: 120px;
 
@@ -122,7 +122,7 @@
     border-radius: 14px;
 }
 
-.teacher-stat-box strong{
+.teacher-stat-box strong {
 
     display: block;
 
@@ -131,7 +131,7 @@
     color: var(--text-main);
 }
 
-.teacher-stat-box span{
+.teacher-stat-box span {
 
     color: var(--text-muted);
 
@@ -140,7 +140,7 @@
 
 /* مهارت ها */
 
-.teacher-skills{
+.teacher-skills {
 
     display: flex;
 
@@ -152,7 +152,7 @@
 
 }
 
-.teacher-skills span{
+.teacher-skills span {
 
     background: var(--bg-main);
 
@@ -171,19 +171,19 @@
 /* دوره های مدرس */
 /* ===================================================================== */
 
-.teacher-courses-section{
+.teacher-courses-section {
 
     padding: 40px 0 80px;
 }
 
-.section-title{
+.section-title {
 
     text-align: center;
 
     margin-bottom: 40px;
 }
 
-.section-title h2{
+.section-title h2 {
 
     color: var(--text-main);
 
@@ -192,14 +192,14 @@
     margin-bottom: 10px;
 }
 
-.section-title p{
+.section-title p {
 
     color: var(--text-muted);
 }
 
 /* گرید دوره ها */
 
-.teacher-courses-grid{
+.teacher-courses-grid {
 
     width: 90%;
 
@@ -209,7 +209,7 @@
 
     display: grid;
 
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
 
     gap: 25px;
 }
@@ -218,55 +218,55 @@
 /* ریسپانسیو */
 /* ===================================================================== */
 
-@media (max-width:900px){
+@media (max-width:900px) {
 
-    .teacher-profile-card{
+    .teacher-profile-card {
 
         flex-direction: column;
 
         text-align: center;
     }
 
-    .teacher-profile-image img{
+    .teacher-profile-image img {
 
         width: 180px;
         height: 180px;
     }
 
-    .teacher-stats{
+    .teacher-stats {
 
         justify-content: center;
     }
 
-    .teacher-skills{
+    .teacher-skills {
 
         justify-content: center;
     }
 
-    .teacher-courses-grid{
+    .teacher-courses-grid {
 
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }
 
-@media (max-width:600px){
+@media (max-width:600px) {
 
-    .teacher-courses-grid{
+    .teacher-courses-grid {
 
         grid-template-columns: 1fr;
     }
 
-    .teacher-profile-info h1{
+    .teacher-profile-info h1 {
 
         font-size: 28px;
     }
 
 }
 
-@media  (max-width: 400px){
+@media (max-width: 400px) {
 
-    .teacher-courses-grid{
+    .teacher-courses-grid {
 
         display: flex;
 
@@ -277,5 +277,5 @@
         flex-direction: column;
 
     }
-    
+
 }
