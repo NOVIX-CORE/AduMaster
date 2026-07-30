@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,21 +10,22 @@
     <!-- ۲. اتصال به CSS اختصاصی صفحه ورود و ثبت نام -->
     <link rel="stylesheet" href="../css/login.css">
 </head>
+
 <body class="auth-page-body">
 
     <div class="auth-wrapper">
         <!-- دکمه بازگشت به خانه -->
         <a href="../index.html" class="back-to-home">← بازگشت به صفحه اصلی</a>
-        
+
         <div class="auth-card" id="authCard">
             <h2 class="auth-title">عضویت در ادومستر</h2>
             <p class="auth-subtitle">برای شروع یادگیری، لطفاً اطلاعات خود را وارد کنید.</p>
-            
+
             <!-- باکس پیام خطای کلی سیستم -->
             <div class="global-error-box" id="globalErrorBox">خطایی در ثبت‌نام رخ داده است!</div>
-            
+
             <form class="auth-form" id="registerForm" novalidate>
-                
+
                 <!-- فیلد نام کاربری -->
                 <div class="form-group" id="usernameGroup">
                     <label for="username">نام و نام خانوادگی</label>
@@ -37,7 +39,7 @@
                     <input type="email" id="email" placeholder="example@gmail.com" autocomplete="off" required>
                     <span class="error-message">لطفاً یک ایمیل معتبر وارد کنید.</span>
                 </div>
-                
+
                 <!-- فیلد رمز عبور -->
                 <div class="form-group" id="passwordGroup">
                     <label for="password">رمز عبور</label>
@@ -57,21 +59,21 @@
                     </div>
                     <span class="error-message">رمز عبور و تکرار آن همخوانی ندارند.</span>
                 </div>
-                
+
                 <!-- قوانین -->
                 <div class="form-options">
                     <label class="remember-me">
                         <input type="checkbox" id="termsCheck" required> قوانین و مقررات سایت را می‌پذیرم
                     </label>
                 </div>
-                
+
                 <!-- دکمه ارسال فرم -->
                 <button type="submit" class="auth-submit-btn" id="submitBtn">
                     <span class="btn-text">ثبت‌نام و عضویت</span>
                     <div class="btn-spinner"></div>
                 </button>
             </form>
-            
+
             <div class="auth-footer">
                 <span>قبلاً ثبت‌نام کرده‌اید؟</span>
                 <a href="login.html" class="register-link">ورود به حساب</a>
@@ -82,4 +84,5 @@
     <!-- ۳. اتصال به جاوااسکریپت اصلی پروژه -->
     <script src="../js/script.js"></script>
 </body>
+
 </html>
