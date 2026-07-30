@@ -1,7 +1,8 @@
 /* ==========================================================================
    نوار فیلتر بالای دوره‌ها
    ========================================================================== */
-   .courses-filter-bar {
+
+.courses-filter-bar {
     display: flex;
     gap: 12px;
     border-bottom: 1px solid var(--border-color);
@@ -33,9 +34,11 @@
     color: #ffffff;
 }
 
+
 /* ==========================================================================
    شبکه کارت‌های دوره‌ها (Grid)
    ========================================================================== */
+
 .courses-archive-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -58,7 +61,9 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
+
 /* کاور دوره */
+
 .course-card-cover {
     position: relative;
     width: 100%;
@@ -71,7 +76,9 @@
     height: 100%;
 }
 
+
 /* نشان وضعیت روی کاور */
+
 .course-badge {
     position: absolute;
     top: 12px;
@@ -91,7 +98,9 @@
     background-color: #10b981;
 }
 
+
 /* بدنه کارت */
+
 .course-card-body {
     padding: 20px;
     display: flex;
@@ -105,7 +114,8 @@
     font-size: 15px;
     font-weight: 700;
     line-height: 1.5;
-    min-height: 44px; /* هم‌تراز شدن تایتل‌ها */
+    min-height: 44px;
+    /* هم‌تراز شدن تایتل‌ها */
 }
 
 .course-card-body .instructor {
@@ -113,7 +123,9 @@
     font-size: 13px;
 }
 
+
 /* پیشرفت دوره */
+
 .course-progress-section {
     display: flex;
     flex-direction: column;
@@ -129,7 +141,9 @@
     font-weight: 700;
 }
 
+
 /* دکمه ورود به دوره */
+
 .enter-course-btn {
     display: block;
     text-align: center;
@@ -151,7 +165,9 @@
     color: #ffffff;
 }
 
+
 /* استایل دکمه دوره‌های تمام شده */
+
 .enter-course-btn.completed-btn {
     border-color: rgba(16, 185, 129, 0.3);
     color: #10b981;
