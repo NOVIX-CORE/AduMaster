@@ -1,7 +1,8 @@
 /* ==========================================================================
    شبکه کارت‌های گواهینامه‌ها (Grid)
    ========================================================================== */
-   .cert-archive-grid {
+
+.cert-archive-grid {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -21,10 +22,13 @@
 
 .cert-archive-card:hover {
     transform: translateX(-5px);
-    border-color: rgba(16, 185, 129, 0.4); /* افکت سبز ملایم هنگام هاور مدرک صادر شده */
+    border-color: rgba(16, 185, 129, 0.4);
+    /* افکت سبز ملایم هنگام هاور مدرک صادر شده */
 }
 
+
 /* آیکون مدال مدرک */
+
 .cert-badge-box {
     width: 64px;
     height: 64px;
@@ -36,7 +40,9 @@
     font-size: 32px;
 }
 
+
 /* اطلاعات مدرک */
+
 .cert-card-info {
     flex: 1;
     display: flex;
@@ -67,7 +73,9 @@
     font-size: 12.5px;
 }
 
+
 /* دکمه‌های عملیات کارت مدرک */
+
 .cert-card-actions {
     display: flex;
     gap: 12px;
@@ -107,9 +115,11 @@
     border-color: #059669;
 }
 
+
 /* ==========================================================================
    استایل کارت‌های قفل شده (دوره‌های تمام نشده)
    ========================================================================== */
+
 .cert-archive-card.locked-cert {
     opacity: 0.65;
     border-style: dashed;
@@ -142,9 +152,11 @@
     background-color: rgba(99, 102, 241, 0.05);
 }
 
+
 /* ==========================================================================
    باکس راهنمای دریافت مدرک (پایین صفحه)
    ========================================================================== */
+
 .cert-guide-box {
     background-color: var(--bg-main);
     border: 1px solid var(--border-color);
@@ -205,7 +217,9 @@
     line-height: 1.6;
 }
 
+
 /* واکنش‌گرایی برای موبایل */
+
 @media (max-width: 768px) {
     .cert-archive-card {
         flex-direction: column;
