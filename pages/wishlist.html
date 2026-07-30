@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,11 @@
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="../css/wishlist.css">
 </head>
+
 <body>
 
     <div class="dashboard-wrapper">
-        
+
         <!-- سایدبار مشترک پنل (کلاس active روی علاقه‌مندی‌ها قرار گرفته) -->
         <aside class="dash-sidebar">
             <div class="dash-logo">
@@ -22,7 +24,7 @@
                 <span class="dash-icon">🏠</span>
                 بازگشت به سایت اصلی
             </a>
-            
+
             <nav class="dash-menu">
                 <a href="dashboard.html" class="dash-menu-item">
                     <span class="dash-icon">📊</span>
@@ -52,7 +54,7 @@
 
         <!-- محتوای اصلی بخش علاقه‌مندی‌ها -->
         <main class="dash-main-content">
-            
+
             <!-- هدر بالایی پنل -->
             <header class="dash-header">
                 <div class="user-welcome">
@@ -66,7 +68,7 @@
 
             <!-- شبکه کارت‌های علاقه‌مندی‌ها -->
             <section class="wishlist-grid" id="wishlistGrid">
-                
+
                 <!-- کارت اول -->
                 <div class="wish-card" id="wishItem1">
                     <div class="wish-card-cover">
@@ -78,7 +80,7 @@
                         <span class="wish-category">برنامه‌نویسی وب</span>
                         <h4>آموزش جامع Next.js پیشرفته و پیاده‌سازی پروژه</h4>
                         <p class="instructor">مدرس: احمد کریمی</p>
-                        
+
                         <div class="wish-card-footer">
                             <div class="wish-price-box">
                                 <span class="old-price">۲,۹۰۰,۰۰۰</span>
@@ -99,7 +101,7 @@
                         <span class="wish-category">طراحی گرافیک</span>
                         <h4>دوره صفر تا صد طراحی UI/UX با نرم‌افزار Figma</h4>
                         <p class="instructor">مدرس: احمد کریمی</p>
-                        
+
                         <div class="wish-card-footer">
                             <div class="wish-price-box">
                                 <span class="current-price">۹۸۰,۰۰۰ تومان</span>
@@ -126,20 +128,20 @@
     <!-- ==========================================================================
    باکس پاپ‌آپ تایید خروج (Logout Modal)
    ========================================================================== -->
-<div class="logout-modal-overlay" id="logoutModal">
-    <div class="logout-modal-card">
-        <div class="modal-icon">🚪</div>
-        <h3>خروج از حساب کاربری</h3>
-        <p>احمد عزیز، آیا واقعاً می‌خواهی از حساب کاربری خود خارج شوی؟</p>
-        
-        <div class="modal-actions">
-            <!-- این دکمه کاربر را به صفحه اصلی هدایت می‌کند -->
-            <a href="../index.html" class="modal-btn confirm-logout-btn">بله، خارج می‌شوم</a>
-            <!-- این دکمه پاپ‌آپ را می‌بندد -->
-            <button class="modal-btn cancel-logout-btn" onclick="toggleLogoutModal(false)">خیر، می‌مانم</button>
+    <div class="logout-modal-overlay" id="logoutModal">
+        <div class="logout-modal-card">
+            <div class="modal-icon">🚪</div>
+            <h3>خروج از حساب کاربری</h3>
+            <p>احمد عزیز، آیا واقعاً می‌خواهی از حساب کاربری خود خارج شوی؟</p>
+
+            <div class="modal-actions">
+                <!-- این دکمه کاربر را به صفحه اصلی هدایت می‌کند -->
+                <a href="../index.html" class="modal-btn confirm-logout-btn">بله، خارج می‌شوم</a>
+                <!-- این دکمه پاپ‌آپ را می‌بندد -->
+                <button class="modal-btn cancel-logout-btn" onclick="toggleLogoutModal(false)">خیر، می‌مانم</button>
+            </div>
         </div>
     </div>
-</div>
 
     <script src="../js/script.js"></script>
     <script src="../js/wishlist.js"></script>
@@ -147,6 +149,6 @@
 
 <button class="mobile-menu-btn" onclick="toggleMenu()">
     ☰
-    </button>
+</button>
 
 </html>
