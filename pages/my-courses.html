@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,11 @@
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="../css/my-courses.css">
 </head>
+
 <body>
 
     <div class="dashboard-wrapper">
-        
+
         <!-- سایدبار مشترک پنل (کلاس active روی دوره‌های من قرار گرفته) -->
         <aside class="dash-sidebar">
             <div class="dash-logo">
@@ -22,7 +24,7 @@
                 <span class="dash-icon">🏠</span>
                 بازگشت به سایت اصلی
             </a>
-            
+
             <nav class="dash-menu">
                 <a href="dashboard.html" class="dash-menu-item">
                     <span class="dash-icon">📊</span>
@@ -53,7 +55,7 @@
 
         <!-- محتوای اختصاصی آرشیو کامل دوره‌ها -->
         <main class="dash-main-content">
-            
+
             <!-- هدر بالایی پنل -->
             <header class="dash-header">
                 <div class="user-welcome">
@@ -74,7 +76,7 @@
 
             <!-- شبکه کارت‌های دوره‌ها (آرشیو کامل) -->
             <section class="courses-archive-grid">
-                
+
                 <!-- دوره اول -->
                 <div class="course-archive-card">
                     <div class="course-card-cover">
@@ -84,7 +86,7 @@
                     <div class="course-card-body">
                         <h4>دوره جامع متخصص فرانت‌اند (React)</h4>
                         <p class="instructor">مدرس: احمد کریمی</p>
-                        
+
                         <div class="course-progress-section">
                             <div class="progress-text">
                                 <span>میزان پیشرفت:</span>
@@ -108,7 +110,7 @@
                     <div class="course-card-body">
                         <h4>دوره جاوااسکریپت مدرن و پروژه محور</h4>
                         <p class="instructor">مدرس: احمد کریمی</p>
-                        
+
                         <div class="course-progress-section">
                             <div class="progress-text">
                                 <span>میزان پیشرفت:</span>
@@ -132,14 +134,15 @@
                     <div class="course-card-body">
                         <h4>آموزش پروژه محور CSS Grid و Flexbox</h4>
                         <p class="instructor">مدرس: احمد کریمی</p>
-                        
+
                         <div class="course-progress-section">
                             <div class="progress-text">
                                 <span>میزان پیشرفت:</span>
                                 <span>۱۰۰٪</span>
                             </div>
                             <div class="progress-bar-wrapper">
-                                <div class="progress-bar" style="width: 100%; background-color: var(--secondary-color);"></div>
+                                <div class="progress-bar"
+                                    style="width: 100%; background-color: var(--secondary-color);"></div>
                             </div>
                         </div>
 
@@ -156,27 +159,27 @@
     <!-- ==========================================================================
    باکس پاپ‌آپ تایید خروج (Logout Modal)
    ========================================================================== -->
-<div class="logout-modal-overlay" id="logoutModal">
-    <div class="logout-modal-card">
-        <div class="modal-icon">🚪</div>
-        <h3>خروج از حساب کاربری</h3>
-        <p>احمد عزیز، آیا واقعاً می‌خواهی از حساب کاربری خود خارج شوی؟</p>
-        
-        <div class="modal-actions">
-            <!-- این دکمه کاربر را به صفحه اصلی هدایت می‌کند -->
-            <a href="../index.html" class="modal-btn confirm-logout-btn">بله، خارج می‌شوم</a>
-            <!-- این دکمه پاپ‌آپ را می‌بندد -->
-            <button class="modal-btn cancel-logout-btn" onclick="toggleLogoutModal(false)">خیر، می‌مانم</button>
+    <div class="logout-modal-overlay" id="logoutModal">
+        <div class="logout-modal-card">
+            <div class="modal-icon">🚪</div>
+            <h3>خروج از حساب کاربری</h3>
+            <p>احمد عزیز، آیا واقعاً می‌خواهی از حساب کاربری خود خارج شوی؟</p>
+
+            <div class="modal-actions">
+                <!-- این دکمه کاربر را به صفحه اصلی هدایت می‌کند -->
+                <a href="../index.html" class="modal-btn confirm-logout-btn">بله، خارج می‌شوم</a>
+                <!-- این دکمه پاپ‌آپ را می‌بندد -->
+                <button class="modal-btn cancel-logout-btn" onclick="toggleLogoutModal(false)">خیر، می‌مانم</button>
+            </div>
         </div>
     </div>
-</div>
 
 
-<script src="../js/script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 
 <button class="mobile-menu-btn" onclick="toggleMenu()">
     ☰
-    </button>
+</button>
 
 </html>
