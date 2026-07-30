@@ -1,5 +1,6 @@
 /* استایل‌های اختصاصی صفحه درباره ما 
 */
+
 .about-main-content {
     background-color: var(--bg-main);
     font-family: var(--font-family);
@@ -12,7 +13,9 @@
     padding: 0 20px;
 }
 
+
 /* بخش هیرو و بنر عنوان */
+
 .about-hero {
     text-align: center;
     padding: 60px 0;
@@ -46,7 +49,9 @@
     margin: 0 auto;
 }
 
+
 /* چیدمان دو ستونه متن داستان و آمار */
+
 .story-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -71,7 +76,9 @@
     text-align: justify;
 }
 
+
 /* گرید باکس‌های آمار نئونی */
+
 .about-stats-box {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -87,7 +94,9 @@
     transition: all 0.3s ease;
 }
 
+
 /* هاور نئونی بنفش برای آمارها */
+
 .stat-item:hover {
     transform: translateY(-5px);
     border-color: var(--primary-color);
@@ -107,7 +116,9 @@
     margin: 0;
 }
 
+
 /* ریسپانسیو برای تبلت و موبایل */
+
 @media (max-width: 768px) {
     .story-grid {
         grid-template-columns: 1fr;
