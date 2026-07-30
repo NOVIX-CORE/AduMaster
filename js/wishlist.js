@@ -10,11 +10,11 @@ function removeWishItem(itemId) {
 
     setTimeout(function() {
         item.remove();
-        
+
         // بررسی اینکه آیا هنوز کارتی باقی مانده است یا خیر
         var grid = document.getElementById('wishlistGrid');
         var remainingItems = grid.querySelectorAll('.wish-card');
-        
+
         if (remainingItems.length === 0) {
             grid.style.display = 'none';
             document.getElementById('wishlistEmptyState').style.display = 'flex';
