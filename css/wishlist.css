@@ -1,7 +1,8 @@
 /* ==========================================================================
    شبکه کارت‌های علاقه‌مندی‌ها (Grid)
    ========================================================================== */
-   .wishlist-grid {
+
+.wishlist-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
     gap: 25px;
@@ -22,7 +23,9 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
+
 /* کاور کارت */
+
 .wish-card-cover {
     position: relative;
     width: 100%;
@@ -36,7 +39,9 @@
     object-fit: cover;
 }
 
+
 /* دکمه قرمز حذف از علاقه‌مندی‌ها روی کاور */
+
 .remove-wish-btn {
     position: absolute;
     top: 12px;
@@ -62,7 +67,9 @@
     transform: scale(1.05);
 }
 
+
 /* بدنه کارت */
+
 .wish-card-body {
     padding: 20px;
     display: flex;
@@ -91,7 +98,9 @@
     margin-bottom: 5px;
 }
 
+
 /* بخش قیمت و دکمه خرید در فوتر کارت */
+
 .wish-card-footer {
     display: flex;
     justify-content: space-between;
@@ -134,9 +143,11 @@
     background-color: var(--secondary-color);
 }
 
+
 /* ==========================================================================
    استایل وضعیت خالی بودن لیست (Empty State)
    ========================================================================== */
+
 .wishlist-empty-state {
     text-align: center;
     padding: 60px 20px;
