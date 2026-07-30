@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,11 @@
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="../css/certificates.css">
 </head>
+
 <body>
 
     <div class="dashboard-wrapper">
-        
+
         <!-- سایدبار مشترک پنل (کلاس active روی گواهینامه‌ها قرار گرفته) -->
         <aside class="dash-sidebar">
             <div class="dash-logo">
@@ -22,7 +24,7 @@
                 <span class="dash-icon">🏠</span>
                 بازگشت به سایت اصلی
             </a>
-            
+
             <nav class="dash-menu">
                 <a href="dashboard.html" class="dash-menu-item">
                     <span class="dash-icon">📊</span>
@@ -53,7 +55,7 @@
 
         <!-- محتوای اصلی بخش گواهینامه‌ها -->
         <main class="dash-main-content">
-            
+
             <!-- هدر بالایی پنل -->
             <header class="dash-header">
                 <div class="user-welcome">
@@ -67,7 +69,7 @@
 
             <!-- شبکه کارت‌های گواهینامه‌ها -->
             <section class="cert-archive-grid">
-                
+
                 <!-- گواهینامه اول (صادر شده) -->
                 <div class="cert-archive-card">
                     <div class="cert-badge-box">🥇</div>
@@ -87,7 +89,8 @@
                     <div class="cert-badge-box">🔒</div>
                     <div class="cert-card-info">
                         <h4>گواهینامه دوره جامع متخصص فرانت‌اند (React)</h4>
-                        <p class="cert-meta">وضعیت: <span class="cert-status-text">در حال یادگیری (۴۵٪ طی شده)</span></p>
+                        <p class="cert-meta">وضعیت: <span class="cert-status-text">در حال یادگیری (۴۵٪ طی شده)</span>
+                        </p>
                         <p class="cert-date">پس از اتمام ۱۰۰٪ دوره صادر می‌شود.</p>
                     </div>
                     <div class="cert-card-actions">
@@ -126,26 +129,26 @@
     <!-- ==========================================================================
    باکس پاپ‌آپ تایید خروج (Logout Modal)
    ========================================================================== -->
-<div class="logout-modal-overlay" id="logoutModal">
-    <div class="logout-modal-card">
-        <div class="modal-icon">🚪</div>
-        <h3>خروج از حساب کاربری</h3>
-        <p>احمد عزیز، آیا واقعاً می‌خواهی از حساب کاربری خود خارج شوی؟</p>
-        
-        <div class="modal-actions">
-            <!-- این دکمه کاربر را به صفحه اصلی هدایت می‌کند -->
-            <a href="../index.html" class="modal-btn confirm-logout-btn">بله، خارج می‌شوم</a>
-            <!-- این دکمه پاپ‌آپ را می‌بندد -->
-            <button class="modal-btn cancel-logout-btn" onclick="toggleLogoutModal(false)">خیر، می‌مانم</button>
+    <div class="logout-modal-overlay" id="logoutModal">
+        <div class="logout-modal-card">
+            <div class="modal-icon">🚪</div>
+            <h3>خروج از حساب کاربری</h3>
+            <p>احمد عزیز، آیا واقعاً می‌خواهی از حساب کاربری خود خارج شوی؟</p>
+
+            <div class="modal-actions">
+                <!-- این دکمه کاربر را به صفحه اصلی هدایت می‌کند -->
+                <a href="../index.html" class="modal-btn confirm-logout-btn">بله، خارج می‌شوم</a>
+                <!-- این دکمه پاپ‌آپ را می‌بندد -->
+                <button class="modal-btn cancel-logout-btn" onclick="toggleLogoutModal(false)">خیر، می‌مانم</button>
+            </div>
         </div>
     </div>
-</div>
 
-<script src="../js/script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 
 <button class="mobile-menu-btn" onclick="toggleMenu()">
     ☰
-    </button>
+</button>
 
 </html>
