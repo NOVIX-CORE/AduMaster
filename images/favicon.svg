@@ -1,0 +1,21 @@
+<svg xmlns="http://w3.org" viewBox="0 0 100 100" width="100" height="100">
+  <!-- رنگ آیکون به صورت گرادینت شیک آبی هوشمند -->
+  <defs>
+    <linearGradient id="eduGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+  </defs>
+  
+  <!-- بدنه اصلی کلاه فارغ‌التحصیلی (طرح لوزی بالای حرف A) -->
+  <polygon points="50,15 85,32 50,49 15,32" fill="url(#eduGrad)" />
+  <!-- منگوله کلاه -->
+  <path d="M15,32 L15,55 C15,58 12,60 12,60" stroke="#2563eb" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- پایه حرف A که به شکل کتاب باز و ستون‌های دانشگاه طراحی شده -->
+  <path d="M32,44 L32,80 C32,82 34,85 45,85 L50,85 L50,53 Z" fill="#1e293b" />
+  <path d="M68,44 L68,80 C68,82 66,85 55,85 L50,85 L50,53 Z" fill="#1e293b" />
+  
+  <!-- خط تیره وسط حرف A به صورت مدرن -->
+  <rect x="38" y="62" width="24" height="5" rx="2.5" fill="#f8fafc" />
+</svg>
