@@ -1,7 +1,8 @@
 /* ==========================================================================
    باکس‌های بخش‌بندی تنظیمات (Cards)
    ========================================================================== */
-   .settings-form-wrapper {
+
+.settings-form-wrapper {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -26,9 +27,11 @@
     font-weight: 800;
 }
 
+
 /* ==========================================================================
    بخش آپلود تصویر پروفایل
    ========================================================================== */
+
 .profile-upload-box {
     display: flex;
     align-items: center;
@@ -56,7 +59,8 @@
 }
 
 .upload-btn-details input[type="file"] {
-    display: none; /* مخفی کردن دکمه پیش‌فرض زشت */
+    display: none;
+    /* مخفی کردن دکمه پیش‌فرض زشت */
 }
 
 .custom-file-upload {
@@ -83,9 +87,11 @@
     margin-top: 6px;
 }
 
+
 /* ==========================================================================
    استایل فیلدها و ساختار فرم (Form Controls)
    ========================================================================== */
+
 .settings-grid-form {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -121,7 +127,9 @@
     box-shadow: 0 0 12px rgba(99, 102, 241, 0.15);
 }
 
+
 /* فیلد غیرقابل تغییر */
+
 .disabled-input {
     background-color: rgba(255, 255, 255, 0.05) !important;
     color: var(--text-muted) !important;
@@ -129,9 +137,12 @@
     opacity: 0.6;
 }
 
+
 /* دکمه ذخیره */
+
 .form-action-box {
-    grid-column: 1 / -1; /* دکمه کل عرض سطر را بگیرد یا ته صف برود */
+    grid-column: 1 / -1;
+    /* دکمه کل عرض سطر را بگیرد یا ته صف برود */
     display: flex;
     justify-content: flex-end;
     margin-top: 10px;
@@ -163,21 +174,19 @@
     background-color: #059669;
 }
 
-@media (max-width: 390px){
-    .input-group{
+@media (max-width: 390px) {
+    .input-group {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
-    .form-action-box{
+    .form-action-box {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
     }
-
-    .settings-grid-form{
+    .settings-grid-form {
         display: flex;
         flex-direction: column;
         justify-content: center;
