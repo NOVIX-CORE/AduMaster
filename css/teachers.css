@@ -1,5 +1,3 @@
-
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -24,7 +22,9 @@
     font-size: 1.1rem;
 }
 
+
 /* شبکه کارت‌ها با گرید سیستم کاملا ریسپانسیو */
+
 .teachers-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -32,7 +32,9 @@
     margin-bottom: 2rem;
 }
 
+
 /* کارت استاد با افکت هاور نرم */
+
 .teacher-card {
     background-color: var(--bg-card);
     border-radius: 16px;
@@ -87,7 +89,8 @@
     font-size: 0.95rem;
     margin-bottom: 1.5rem;
     text-align: justify;
-    height: 70px; /* هم‌تراز شدن متن دسکتاپ */
+    height: 70px;
+    /* هم‌تراز شدن متن دسکتاپ */
     overflow: hidden;
 }
 
@@ -98,7 +101,8 @@
     align-items: center;
     border-top: 1px solid var(--border-color);
     padding-top: 1.25rem;
-    margin-top: auto; /* چسبیدن به کف کارت */
+    margin-top: auto;
+    /* چسبیدن به کف کارت */
 }
 
 .courses-count {
@@ -121,17 +125,14 @@
     background-color: var(--primary-hover);
 }
 
-
-
-@media  (max-width: 400px){
-    .teachers-grid{
+@media (max-width: 400px) {
+    .teachers-grid {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
     }
-
-    .container{
+    .container {
         padding: 3rem 1rem;
     }
 }
